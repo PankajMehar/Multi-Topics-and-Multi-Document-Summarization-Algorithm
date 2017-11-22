@@ -8,5 +8,6 @@ Next:
   將各文件的Sentence Group矩陣轉換出來單一文件
 Need To Check:
 
-
-http://fb.me
+2017/11/22
+1. 找出目前可直接套用tfidf的package
+2.自建tfidf的function
