@@ -11,3 +11,8 @@ Need To Check:
 2017/11/22
 1. 找出目前可直接套用tfidf的package
 2.自建tfidf的function
+
+2017/11/25
+1. 完成text_to_vector
+2. 完成tf
+3. 預計下次完成idf計算   log(出現的文件次數/總文件數)
