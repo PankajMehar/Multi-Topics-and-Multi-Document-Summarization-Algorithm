@@ -5,6 +5,7 @@
 # @Software: PyCharm Community Edition
 
 import numpy as np
+import copy
 from log_module import log
 
 # 轉換成字詞向量
@@ -33,10 +34,9 @@ def text_to_vector(corpus_list):
     return word_array
 
 # 計算tf
-def _tf(array):
+def tf(array):
     # 建立資料tf資料陣列
-    tf_array=array
-
+    tf_array=copy.deepcopy(array)
     log("tf_array:\n" + str(tf_array))
     log("array:\n" + str(array))
 
@@ -50,7 +50,7 @@ def _tf(array):
     log("array:\n"+str(array))
 
 # 計算idf
-def _idf(array):
+def idf(array):
     # 建立資料idf陣列資料
     idf_array = array
     # 總文件數
@@ -64,9 +64,9 @@ def tf_idf(corpus_list):
     vector = text_to_vector(corpus_list)
     log(vector)
     print("=======================\n")
-    _tf(vector)
-    # print("=======================\n")
-    # idf(vector)
+    tf(vector)
+    print("=======================\n")
+    idf(vector)
 
 
 
