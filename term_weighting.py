@@ -5,6 +5,7 @@
 # @Software: PyCharm Community Edition
 
 import numpy as np
+from log_module import log
 
 # 轉換成字詞向量
 def text_to_vector(corpus_list):
@@ -29,31 +30,45 @@ def text_to_vector(corpus_list):
             corpus_list[raw] = [word.lower() for word in corpus_list[raw]]
             temp.append(corpus_list[raw].count(word_list[word]))
         word_array.append(temp)
-
-    print(np.asarray(word_array))
-    tf(word_array)
     return word_array
 
 # 計算tf
-def tf(array):
+def _tf(array):
     # 建立資料tf資料陣列
     tf_array=array
 
-    for raw in range(1,len(array)):
-        word_cout = sum(array[raw])
-        for i in range(len(array[raw])):
-            tf_array[raw][i] = array[raw][i]/word_cout
-    print(np.asarray(tf_array))
+    log("tf_array:\n" + str(tf_array))
+    log("array:\n" + str(array))
+
+    for raw in range(1,len(tf_array)):
+        word_cout = sum(tf_array[raw])
+        for i in range(len(tf_array[raw])):
+            # 這行會導致變數被污染
+            tf_array[raw][i] = tf_array[raw][i]/word_cout
+    # print(np.asarray(tf_array))
+    log("tf_array:\n"+str(tf_array))
+    log("array:\n"+str(array))
 
 # 計算idf
-def idf(array):
+def _idf(array):
+    # 建立資料idf陣列資料
     idf_array = array
-
+    # 總文件數
+    file_count = len(array)
+    # 先進行轉置
+    array = [[row[i] for row in array] for i in range(len(array[0]))]
+    print(np.asarray(idf_array))
 
 # 計算tf_idf
 def tf_idf(corpus_list):
-    res = text_to_vector(corpus_list)
-    print(res)
+    vector = text_to_vector(corpus_list)
+    log(vector)
+    print("=======================\n")
+    _tf(vector)
+    # print("=======================\n")
+    # idf(vector)
+
+
 
 def main():
     corpus =[
@@ -67,5 +82,3 @@ def main():
 
 if __name__=="__main__":
     main()
-
-
