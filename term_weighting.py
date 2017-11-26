@@ -50,6 +50,8 @@ def tf(array):
     log("[tf] \n%s" % np.asarray(tf_array))
     log("[tf][end]",lvl="i")
 
+    return tf_array
+
 # 計算idf
 def idf(array):
     log("[idf][start]",lvl="i")
@@ -58,37 +60,45 @@ def idf(array):
     # 建立暫存的資料做idf運算
     temp = copy.deepcopy(idf_array)
     # 總文件數
-    file_count = len(array)
-    word_count = len(array[0])
+    file_count = len(idf_array)-1
+    word_count = len(idf_array[0])
     # 先進行轉置
-    temp = [[row[i] for row in temp] for i in range(len(temp[0]))]
+    # temp = [[row[i] for row in temp] for i in range(len(temp[0]))]
     # 顯示暫存資料的內容，確定已經轉置
     log(np.asarray(temp))
 
     for word in range(word_count):
         word_in_file = 0
-        for i in range(1,word):
-            if word_count[word][i] > 0:
+        for i in range(1,file_count+1):
+            if int(idf_array[i][word]) > 0:
                 word_in_file = word_in_file+1
-        log(word_in_file,word_count)
-        # idf_value = math.log10(word_in_file/word_count)
-        idf_value = word_in_file
-        for i in range(1,word):
-            temp[i][word] = idf_value
+
+        for j in range(1,file_count+1):
+            temp[j][word] = abs(math.log10(file_count/word_in_file))
+
     log("[idf] %s\n" % np.asarray(temp))
     log("[idf][end]", lvl="i")
+    return temp
 
 # 計算tf_idf
 def tf_idf(corpus_list):
     vector = text_to_vector(corpus_list)
-    tf(vector)
-    idf(vector)
+    tf_vect = tf(vector)
+    idf_vect = idf(vector)
 
+    tf_idf_veict = copy.deepcopy(vector)
 
+    for i in range(1,len(tf_idf_veict)):
+        for j in range(len(tf_idf_veict[i])):
+            log((i,j))
+            tf_idf_veict[i][j] = tf_vect[i][j]*idf_vect[i][j]
+            log((tf_vect[i][j],idf_vect[i][j],tf_idf_veict[i][j]))
+
+    log("[tf_idf] %s\n" % np.asarray(tf_idf_veict))
 
 def main():
     corpus =[
-        ["This","is","the","first","document"],
+        ["this","is","the","first","document"],
         ["this","is","the","second","second","document"],
         ["and","the","third","one"],
         ["is","this","the","first","document"],
