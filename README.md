@@ -16,3 +16,8 @@ Need To Check:
 1. 完成text_to_vector
 2. 完成tf
 3. 預計下次完成idf計算   log(出現的文件次數/總文件數)
+
+2017/11/27
+1. 完成tf-idf驗證
+2. 了解其他tf-idf的計算方式
+3. 預計接著實做pdf
