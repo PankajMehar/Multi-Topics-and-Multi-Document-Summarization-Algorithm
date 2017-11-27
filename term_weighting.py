@@ -74,9 +74,10 @@ def idf(array):
                 word_in_file = word_in_file+1
 
         for j in range(1,file_count+1):
-            temp[j][word] = abs(math.log10(file_count/word_in_file))
+            # normal
+            temp[j][word] = abs(np.log10(file_count/(1+word_in_file)))
 
-    log("[idf] %s\n" % np.asarray(temp))
+    log("[idf] \n%s" % np.asarray(temp))
     log("[idf][end]", lvl="i")
     return temp
 
@@ -94,14 +95,26 @@ def tf_idf(corpus_list):
             tf_idf_veict[i][j] = tf_vect[i][j]*idf_vect[i][j]
             log((tf_vect[i][j],idf_vect[i][j],tf_idf_veict[i][j]))
 
-    log("[tf_idf] %s\n" % np.asarray(tf_idf_veict))
+    log("[tf_idf] \n%s" % np.asarray(tf_idf_veict))
 
 def main():
     corpus =[
         ["this","is","the","first","document"],
-        ["this","is","the","second","second","document"],
-        ["and","the","third","one"],
-        ["is","this","the","first","document"],
+        # ["this","is","the","second","second","document"],
+        # ["and","the","third","one"],
+        # ["is","this","the","first","document"],
+    ]
+
+    corpus = [
+        ["the", "sky", "is", "blue"],
+        ["the","sun","is","bright","today"],
+        ["the","sun","in","the","sky","is","bright"],
+        ["we","can","see","the","shining","sun","the","bright","sun"]
+    ]
+
+    corpus = [
+        ["this", "is", "a", "a","sample"],
+        ["this","is","another","another","example","example","example"],
     ]
 
     tf_idf(corpus)
