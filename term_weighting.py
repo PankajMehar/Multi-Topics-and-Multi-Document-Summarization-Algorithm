@@ -83,6 +83,7 @@ def idf(array):
 
 # 計算tf_idf
 def tf_idf(corpus_list):
+    log("[tf_idf][start]", lvl="i")
     vector = text_to_vector(corpus_list)
     tf_vect = tf(vector)
     idf_vect = idf(vector)
@@ -91,11 +92,12 @@ def tf_idf(corpus_list):
 
     for i in range(1,len(tf_idf_veict)):
         for j in range(len(tf_idf_veict[i])):
-            log((i,j))
+            # log((i,j))
             tf_idf_veict[i][j] = tf_vect[i][j]*idf_vect[i][j]
-            log((tf_vect[i][j],idf_vect[i][j],tf_idf_veict[i][j]))
+            # log((tf_vect[i][j],idf_vect[i][j],tf_idf_veict[i][j]))
 
     log("[tf_idf] \n%s" % np.asarray(tf_idf_veict))
+    log("[tf_idf][end]", lvl="i")
 
 def main():
     corpus =[
