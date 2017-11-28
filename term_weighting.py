@@ -18,7 +18,8 @@ def text_to_vector(corpus_list):
         word_list = word_list+corpus_list[i]
     # 轉成小寫文字
     word_list = [word.lower() for word in word_list]
-    word_list = list(set(word_list))
+    # 將文字按照順序排序
+    word_list = sorted(list(set(word_list)))
 
     # 建立空的array給字詞計算的結果
     word_array = []
@@ -81,6 +82,47 @@ def idf(array):
     log("[idf][end]", lvl="i")
     return temp
 
+# 計算pdf
+def pdf(array,group):
+    log("[pdf]")
+    # 檢查哪些是同一個群組的
+    # 根據不同的Group將字詞資料做合併
+    group_item = list(set(group))
+    log(group_item)
+    # 合併的Group array
+    group_array = []
+    group_array.append(array[0])
+    # 計算出各group的數量存成group_doc_count
+    group_doc_count = []
+    for i in group_item:
+        temp_group_list = np.zeros(len(array[0]))
+        temp_group_count = 0
+        for number in range(len(group)):
+            if i == group[number]:
+                temp_group_count = temp_group_count+1
+                temp_group_list = np.add(temp_group_list,array[number+1])
+        temp_group_list = temp_group_list.tolist()
+        group_array.append(temp_group_list)
+        group_doc_count.append(temp_group_count)
+        log((temp_group_list,temp_group_count))
+    log(group_array)
+    log(group_doc_count)
+
+    # 開始計算各pdf值
+    pdf_array = copy.deepcopy(array)
+
+    # 第一個字的pdf
+    # for j in
+    #     sigma_fk2 = 0
+    #     for i in group_array[0]:
+    #         fkd2 = i^2
+    #         sigma_fk2 = sigma_fk2+fkd2
+    #     fid = 1/ np.sqrt(sigma_fk2)
+    #     fid*()
+
+
+    return array
+
 # 計算tf_idf
 def tf_idf(corpus_list):
     log("[tf_idf][start]", lvl="i")
@@ -88,38 +130,73 @@ def tf_idf(corpus_list):
     tf_vect = tf(vector)
     idf_vect = idf(vector)
 
-    tf_idf_veict = copy.deepcopy(vector)
+    tf_idf_vect = copy.deepcopy(vector)
 
-    for i in range(1,len(tf_idf_veict)):
-        for j in range(len(tf_idf_veict[i])):
+    for i in range(1,len(tf_idf_vect)):
+        for j in range(len(tf_idf_vect[i])):
             # log((i,j))
-            tf_idf_veict[i][j] = tf_vect[i][j]*idf_vect[i][j]
+            tf_idf_vect[i][j] = tf_vect[i][j]*idf_vect[i][j]
             # log((tf_vect[i][j],idf_vect[i][j],tf_idf_veict[i][j]))
 
-    log("[tf_idf] \n%s" % np.asarray(tf_idf_veict))
+    log("[tf_idf] \n%s" % np.asarray(tf_idf_vect))
     log("[tf_idf][end]", lvl="i")
 
-def main():
-    corpus =[
-        ["this","is","the","first","document"],
-        # ["this","is","the","second","second","document"],
-        # ["and","the","third","one"],
-        # ["is","this","the","first","document"],
-    ]
+# 計算tf_pdf
+# corpus_list是原本的文字矩陣，group_info是記錄哪些文件是相同的
+# group_info中的元素如果數字一樣代表是同一個Group
+def tf_pdf(corpus_list,group_info):
+    log("[tf_pdf][start]", lvl ="i")
+    # 先判斷進來的矩陣與group資料是否相同
+    if len(corpus_list)==len(group_info):
+        vector = text_to_vector(corpus_list)
+        tf_vect = tf(vector)
+        pdf_vect = pdf(vector,group_info)
 
-    corpus = [
-        ["the", "sky", "is", "blue"],
-        ["the","sun","is","bright","today"],
-        ["the","sun","in","the","sky","is","bright"],
-        ["we","can","see","the","shining","sun","the","bright","sun"]
-    ]
+        tf_pdf_vect = copy.deepcopy(vector)
+
+        for i in range(1,len(tf_pdf_vect)):
+            for j in range(len(tf_pdf_vect[i])):
+                # log((i,j))
+                tf_pdf_vect[i][j] = tf_vect[i][j]*pdf_vect[i][j]
+                # log((tf_vect[i][j],idf_vect[i][j],tf_idf_veict[i][j]))
+
+        log("[tf_idf] \n%s" % np.asarray(tf_pdf_vect))
+    else:
+        log("[tf_pdf] The document count is not match with group count, please check again.")
+        empty = []
+        return empty
+    log("[tf_pdf][end]",lvl="i")
+
+def main():
+    # corpus =[
+    #     ["this","is","the","first","document"],
+    #     # ["this","is","the","second","second","document"],
+    #     # ["and","the","third","one"],
+    #     # ["is","this","the","first","document"],
+    # ]
+    #
+    # corpus = [
+    #     ["the", "sky", "is", "blue"],
+    #     ["the","sun","is","bright","today"],
+    #     ["the","sun","in","the","sky","is","bright"],
+    #     ["we","can","see","the","shining","sun","the","bright","sun"]
+    # ]
 
     corpus = [
         ["this", "is", "a", "a","sample"],
         ["this","is","another","another","example","example","example"],
     ]
 
-    tf_idf(corpus)
+    corpus = [
+        ["cat","pet"],
+        ["fish","pet"],
+        ["cat","eat","fish"],
+        ["fish","die"]
+    ]
+    group = [1,2,1,1]
+
+    # tf_idf(corpus)
+    tf_pdf(corpus,group)
 
 if __name__=="__main__":
     main()
