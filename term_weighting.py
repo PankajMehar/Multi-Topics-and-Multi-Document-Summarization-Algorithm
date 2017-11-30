@@ -111,6 +111,16 @@ def pdf(array,group):
     # 開始計算各pdf值
     pdf_array = copy.deepcopy(array)
 
+    # 先計算分母
+    denominator = []
+    for i in range(1,len(group_array)):
+        m_sum = 0
+        for j in group_array[i]:
+            m_sum = m_sum + pow(j,2)
+        m_sum = np.sqrt(m_sum)
+        denominator.append(1/m_sum)
+
+    log("denominator: %s"% denominator)
     # 第一個字的pdf
     # for j in
     #     sigma_fk2 = 0
