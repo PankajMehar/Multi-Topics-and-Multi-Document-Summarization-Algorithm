@@ -105,8 +105,8 @@ def pdf(array,group):
         group_array.append(temp_group_list)
         group_doc_count.append(temp_group_count)
         log((temp_group_list,temp_group_count))
-    log(group_array)
-    log(group_doc_count)
+    log("group_array: %s" % group_array)
+    log("group_doc_count: %s" % group_doc_count)
 
     # 開始計算各pdf值
     pdf_array = copy.deepcopy(array)
@@ -121,6 +121,16 @@ def pdf(array,group):
         denominator.append(1/m_sum)
 
     log("denominator: %s"% denominator)
+
+    for j  in range(len(group_array[1])):
+        # 計算出來的PDF
+        pdf = 0
+        for i in range(len(group_item)):
+            pdf = pdf+(denominator[i] * np.exp(group_array[i+1][j]/group_doc_count[i]))
+            log("pdf: %s, %s * np.exp( %s / %s )" % (pdf,denominator[i],group_array[i+1][j],group_doc_count[i]))
+        log("word: %s, pdf: %s" % (group_array[0][j],pdf))
+    # for i in
+
     # 第一個字的pdf
     # for j in
     #     sigma_fk2 = 0
@@ -203,7 +213,7 @@ def main():
         ["cat","eat","fish"],
         ["fish","die"]
     ]
-    group = [1,2,1,1]
+    group = [1,1,2,2]
 
     # tf_idf(corpus)
     tf_pdf(corpus,group)
