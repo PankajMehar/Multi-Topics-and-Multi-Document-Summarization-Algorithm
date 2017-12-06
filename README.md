@@ -1,4 +1,8 @@
 # MEMDS
+2017/12/06
+1. 完成餘弦相似度，且確認可以直接套用idf-cosine與pdf-cosine
+2. 接著做 precision, recall, F1的計算
+http://blog.csdn.net/quiet_girl/article/details/70830796
 
 2017/12/01
 1. 完成tf-pdf驗證與計算

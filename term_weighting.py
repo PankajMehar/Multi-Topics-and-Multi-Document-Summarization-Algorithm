@@ -175,47 +175,22 @@ def tf_pdf(corpus_list,group_info):
         for i in range(1,len(tf_pdf_vect)):
             for j in range(len(tf_pdf_vect[i])):
                 tf_pdf_vect[i][j] = tf_vect[i][j]*pdf_vect[1][j]
-                log((tf_vect[i][j],pdf_vect[1][j],tf_pdf_vect[i][j]))
+                # log((tf_vect[i][j],pdf_vect[1][j],tf_pdf_vect[i][j]))
 
         log("[tf_pdf] \n%s" % np.asarray(tf_pdf_vect))
+        log("[tf_pdf][end]\n", lvl="i")
+        return tf_pdf_vect
     else:
         log("[tf_pdf] The document count is not match with group count, please check again.")
         empty = []
         log("[tf_pdf][end]\n", lvl="i")
         return empty
-    log("[tf_pdf][end]\n",lvl="i")
-
-def idf_cosine(list_a,list_b):
-    log("[idf_cosine][start]", lvl="i")
-    if len(list_a) == len(list_b):
-        cosine = 0
-        log("[idf_cosine] cosine: %s" % cosine)
-        log("[idf_cosine][end]", lvl="i")
-        return cosine
-
-    else:
-        # 如果兩個list大小不一樣就回傳-1
-        log("[idf_cosine] length of lists are not the same.")
-        log("[idf_cosine][end]", lvl="i")
-        return -1
 
 
-def pdf_cosine(list_a,list_b):
-    log("[pdf_cosine][start]", lvl="i")
-    if len(list_a) == len(list_b):
-        cosine = 0
-        log("[pdf_cosine] cosine: %s" % cosine)
-        log("[pdf_cosine][end]", lvl="i")
-        return cosine
-
-    else:
-        # 如果兩個list大小不一樣就回傳-1
-        log("[pdf_cosine] length of lists are not the same.")
-        log("[pdf_cosine][end]", lvl="i")
-        return -1
-
-def normal_consine(list_a,list_b):
-    log("[normal_cosine][start]", lvl="i")
+# 計算cosine
+# 直接用tf*idf或tf*pdf，代入整個cosine
+def cosines(list_a,list_b):
+    log("[cosines][start]", lvl="i")
     if len(list_a)==len(list_b):
         # 分母
         top = 0
@@ -224,22 +199,20 @@ def normal_consine(list_a,list_b):
         # 右分子
         btn_right = 0
 
+        log("%s, %s" % (list_a, list_b))
         for i in range(len(list_a)):
             top = top + (list_a[i]*list_b[i])
             btn_left = btn_left + pow(list_a[i],2)
             btn_right = btn_right + pow(list_b[i],2)
         cosine = top / (math.sqrt(btn_left)*math.sqrt(btn_right))
-        log("[normal_cosine] cosine: %s" % cosine)
-        log("[normal_cosine][end]", lvl="i")
+        log("[cosines] cosine: %s" % cosine)
+        log("[cosines][end]", lvl="i")
         return cosine
-
     else:
         # 如果兩個list大小不一樣就回傳-1
-        log("[normal_cosine] length of lists are not the same.")
-        log("[normal_cosine][end]", lvl="i")
+        log("[cosines] length of lists are not the same.")
+        log("[cosines][end]", lvl="i")
         return -1
-
-
 
 def main():
     # tf-idf測試資料
@@ -259,11 +232,15 @@ def main():
 
     tf_idf(corpus_tf_idf)
     log('='*40,lvl='i')
-    tf_pdf(corpus_tf_pdf,group)
+    res = tf_pdf(corpus_tf_pdf,group)
 
-    lista = [1,1]
-    listb = [1,1]
-    normal_consine(lista,listb)
+    for i in range(1,len(res)):
+        for j in range(1,i):
+            log("%s, %s" % (i,j))
+            cosines(res[i],res[j])
+
+# 計算混淆矩陣
+# http://blog.csdn.net/quiet_girl/article/details/70830796
 
 if __name__=="__main__":
     main()
