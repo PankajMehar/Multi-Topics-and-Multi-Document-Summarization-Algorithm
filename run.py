@@ -95,9 +95,9 @@ if __name__ =='__main__':
 
     # 取得各資料夾內檔案的清單，存到各變數中
     # 因為裡面的檔案命名都是以發生的時間，所以將要的檔案清單用正規表示法做限定
-    crimea = get_file_list(current_dir+'/source/crimea',pattern = "\d+")
-    hk = get_file_list(current_dir+'/source/hk',pattern = "\d+")
-    sewol = get_file_list(current_dir+'/source/sewol',pattern = "\d+")
+    crimea = get_file_list(current_dir+'/CNN/crimea',pattern = "\d+")
+    hk = get_file_list(current_dir+'/CNN/hk',pattern = "\d+")
+    sewol = get_file_list(current_dir+'/CNN/sewol',pattern = "\d+")
 
     # 開始計算所有主題內的新聞報導時間，包含開始、結束、報導的總時間(結束-開始)、各報導的檔案＋日期＋第n天報導的混合矩陣
     crimea_start, crimea_end, crimea_diff, crimea_matrix = run_days(crimea)
