@@ -71,14 +71,15 @@ if __name__ == '__main__':
     temp = []
 
     file_list = ['hk','sewol','crimea','test']
+    # file_list = ['crimea']
     source = 'theguardian'
 
     for folder in file_list:
-        if not os.path.exists(os.curdir+'/%s/%s/%s_title_tmp.txt' % (source,folder,folder)):
+        if not os.path.exists(os.curdir+'/%s/%s/%s_title_tmp_full.txt' % (source,folder,folder)):
             print('pass %s' % folder)
             pass
         else:
-            with open(os.curdir+'/%s/%s/%s_title_tmp.txt' % (source,folder,folder)) as urls:
+            with open(os.curdir+'/%s/%s/%s_title_tmp_full.txt' % (source,folder,folder)) as urls:
                 for line in urls.readlines():
                     # print(line)
                     url.append(line.strip())
