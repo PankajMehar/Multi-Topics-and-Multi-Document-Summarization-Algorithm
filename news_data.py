@@ -70,8 +70,8 @@ if __name__ == '__main__':
     url = []
     temp = []
 
-    file_list = ['hk','sewol','crimea','test']
-    # file_list = ['crimea']
+    # file_list = ['hk','sewol','crimea','test']
+    file_list = ['sewol']
     source = 'theguardian'
 
     for folder in file_list:

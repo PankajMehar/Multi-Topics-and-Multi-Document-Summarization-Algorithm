@@ -10,6 +10,7 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem.wordnet import WordNetLemmatizer
 import re
+from log_module import log
 
 class DocToSG():
 
@@ -28,7 +29,10 @@ class DocToSG():
 
     def load_document_common(self,docfile):
         file_name_r = os.path.basename(docfile).replace('.','_r.')
-        output_path = os.path.dirname(docfile)+'/'+file_name_r
+        output_path = os.path.dirname(docfile)+'_r/'+file_name_r
+        # 建立路徑存放產生出來的資料
+        if not os.path.exists(os.path.dirname(docfile)+'_r/'):
+            os.makedirs(os.path.dirname(docfile)+'_r/')
 
         with open (docfile,'r') as file:
             res = file.readlines()
@@ -58,10 +62,10 @@ class DocToSG():
         with open(docfile, 'r') as docF:
             SG = docF.readlines()
 
-        # 輸出到個檔案
+        # 輸出到各檔案
         for x in range(0,len(SG)):
             file_name = file_dir+"\\D"+str(days)+"SG"+str(x+1)+".txt"
-            print("\n[File]: "+file_name)
+            log("\n[File]: "+file_name)
             with open(file_name, 'w') as SGF:
                 res = self.ProcessText(SG[x])
                 SGF.write(res)
@@ -124,13 +128,13 @@ class DocToSG():
 
         if _textType in ['CC', 'PRP', 'MD', 'WP', 'IN', 'CD']:
             # 序號 指示代名詞 助動詞 疑問代名詞 介系詞 計數
-            print(u"\t詞性 %s:%s" % _text[0])
+            log(u"\t詞性 %s:%s" % _text[0])
             return None
         elif _textType[:2] == 'VB':
             # 動詞
             _word2 = WordNetLemmatizer().lemmatize(_word, 'v')
             if _word != _word2:
-                print("%s -> %s" % (_word, _word2))
+                log("%s -> %s" % (_word, _word2))
         elif _textType[:2] == 'NN':
             # 名詞
             if _word in self.specialNouns:
@@ -139,19 +143,19 @@ class DocToSG():
                 _word2 = WordNetLemmatizer().lemmatize(_word, 'n')
 
             if _word != _word2:
-                print("%s -> %s" % (_word, _word2))
+                log("%s -> %s" % (_word, _word2))
         elif _textType[:2] == 'RB':
             # 副詞
             _word2 = WordNetLemmatizer().lemmatize(_word, 'r')
             if _word != _word2:
-                print("%s -> %s" % (_word, _word2))
+                log("%s -> %s" % (_word, _word2))
         elif _textType[:2] == 'JJ':
             # 形容詞
             _word2 = WordNetLemmatizer().lemmatize(_word, 'a')
             if _word != _word2:
-                print("%s -> %s" % (_word, _word2))
+                log("%s -> %s" % (_word, _word2))
         else:
-            print(u"\t詞性 %s:%s" % _text[0])
+            log(u"\t詞性 %s:%s" % _text[0])
             _word2 = word
 
         return _word2
@@ -165,9 +169,9 @@ class DocToSG():
             word = word.replace("\n"," ")
             word = word.strip()
             if string.punctuation in word:
-                print("!!!!!!!!!!!!!!!"+word)
+                log("!!!!!!!!!!!!!!!"+word)
             if "\n" in word:
-                print("!!!!!!!!!!!!!!!"+word)
+                log("!!!!!!!!!!!!!!!"+word)
 
 
             if word in self.stopWords:
@@ -191,5 +195,5 @@ class DocToSG():
             if _word not in self.specialWords:
                 res = self.RemovePunctuation(_word)
                 _wordList.append(res)
-        print(_wordList)
+        log(_wordList)
         return ' '.join(_wordList)
