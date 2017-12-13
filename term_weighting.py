@@ -158,6 +158,7 @@ def tf_idf(corpus_list):
 
     log("[tf_idf] \n%s" % np.asarray(tf_idf_vect), lvl="i")
     log("[tf_idf][end]\n", lvl="i")
+    return tf_idf_vect
 
 # 計算tf_pdf
 # corpus_list是原本的文字矩陣，group_info是記錄哪些文件是相同的
@@ -205,7 +206,7 @@ def cosines(list_a,list_b):
             btn_left = btn_left + pow(list_a[i],2)
             btn_right = btn_right + pow(list_b[i],2)
         cosine = top / (math.sqrt(btn_left)*math.sqrt(btn_right))
-        log("[cosines] cosine: %s" % cosine)
+        log("[cosines] cosine: %s" % cosine,lvl='i')
         log("[cosines][end]", lvl="i")
         return cosine
     else:

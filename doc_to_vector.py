@@ -20,7 +20,7 @@ class DocToSG():
                     'much', 'many', 'well',
                     'go', 'take', 'come', 'become', 'call',
                     'new', 'old', 'others', 'rather', 'still', 'latter',
-                    'like', 'unlink', 'now', 'past', 'name', 'the']
+                    'like', 'unlink', 'now', 'past', 'name', 'the','£','“','£10m']
     # 轉換複數字為單數
     specialNouns = ['fintechs', 'replaces']
 

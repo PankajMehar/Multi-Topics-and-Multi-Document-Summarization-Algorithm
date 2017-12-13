@@ -15,7 +15,7 @@ from logging.handlers import RotatingFileHandler
 
 # 預設輸出的log 等級數字為11(Debug)
 # 只顯示info就設定為20
-out_put_lvl = 11
+out_put_lvl = 20
 
 dir = '%s/' % os.getcwd()
 dir = dir+datetime.datetime.now().strftime("%Y%m%d_")+"result/"

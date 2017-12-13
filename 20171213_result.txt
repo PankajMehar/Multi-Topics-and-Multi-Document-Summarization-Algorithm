@@ -1,0 +1,199 @@
+測試檔案為下面十個
+計算所有檔案的tf-idf值，接著用tf-idf的相似度嘗試找出正確的分群
+
+初步看起來是有機會可以找出正確分群的，只要相似度大於0.1就有機會
+
+day_one_data = [
+    '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_cnn_cr_0_r.txt',
+    '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_cnn_cr_1_r.txt',
+    '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_cnn_hk_0_r.txt',
+    '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_cnn_se_0_r.txt',
+    '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_cnn_se_1_r.txt',
+    '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_cnn_se_2_r.txt',
+    '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_the_cr_0_r.txt',
+    '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_the_hk_0_r.txt',
+    '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_the_se_0_r.txt',
+    '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_the_se_1_r.txt'
+]
+
+2017-12-13 23:54:12 I 2, 1
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.576178180668
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 3, 1
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0309160356169
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 3, 2
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0954725027028
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 4, 1
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0113915812424
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 4, 2
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0125774703035
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 4, 3
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0100898344496
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 5, 1
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0262798766813
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 5, 2
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0336515601313
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 5, 3
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0230392751297
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 5, 4
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.167951842009
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 6, 1
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.02971682136
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 6, 2
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.017391875413
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 6, 3
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.00835007111031
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 6, 4
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.180910730024
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 6, 5
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.214380437185
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 7, 1
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0218630536623
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 7, 2
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0259415184289
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 7, 3
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0118388021898
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 7, 4
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0331257778634
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 7, 5
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0687509450611
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 7, 6
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0406456826246
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 8, 1
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0280599879849
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 8, 2
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0407506137717
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 8, 3
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.108092832527
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 8, 4
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.049540902013
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 8, 5
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0231031599476
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 8, 6
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0358352543058
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 8, 7
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0659812347982
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 9, 1
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:12 I [cosines] cosine: 0.0155470658579
+2017-12-13 23:54:12 I [cosines][end]
+2017-12-13 23:54:12 I 9, 2
+2017-12-13 23:54:12 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.0242920049468
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 9, 3
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.0303944109436
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 9, 4
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.108733484707
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 9, 5
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.213631820747
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 9, 6
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.107036353003
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 9, 7
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.06747883807
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 9, 8
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.0483040150651
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 10, 1
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.0145991702492
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 10, 2
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.0377702739101
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 10, 3
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.0129363385794
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 10, 4
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.107216556857
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 10, 5
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.248229931391
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 10, 6
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.133391876042
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 10, 7
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.070366650973
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 10, 8
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.0364715377162
+2017-12-13 23:54:13 I [cosines][end]
+2017-12-13 23:54:13 I 10, 9
+2017-12-13 23:54:13 I [cosines][start]
+2017-12-13 23:54:13 I [cosines] cosine: 0.369962267582
+2017-12-13 23:54:13 I [cosines][end]
+
