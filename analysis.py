@@ -30,10 +30,24 @@ document_list = []
 for data in day_one_data:
     # data = '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_cnn_cr_0_r.txt'
     file = open(data,'r')
+    print(str(data))
     result = file.readline().strip().split(' ')
     document_list.append(result)
 log(document_list)
 res = tf_idf(document_list)
+log('===='*20)
+log(res)
+log('===='*20)
+log(len(res[0]))
+
+for i in range(1,len(res)):
+    for j in range(1,i):
+        log("%s, %s" % (i,j),lvl='i')
+        cosines(res[i],res[j])
+
+
+channel_list = [1,1,1,1,1,1,2,2,2,2]
+res = tf_pdf(document_list,channel_list)
 log('===='*20)
 log(res)
 log('===='*20)
