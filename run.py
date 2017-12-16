@@ -132,30 +132,30 @@ if __name__ =='__main__':
     create_document(the_hk_matrix, 'the_hk')
     create_document(the_sewol_matrix, 'the_se')
 
-    # # 產生Sentence Group之類的....
-    # format_document(cnn_crimea_matrix)
-    # format_document(cnn_hk_matrix)
-    # format_document(cnn_sewol_matrix)
-    #
-    # format_document(the_crimea_matrix)
-    # format_document(the_hk_matrix)
-    # format_document(the_sewol_matrix)
+    # 產生Sentence Group之類的....
+    format_document(cnn_crimea_matrix)
+    format_document(cnn_hk_matrix)
+    format_document(cnn_sewol_matrix)
 
-    # 將news_documents第一天的資料轉換成文字矩陣
-    day_one_data = [
-        '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_cnn_cr_0.txt',
-        '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_cnn_cr_1.txt',
-        '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_cnn_hk_0.txt',
-        '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_cnn_se_0.txt',
-        '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_cnn_se_1.txt',
-        '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_cnn_se_2.txt',
-        '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_the_cr_0.txt',
-        '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_the_hk_0.txt',
-        '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_the_se_0.txt',
-        '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_the_se_1.txt'
-    ]
-    # 將第一天的資料產生文字矩陣後，放在news_documents_r中
-    format_document(day_one_data)
+    format_document(the_crimea_matrix)
+    format_document(the_hk_matrix)
+    format_document(the_sewol_matrix)
+
+    # # 將news_documents第一天的資料轉換成文字矩陣
+    # day_one_data = [
+    #     '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_cnn_cr_0.txt',
+    #     '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_cnn_cr_1.txt',
+    #     '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_cnn_hk_0.txt',
+    #     '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_cnn_se_0.txt',
+    #     '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_cnn_se_1.txt',
+    #     '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_cnn_se_2.txt',
+    #     '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_the_cr_0.txt',
+    #     '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_the_hk_0.txt',
+    #     '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_the_se_0.txt',
+    #     '/Users/yuhsuan/Desktop/MEMDS/news_documents/day0_the_se_1.txt'
+    # ]
+    # # 將第一天的資料產生文字矩陣後，放在news_documents_r中
+    # format_document(day_one_data)
 
 
     

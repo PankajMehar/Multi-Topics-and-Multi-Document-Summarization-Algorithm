@@ -8,6 +8,7 @@ import os
 import string
 import nltk
 from nltk.corpus import stopwords
+from nltk.tokenize import RegexpTokenizer
 from nltk.stem.wordnet import WordNetLemmatizer
 import re
 from log_module import log
@@ -72,13 +73,24 @@ class DocToSG():
 
     # 移除標點符號
     def RemovePunctuation(self, word):
-        if word[-1:] in string.punctuation:
+        # print(string.punctuation)
+        # 自訂特殊標點符號
+        special_words = '“'
+        symbol = string.punctuation+special_words
+        if word[-1:] in symbol:
             word = word[:len(word) - 1]
 
         if word != '':
-            if word[0] in string.punctuation:
+            if word[0] in symbol:
                 word = word[1:]
 
+        tokenizer = RegexpTokenizer(r'\w+')
+        word = tokenizer.tokenize(word)
+
+        if len(word) >=1:
+            word = word[0]
+        else:
+            word = ''
         return word
 
     # 移除所有格
