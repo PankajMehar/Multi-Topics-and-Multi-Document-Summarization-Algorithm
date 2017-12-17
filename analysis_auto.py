@@ -68,6 +68,16 @@ for day in range(0,max_day+1):
         document_list.append(result)
     log('document_list: %s' % document_list)
 
+    # tf_idf的預測與結果
+    tf_idf_cos = []
+    tf_idf_pre = []
+    tf_idf_act = []
+    tf_idf_cre = 0.05 #設定準確率
+    # tf_pdf的預測與結果
+    tf_pdf_pre = []
+    tf_pdf_act = []
+    tf_pdf_cre = 0.1
+
     # 計算tf_idf資料
     log('計算tf-idf資料'+'===='*20,lvl='i')
     res = tf_idf(document_list)
@@ -80,12 +90,29 @@ for day in range(0,max_day+1):
     log('計算tf-idf相似度' + '====' * 20, lvl='i')
     matrix = [[None]*(len(res)-1) for i in range(len(res)-1)]
     for i in range(1, len(res)):
-        for j in range(1, i+1):
+        for j in range(1, i):
             log("%s, %s" % (i, j), lvl='i')
             cos = cosines(res[i], res[j])
-            matrix[j-1][i-1] = cos
-    log('tf-idf: \n%s' % np.asarray(matrix),lvl='i')
 
+            tf_idf_cos.append(cos)
+            # 預測部分
+            if cos>=tf_idf_cre:
+                tf_idf_pre.append(1)
+            else:
+                tf_idf_pre.append(0)
+
+            # 真實部分
+            if df['theme'][i-1]==df['theme'][j-1]:
+                tf_idf_act.append(1)
+            else:
+                tf_idf_act.append(0)
+
+            matrix[j-1][i-1] = cos
+    log('tf-idf: \n%s' % matrix,lvl='i')
+    log('tf_idf_cos: %s,tf_idf_pre: %s, tf_idf_act: %s' % (tf_idf_cos,tf_idf_pre,tf_idf_act),lvl='i')
+    from sklearn import metrics
+
+    log('\n\nprecision: %s, recall: %s, f1-score: %s\n\n' % (metrics.precision_score(tf_idf_act, tf_idf_pre),metrics.recall_score(tf_idf_act, tf_idf_pre),metrics.f1_score(tf_idf_act, tf_idf_pre)),lvl='i')
     # 計算tf_pdf資料
     log('計算tf-pdf資料' + '====' * 20, lvl='i')
     res = tf_pdf(document_list, channel_list)
@@ -102,4 +129,4 @@ for day in range(0,max_day+1):
             log("%s, %s" % (i, j), lvl='i')
             cos = cosines(res[i], res[j])
             matrix[j-1][i-1] = cos
-    log('tf-pdf: \n%s' % np.asarray(matrix), lvl='i')
+    log('tf-pdf: \n%s' % matrix, lvl='i')

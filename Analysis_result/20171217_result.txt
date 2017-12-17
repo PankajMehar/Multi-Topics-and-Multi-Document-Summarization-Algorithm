@@ -1,0 +1,18 @@
+這邊是處理出來的結果，門檻設定為0.05,跑一跑會有error要再確認看看為什麼
+
+cat /Users/yuhsuan/Desktop/MEMDS/20171217_result/20171217_232907.log | grep 'precision:'
+
+precision: 0.705882352941, recall: 0.857142857143, f1-score: 0.774193548387
+precision: 1.0, recall: 0.619047619048, f1-score: 0.764705882353
+precision: 0.833333333333, recall: 0.833333333333, f1-score: 0.833333333333
+precision: 1.0, recall: 0.75, f1-score: 0.857142857143
+precision: 0.777777777778, recall: 1.0, f1-score: 0.875
+precision: 1.0, recall: 1.0, f1-score: 1.0
+precision: 1.0, recall: 0.857142857143, f1-score: 0.923076923077
+precision: 1.0, recall: 1.0, f1-score: 1.0
+precision: 0.842105263158, recall: 0.888888888889, f1-score: 0.864864864865
+precision: 0.904761904762, recall: 0.527777777778, f1-score: 0.666666666667
+precision: 0.904761904762, recall: 0.550724637681, f1-score: 0.684684684685
+precision: 0.913043478261, recall: 0.677419354839, f1-score: 0.777777777778
+precision: 1.0, recall: 1.0, f1-score: 1.0
+precision: 0.0, recall: 0.0, f1-score: 0.0
