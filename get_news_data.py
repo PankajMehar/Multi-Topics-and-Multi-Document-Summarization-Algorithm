@@ -4,6 +4,8 @@
 # @File    : news_data.py
 # @Software: PyCharm Community Edition
 
+# 根據某個檔案內的所有新聞路徑將其資料抓取出來後存擋
+
 from newspaper import Article,fulltext
 import requests
 from lxml import html
