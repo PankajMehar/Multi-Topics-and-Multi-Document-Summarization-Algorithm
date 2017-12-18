@@ -1,9 +1,14 @@
 # MEMDS
+2017/12/18
+1. 修改parsing的方式，避免沒有紀錄的資料被處理
+結果記錄在20171218_result.txt
+
 2017/12/17
 1. 增加analysis_auto.py可以自動抓取某一資料夾內的資料，依據日子來做分析計算出相似度
 2. 將分析資料的excel計算出ACC, P, R, F1
 3. 修改一些檔案名稱
 4. 已經將正確率等做出來！！！！ 但是需要再看一下怎麼處理資料最好
+reference: http://d0evi1.com/sklearn/model_evaluation/
 
 2017/12/14
 1. 將第一天的資料以TF-PDF做分析,取得結果沒有特別明顯

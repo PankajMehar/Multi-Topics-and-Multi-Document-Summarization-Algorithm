@@ -32,7 +32,7 @@ max_day = max(df['day'])
 log('max_day: %s' % max_day,lvl='i')
 
 # 處理每一天的數據
-for day in range(0,max_day+1):
+for day in list(set(df['day'])):
     log('===='*20,lvl='i')
     log('process day: %s data' % day,lvl='i')
     # 每天的所有資料
@@ -97,22 +97,22 @@ for day in range(0,max_day+1):
             tf_idf_cos.append(cos)
             # 預測部分
             if cos>=tf_idf_cre:
-                tf_idf_pre.append(1)
+                tf_idf_pre.append(True)
             else:
-                tf_idf_pre.append(0)
+                tf_idf_pre.append(False)
 
             # 真實部分
             if df['theme'][i-1]==df['theme'][j-1]:
-                tf_idf_act.append(1)
+                tf_idf_act.append(True)
             else:
-                tf_idf_act.append(0)
+                tf_idf_act.append(False)
 
             matrix[j-1][i-1] = cos
     log('tf-idf: \n%s' % matrix,lvl='i')
     log('tf_idf_cos: %s,tf_idf_pre: %s, tf_idf_act: %s' % (tf_idf_cos,tf_idf_pre,tf_idf_act),lvl='i')
     from sklearn import metrics
 
-    log('\n\nprecision: %s, recall: %s, f1-score: %s\n\n' % (metrics.precision_score(tf_idf_act, tf_idf_pre),metrics.recall_score(tf_idf_act, tf_idf_pre),metrics.f1_score(tf_idf_act, tf_idf_pre)),lvl='i')
+    log('\n\nday: %s, files: %s, precision: %s, recall: %s, f1-score: %s\n\n' % (day,len(df),metrics.precision_score(tf_idf_act, tf_idf_pre),metrics.recall_score(tf_idf_act, tf_idf_pre),metrics.f1_score(tf_idf_act, tf_idf_pre)),lvl='i')
     # 計算tf_pdf資料
     log('計算tf-pdf資料' + '====' * 20, lvl='i')
     res = tf_pdf(document_list, channel_list)
