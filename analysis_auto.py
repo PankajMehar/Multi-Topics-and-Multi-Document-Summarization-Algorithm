@@ -112,7 +112,7 @@ for day in list(set(df['day'])):
     log('tf_idf_cos: %s,tf_idf_pre: %s, tf_idf_act: %s' % (tf_idf_cos,tf_idf_pre,tf_idf_act),lvl='i')
     from sklearn import metrics
 
-    log('\n\nday: %s, files: %s, precision: %s, recall: %s, f1-score: %s\n\n' % (day,len(df),metrics.precision_score(tf_idf_act, tf_idf_pre),metrics.recall_score(tf_idf_act, tf_idf_pre),metrics.f1_score(tf_idf_act, tf_idf_pre)),lvl='i')
+    log('\n\nday: %s, files: %s, accuracy: %s, precision: %s, recall: %s, f1-score: %s\n\n' % (day,len(df),metrics.accuracy_score(tf_idf_act, tf_idf_pre),metrics.precision_score(tf_idf_act, tf_idf_pre),metrics.recall_score(tf_idf_act, tf_idf_pre),metrics.f1_score(tf_idf_act, tf_idf_pre)),lvl='i')
     # 計算tf_pdf資料
     log('計算tf-pdf資料' + '====' * 20, lvl='i')
     res = tf_pdf(document_list, channel_list)

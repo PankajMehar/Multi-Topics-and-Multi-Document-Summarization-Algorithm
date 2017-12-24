@@ -23,6 +23,7 @@ https://zh.wikipedia.org/wiki/%E8%8B%B1%E5%9C%8B%E5%8E%BB%E7%95%99%E6%AD%90%E7%9
 gravitational wave site:cnn.com 2016/1/1~2016/4/1
 https://zh.wikipedia.org/wiki/GW150914
 
+2. 補上accuracy的資料
 
 
 2017/12/18
