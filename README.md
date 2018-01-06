@@ -1,15 +1,17 @@
 # MEMDS
 
+#### 2017/01/06
+
 
 #### 2017/12/24
 * 補上accuracy的資料
 * 預期新增的主題:
-  1. [嘉爾泰隆獨立事件 (Catalan independence 09/01~12/01)](https://en.wikipedia.org/wiki/Catalan_independence_movement)
+  1. [嘉爾泰隆獨立事件 (Catalan independence site: cnn.com 09/01~12/01)](https://en.wikipedia.org/wiki/Catalan_independence_movement)
   2. (iphone X 09/01~12/01)
-  3. [北韓飛彈試射 (North Korean missile 8/1/2017~10/1/2017)](https://en.wikipedia.org/wiki/2017_North_Korean_missile_tests#Mid-range_launch_over_Japan)
+  3. [北韓飛彈試射 (North Korean missile site: cnn.com 8/1/2017~10/1/2017)](https://en.wikipedia.org/wiki/2017_North_Korean_missile_tests#Mid-range_launch_over_Japan)
   4. [Syria chemical attack site:cnn.com4/1/2017 06/01/2017](https://en.wikipedia.org/wiki/Khan_Shaykhun_chemical_attack)
   5. [Turkish coup  attempt site:theguardian.com 7/1/2016  8/1/2016](https://zh.wikipedia.org/wiki/2016%E5%B9%B4%E5%9C%9F%E8%80%B3%E5%85%B6%E6%94%BF%E8%AE%8A)
-  6. [Brexit vote](https://zh.wikipedia.org/wiki/%E8%8B%B1%E5%9C%8B%E5%8E%BB%E7%95%99%E6%AD%90%E7%9B%9F%E5%85%AC%E6%8A%95#%E6%8A%95%E7%A5%A8%E7%B5%90%E6%9E%9C)
+  6. [Brexit voteBrexit vote site: cnn.com](https://zh.wikipedia.org/wiki/%E8%8B%B1%E5%9C%8B%E5%8E%BB%E7%95%99%E6%AD%90%E7%9B%9F%E5%85%AC%E6%8A%95#%E6%8A%95%E7%A5%A8%E7%B5%90%E6%9E%9C)
   7. [gravitational wave site:cnn.com 2016/1/1~2016/4/1](https://zh.wikipedia.org/wiki/GW150914)
 ---------------------------------------
 #### 2017/12/18
