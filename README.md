@@ -6,7 +6,7 @@
 #### 2017/12/24
 * 補上accuracy的資料
 * 預期新增的主題:
-  1. [嘉爾泰隆獨立事件 - Catalan independence site: cnn.com (09/01/2017~12/01/2017)](https://en.wikipedia.org/wiki/Catalan_independence_movement)
+  1. [嘉爾泰隆獨立事件 - catalan independence site: cnn.com daterange:2017-09-01..2017-12-31](https://en.wikipedia.org/wiki/Catalan_independence_movement)
   2. (iphone X 09/01~12/01)
   3. [北韓飛彈試射 - North Korean missile site: cnn.com (08/1/2017~10/01/2017)](https://en.wikipedia.org/wiki/2017_North_Korean_missile_tests#Mid-range_launch_over_Japan)
   4. [敘利亞化學攻擊 - Syria chemical attack site:cnn.com (04/01/2017~06/01/2017)](https://en.wikipedia.org/wiki/Khan_Shaykhun_chemical_attack)
