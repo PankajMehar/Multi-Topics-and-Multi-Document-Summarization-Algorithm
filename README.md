@@ -38,18 +38,18 @@ reference: http://d0evi1.com/sklearn/model_evaluation/
 #### 2017/12/11
 * 將hk的資料抓取完畢
 * 將世越號資料抓取完畢
-- [x]開始進行分類比對
+- [x] 開始進行分類比對
 ---------------------------------------
 #### 2017/12/10
 * 設計抓新聞的機制(衛報)
 * 將crimea的資料抓完
 * 將資料夾名稱重新設計
-- [ ] 將其他的兩個主題抓完
+- [x] 將其他的兩個主題抓完
 ---------------------------------------
 #### 2017/12/06
 * 完成餘弦相似度，且確認可以直接套用idf-cosine與pdf-cosine
-- [ ]接著做 precision, recall, F1的計算
-[http://blog.csdn.net/quiet_girl/article/details/70830796]
+- [x] 接著做 precision, recall, F1的計算
+(http://blog.csdn.net/quiet_girl/article/details/70830796)
 ---------------------------------------
 #### 2017/12/01
 * 完成tf-pdf驗證與計算
@@ -63,7 +63,7 @@ reference: http://d0evi1.com/sklearn/model_evaluation/
 #### 2017/11/25
 * 完成text_to_vector
 * 完成tf
-- [ ]預計下次完成idf計算   log(出現的文件次數/總文件數)
+- [x] 預計下次完成idf計算   log(出現的文件次數/總文件數)
 ---------------------------------------
 #### 2017/11/22
 * 找出目前可直接套用tfidf的package
@@ -72,4 +72,4 @@ reference: http://d0evi1.com/sklearn/model_evaluation/
 #### 2017/11/20
 * 將原本的code重構
 * 將蒐集到的新聞報導，根據不同的主題先找出各新聞的時間點
-- [ ]將各文件的Sentence Group矩陣轉換出來單一文件
+- [x] 將各文件的Sentence Group矩陣轉換出來單一文件
