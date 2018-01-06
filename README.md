@@ -4,7 +4,7 @@
 #### 2017/12/24
 * 補上accuracy的資料
 * 預期新增的主題:
-  1. [嘉爾泰隆獨立事件 (Catalan independence 09/01~12/01)][https://en.wikipedia.org/wiki/Catalan_independence_movement]
+  1. [嘉爾泰隆獨立事件 (Catalan independence 09/01~12/01)](https://en.wikipedia.org/wiki/Catalan_independence_movement)
   2. (iphone X 09/01~12/01)
   3. [北韓飛彈試射 (North Korean missile 8/1/2017~10/1/2017)](https://en.wikipedia.org/wiki/2017_North_Korean_missile_tests#Mid-range_launch_over_Japan)
   4. [Syria chemical attack site:cnn.com4/1/2017 06/01/2017](https://en.wikipedia.org/wiki/Khan_Shaykhun_chemical_attack)
@@ -38,7 +38,7 @@ reference: http://d0evi1.com/sklearn/model_evaluation/
 #### 2017/12/11
 * 將hk的資料抓取完畢
 * 將世越號資料抓取完畢
-- [ ]開始進行分類比對
+- [x]開始進行分類比對
 ---------------------------------------
 #### 2017/12/10
 * 設計抓新聞的機制(衛報)
