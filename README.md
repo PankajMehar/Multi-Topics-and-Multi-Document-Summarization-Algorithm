@@ -6,13 +6,13 @@
 #### 2017/12/24
 * 補上accuracy的資料
 * 預期新增的主題:
-  1. [嘉爾泰隆獨立事件 (Catalan independence site: cnn.com 09/01~12/01)](https://en.wikipedia.org/wiki/Catalan_independence_movement)
+  1. [嘉爾泰隆獨立事件 - Catalan independence site: cnn.com (09/01/2017~12/01/2017)](https://en.wikipedia.org/wiki/Catalan_independence_movement)
   2. (iphone X 09/01~12/01)
-  3. [北韓飛彈試射 (North Korean missile site: cnn.com 8/1/2017~10/1/2017)](https://en.wikipedia.org/wiki/2017_North_Korean_missile_tests#Mid-range_launch_over_Japan)
-  4. [Syria chemical attack site:cnn.com4/1/2017 06/01/2017](https://en.wikipedia.org/wiki/Khan_Shaykhun_chemical_attack)
-  5. [Turkish coup  attempt site:theguardian.com 7/1/2016  8/1/2016](https://zh.wikipedia.org/wiki/2016%E5%B9%B4%E5%9C%9F%E8%80%B3%E5%85%B6%E6%94%BF%E8%AE%8A)
-  6. [Brexit voteBrexit vote site: cnn.com](https://zh.wikipedia.org/wiki/%E8%8B%B1%E5%9C%8B%E5%8E%BB%E7%95%99%E6%AD%90%E7%9B%9F%E5%85%AC%E6%8A%95#%E6%8A%95%E7%A5%A8%E7%B5%90%E6%9E%9C)
-  7. [gravitational wave site:cnn.com 2016/1/1~2016/4/1](https://zh.wikipedia.org/wiki/GW150914)
+  3. [北韓飛彈試射 - North Korean missile site: cnn.com (08/1/2017~10/01/2017)](https://en.wikipedia.org/wiki/2017_North_Korean_missile_tests#Mid-range_launch_over_Japan)
+  4. [敘利亞化學攻擊 - Syria chemical attack site:cnn.com (04/01/2017~06/01/2017)](https://en.wikipedia.org/wiki/Khan_Shaykhun_chemical_attack)
+  5. [土耳其政變 - Turkish coup attempt site:theguardian.com (07/01/2016~08/01/2016)](https://zh.wikipedia.org/wiki/2016%E5%B9%B4%E5%9C%9F%E8%80%B3%E5%85%B6%E6%94%BF%E8%AE%8A)
+  6. [英國脫歐 - Brexit vote site: cnn.com (06/01/2016~07/31/2016)](https://zh.wikipedia.org/wiki/%E8%8B%B1%E5%9C%8B%E5%8E%BB%E7%95%99%E6%AD%90%E7%9B%9F%E5%85%AC%E6%8A%95#%E6%8A%95%E7%A5%A8%E7%B5%90%E6%9E%9C)
+  7. [重力波 - gravitational wave site:cnn.com (01/01/2016~04/01/2016)](https://zh.wikipedia.org/wiki/GW150914)
 ---------------------------------------
 #### 2017/12/18
 * 修改parsing的方式，避免沒有紀錄的資料被處理
