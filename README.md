@@ -1,5 +1,36 @@
 # MEMDS
+#### 2017/01/08
+* 檢查抓取得資料是否有問題
+- [ ] CNN - brexit
+- [ ] CNN - catalan
+- [ ] CNN - crimea
+- [ ] CNN - gravitational
+- [ ] CNN - hk
+- [ ] CNN - missile
+- [ ] CNN - sewol
+- [ ] CNN - syria
+- [ ] CNN - turkish
 
+- [ ] NewYorkTimes - brexit
+- [ ] NewYorkTimes - catalan
+- [ ] NewYorkTimes - crimea
+- [ ] NewYorkTimes - gravitational
+- [ ] NewYorkTimes - hk
+- [ ] NewYorkTimes - missile
+- [ ] NewYorkTimes - sewol
+- [ ] NewYorkTimes - syria
+- [ ] NewYorkTimes - turkish
+
+- [X] Theguardian - brexit
+- [ ] Theguardian - catalan
+- [ ] Theguardian - crimea
+- [ ] Theguardian - gravitational
+- [ ] Theguardian - hk
+- [ ] Theguardian - missile
+- [ ] Theguardian - sewol
+- [ ] Theguardian - syria
+- [ ] Theguardian - turkish
+---------------------------------------
 #### 2017/01/07
 * 將6個主題資料擷取完畢
 - [ ] 將所有的資料進行相似度分析

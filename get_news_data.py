@@ -16,7 +16,7 @@ from log_module import log
 
 def news_extract(news_url,name=None,source=None):
     log('[news_extract][start]')
-    log('name: %s, source: %s, url: %s' % (name,source,news_url))
+    log('[news_extract] name: %s, source: %s, url: %s' % (name,source,news_url))
     try:
         if name == None:
             name = 'test'
@@ -46,29 +46,27 @@ def news_extract(news_url,name=None,source=None):
 
         authors = article.authors
         date = article.publish_date
-        date  = datetime.datetime.strftime(date, '%Y%m%d %H%M%S.txt')
+        date  = datetime.datetime.strftime(date, '%Y%m%d %H%M%S')
         title = article.title
+
+        if title =='':
+            log('[news_extract] Error found: the new has no title, skip this one.', lvl='W')
+            log('[news_extract][end]\n')
+            return False
 
         # 避免重複的日期
         file_name = date
-        for i in range(9):
-            if not os.path.exists(os.curdir+'/%s/%s/' % (source,name)+file_name):
+        for i in range(40):
+            if not os.path.exists(os.curdir+'/%s/%s/' % (source,name)+file_name+'.txt'):
                 break
             else:
-                file_name = file_name[:14]+str(i)+file_name[15:]
+                fname = file_name.split(' ')
+                number = int(fname[1])+1
+                file_name = '%s %s' % (fname[0],str(number).zfill(6))
 
-        with open(os.curdir+'/%s/%s/' % (source,name) +file_name,'a+') as file:
+        with open(os.curdir+'/%s/%s/' % (source,name) +file_name+'.txt','a+') as file:
             file.writelines(text)
-        # article.nlp()
-        # summary = article.summary
-        # print(text)
-        # print("========================================================")
-        # print(summary)
-        # print("========================================================")
-        # print(article.meta_data)
-        # #
-        # print(title)
-        # print(authors)
+
         result = []
         result.append(file_name)
         result.append(title)
@@ -77,7 +75,7 @@ def news_extract(news_url,name=None,source=None):
         log('[news_extract][end]\n')
         return result
     except Exception as e:
-        log('Error found: %s\nMessage: %s' % (news_url,e),lvl='W')
+        log('[news_extract] Error found: %s skip this one. \nMessage: %s' % (news_url,e),lvl='W')
         log('[news_extract][end]\n')
         return False
 
@@ -101,15 +99,18 @@ if __name__ == '__main__':
                         # print(line)
                         url.append(line.strip())
 
+                # 避免資料中本身有重複的網址
+                url = list(set(url))
+                log('There are %s urls' % len(url),lvl='I')
+
                 for i in url:
                     log(i)
                     res = news_extract(i,name=folder,source = source)
                     if res != False:
                         temp.append(res)
-
                 temp.sort()
-
-                log('write file')
+                log('Total: %s, Without Error: %s' % (len(url),len(temp)), lvl='I')
+                log('Create news title list file.', lvl ='I')
                 for lines in temp:
                     with open(os.curdir+'/%s/%s/%s_title.txt' % (source,folder,folder),'a+') as file:
                         file.writelines(lines[0]+'   '+lines[1]+'   '+lines[2]+'\n')
