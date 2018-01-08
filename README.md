@@ -22,7 +22,7 @@
 - [ ] NewYorkTimes - turkish
 
 - [X] Theguardian - brexit
-- [ ] Theguardian - catalan
+- [X] Theguardian - catalan
 - [ ] Theguardian - crimea
 - [ ] Theguardian - gravitational
 - [ ] Theguardian - hk
