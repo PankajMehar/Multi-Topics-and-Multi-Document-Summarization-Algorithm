@@ -11,15 +11,15 @@
 - [ ] CNN - syria
 - [ ] CNN - turkish
 
-- [ ] NewYorkTimes - brexit
-- [ ] NewYorkTimes - catalan
-- [ ] NewYorkTimes - crimea
-- [ ] NewYorkTimes - gravitational
-- [ ] NewYorkTimes - hk
-- [ ] NewYorkTimes - missile
-- [ ] NewYorkTimes - sewol
-- [ ] NewYorkTimes - syria
-- [ ] NewYorkTimes - turkish
+- [X] NewYorkTimes - brexit
+- [X] NewYorkTimes - catalan
+- [X] NewYorkTimes - crimea
+- [X] NewYorkTimes - gravitational
+- [X] NewYorkTimes - hk
+- [X] NewYorkTimes - missile
+- [X] NewYorkTimes - sewol
+- [X] NewYorkTimes - syria
+- [X] NewYorkTimes - turkish
 
 - [X] Theguardian - brexit
 - [X] Theguardian - catalan
