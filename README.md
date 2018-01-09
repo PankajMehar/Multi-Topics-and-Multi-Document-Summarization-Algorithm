@@ -1,15 +1,15 @@
 # MEMDS
-#### 2017/01/08
+#### 2017/01/08~09
 * 檢查抓取得資料是否有問題
-- [ ] CNN - brexit
-- [ ] CNN - catalan
-- [ ] CNN - crimea
-- [ ] CNN - gravitational
-- [ ] CNN - hk
-- [ ] CNN - missile
-- [ ] CNN - sewol
-- [ ] CNN - syria
-- [ ] CNN - turkish
+- [X] CNN - brexit
+- [X] CNN - catalan
+- [X] CNN - crimea
+- [X] CNN - gravitational
+- [X] CNN - hk
+- [X] CNN - missile
+- [X] CNN - sewol
+- [X] CNN - syria
+- [X] CNN - turkish
 
 - [X] NewYorkTimes - brexit
 - [X] NewYorkTimes - catalan
