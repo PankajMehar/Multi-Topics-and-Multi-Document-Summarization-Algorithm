@@ -15,12 +15,12 @@ import numpy as np
 import pandas
 
 # 先取得目錄下所有的檔案名稱
-file_list = get_file_list('/Users/yuhsuan/Desktop/MEMDS/news_documents_r/')
+file_list = get_file_list('/Users/yuhsuan/Desktop/MEMDS/news_documents/')
 
 file_info = []
 # 取得每個資料的日,來源,主題
 for i in file_list:
-    m = re.match('.*day(\d+)_(.*)_(.*)_.*_.*.txt',i)
+    m = re.match('.*day(\d+)_(.*)_(.*)_.*.txt',i)
     file_info.append([m.group(0),int(m.group(1)),m.group(2),m.group(3)])
 
 # 顯示所有的資料
