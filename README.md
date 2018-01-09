@@ -23,13 +23,13 @@
 
 - [X] Theguardian - brexit
 - [X] Theguardian - catalan
-- [ ] Theguardian - crimea
-- [ ] Theguardian - gravitational
-- [ ] Theguardian - hk
-- [ ] Theguardian - missile
-- [ ] Theguardian - sewol
-- [ ] Theguardian - syria
-- [ ] Theguardian - turkish
+- [X] Theguardian - crimea
+- [X] Theguardian - gravitational
+- [X] Theguardian - hk
+- [X] Theguardian - missile
+- [X] Theguardian - sewol
+- [X] Theguardian - syria
+- [X] Theguardian - turkish
 ---------------------------------------
 #### 2017/01/07
 * 將6個主題資料擷取完畢

@@ -89,6 +89,8 @@ if __name__ == '__main__':
 
     for folder in file_list:
         for source in sources:
+            url=[]
+            temp=[]
             if os.path.exists(os.curdir+'/%s/%s/%s_title.txt' % (source,folder,folder)):
                 log('pass %s,%s' % (source,folder))
                 pass

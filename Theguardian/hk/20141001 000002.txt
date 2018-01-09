@@ -1,17 +1,22 @@
-Umbrellas and yellow ribbons aren’t the only symbols being used by the city’s protesters: the Instagram hashtag #hk689 refers to the number of votes Hong Kong’s chief executive needed to reach office thanks to its current electoral system
-Name: 689.
-Age: 60.
-Appearance: The loneliest number since the number one.
-OK, I’ve Googled “689”. This isn’t about the bus route from West Croydon to Monks Orchard, is it? Look, I’ll put you out of your misery. I’m referring to CY Leung.
-Hong Kong’s chief executive? That’s right. All the pro-democracy protests in Hong Kong that you’ve been reading about lately? They are calling for CY Leung to be removed from office.
-But what does that have to do with the number 689? That’s Leung’s nickname, silly. It’s how many people voted for him in 2012.
-Seven million people in Hong Kong and he only got 689 votes? How on earth did Leung get to be chief executive? To be fair, only 1,200 votes were cast. He was voted in by the elite electoral committee that steers Hong Kong’s leadership.
-That hardly sounds democratic. Which explains the protests. Good, we’re all up to speed.
-Well, we wrapped this one up quickly today. Great job! Same time tomorrow? Not so fast – I brought it up because “689” now appears to have been taken up as an unofficial symbol of the protests.
-How so? The hashtag “#hk689” has become popular on Instagram, helping to spread word of the protests further than traditional media outlets would have allowed.
-And has it worked? Very well, it seems – the Chinese government has reportedly rushed to block Instagram, just as it previously did with Facebook and Twitter. If that isn’t a sign the protesters are doing something right, nothing is.
-What are the other symbols of the protest? Umbrellas, which protect the protesters against pepper spray; and yellow ribbons, the universal emblem of suffrage. And, um, Les Misérables.
-Pardon? Protesters have daubed “Do You Hear the People Sing?” – the title of a song from the musical – on posters, and reportedly sing the song en masse to remind themselves of their cause.
-Does that mean it’ll end up being the official anthem of Hong Kong if the protesters get their way? God, I hope not.
-Do say: “What a perfect, snappy protest slogan to use in an era of quickly disseminated social-media messages.”
-Don’t say: “Why was five afraid of six? Because six ate nine.”
+Both iPhone and Android users among Hong Kong demonstrations targeted by fake apps that may come from ‘nation-state’ attackers, says Lacoon Mobile Security
+Protesters in Hong Kong calling for democracy reforms are being targeted by spyware that can affect both iPhones and smartphones running Google’s Android software, a security company claims.
+However the iPhone users among the thousands of protesters should be safe if they have not bypassed Apple’s security system to “jailbreak” their phones to install unapproved apps.
+
+The discovery marks the second time that the demonstrators’ phones appear to have been targeted since the protests began last week.
+Dubbed Xsser mRAT by Israeli firm Lacoon Mobile Security, the malware is being run from the same server as a malicious program targeting Android phones spotted last week. That masqueraded as an app for the Occupy Central pro-democracy movement and was spread via messages on the cross-platform Whatsapp messaging system which urged readers to “Check out this Android app designed by Code4HK for the coordination of Occupy Central!”. Protest organisers said none of its members had developed or distributed the application.
+Lacoon said the Chinese government, which has been accused of various digital attacks on activists in recent years, was likely coordinating the attacks – though there is no proof the iPhone malware has infected any of the protesters’ phones. Only those which have been “jailbroken” by the owner to circumvent Apple’s normal security against unauthorised apps are vulnerable. However some users in Asia have jailbroken their iPhones in order to install local apps that are not approved for Apple’s App Store, or run special software. The malware does not itself appear to be able to jailbreak the iPhones.
+The version targeting Android smartphones can spy on the user because it masquerades as an app for organising the protest - and requests access to the owner’s phone address book, web browsing history, location, text messages, and phone call log. It can also record audio. Those details can then be sent to a web server in South Korea which appears to be controlled by a source in mainland China. If successfully installed, the iPhone malware collects the same data.
+“Cross-platform attacks that target both iOS [iPhone] and Android devices are rare, and indicate that this may be conducted by a very large organisation or nation state,” Lacoon co-founder Ohad Bobrov said in a blog post. “The fact that this attack is being used against protesters and is being executed by Chinese-speaking attackers suggests it’s first iOS trojan linked to Chinese government cyber activity.”
+The US-based Electronic Frontier Foundation noted the likelihood of anyone involved in the Hong Kong protests getting infected was not high, given iOS devices had to be jailbroken and Android users still had to be tricked into downloading the malicious software, which was not on the official Google Play market and was not spreading on its own.
+
+The EFF also said that just because the iOS and Android malware are run from the same servers does not mean they are both are aimed at Hong Kong protesters.
+Claudio Guarnieri, a security expert now working to help activists across the globe, said over Twitter the iOS malware didn’t seem unique and was certainly not advanced as Lacoon had suggested, nor was there any evidence it was hitting Hong Kong protesters.
+But onlookers are still concerned about the range of malware targeting activists over different platforms. Security firm Kaspersky Lab confirmed it had also seen various examples of malicious apps for iOS and Android, as well as spyware samples for other platforms, related to the Hong Kong protests.
+
+“Since nearly every part of our lives now has a digital aspect to it, it’s no surprise, in a situation like this, to discover that there are those who wish to steal information from those involved. It is not the first nor the last attack of this kind. We previously observed both targeted and cybercriminal attacks against mobile users. This is unlikely to stop anytime soon, on the contrary, we are witnessing a steady growth of mobile malware,” said David Emm, principal security researcher at Kaspersky Lab.
+
+Guarnieri told the Guardian attacks over mobile on activists “have been happening for a while already and certainly won’t stop”.
+
+“By experience I see many activists putting an inherent trust in their phones while growing a distrust in their computers, and that leads sometimes to irresponsible use of both those technologies.”
+
+In June, so-called “lawful interception” technology was seen posing as a genuine Android news app, which appeared to be targeting people linked to political protest in eastern Saudi Arabia. Analyses of government-grade iOS malware date back to at least 2012.
