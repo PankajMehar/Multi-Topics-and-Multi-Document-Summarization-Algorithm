@@ -9,7 +9,7 @@
 
 from term_weighting import *
 from log_module import log
-from run import get_file_list
+from text_processor import get_file_list
 import re
 import numpy as np
 import pandas

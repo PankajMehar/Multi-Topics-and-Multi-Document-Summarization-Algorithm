@@ -28,12 +28,18 @@ class DocToSG():
     def __init__(self, lang):
         self.stopWords = set(stopwords.words(lang))
 
-    def load_document_common(self,docfile):
-        file_name_r = os.path.basename(docfile).replace('.','_r.')
-        output_path = os.path.dirname(docfile)+'_r/'+file_name_r
+    def load_document_common(self,docfile,path):
+        # 原本的檔案名稱
+        file_name = os.path.basename(docfile)
+        # 原本的檔案路徑
+        file_dir = os.path.dirname(docfile)
+        # 專案的根目錄
+        root_path = os.path.dirname(__file__)
+        # 最後輸出的路徑
+        output_path = os.path.join(file_dir.replace(root_path,path),file_name)
         # 建立路徑存放產生出來的資料
-        if not os.path.exists(os.path.dirname(docfile)+'_r/'):
-            os.makedirs(os.path.dirname(docfile)+'_r/')
+        if not os.path.exists(os.path.dirname(output_path)):
+            os.makedirs(os.path.dirname(output_path))
 
         with open (docfile,'r') as file:
             res = file.readlines()

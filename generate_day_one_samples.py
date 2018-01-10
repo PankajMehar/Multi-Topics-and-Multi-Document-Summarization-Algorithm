@@ -6,7 +6,7 @@
 
 # 將news_documents第一天的資料轉換成文字矩陣
 
-from run import *
+from text_processor import *
 
 # # 這個是將某些特定的的資料產生出來
 # # 如果要把所有的資料都打開要把這個關閉
