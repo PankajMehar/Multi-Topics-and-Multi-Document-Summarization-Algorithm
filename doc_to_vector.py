@@ -41,14 +41,14 @@ class DocToSG():
         if not os.path.exists(os.path.dirname(output_path)):
             os.makedirs(os.path.dirname(output_path))
 
-        with open (docfile,'r') as file:
+        with open (docfile,'r', encoding = 'utf8') as file:
             res = file.readlines()
 
         result = ''
         for i in res:
             result = result+i
 
-        with open (output_path,'w') as file:
+        with open (output_path,'w', encoding = 'utf8') as file:
             res = self.ProcessText(result)
             file.write(res)
 
