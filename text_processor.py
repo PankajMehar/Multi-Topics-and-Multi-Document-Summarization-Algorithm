@@ -21,17 +21,92 @@ def path_is_exists(path):
         os.makedirs(path)
     log('[path_is_exists][end] Path: "%s"' % path, lvl='i')
 
+def generate_time_data(input,output,day,sources,news_events):
+    log('[generate_time_data][start]', lvl='i')
+    log('[generate_time_data] input: %s, output: %s, day: %s' % (input,output,day), lvl='i')
+
+    # 將所有的檔案全部找出來
+    log('[generate_time_data] find all files and merge to one list')
+    all_list = []
+    for source in sources:
+        for news_event in news_events:
+            pattern = '.*'+source+'.*'+news_event+'.*'+'\d+'
+            file_list = get_file_list(input,pattern = pattern)
+            all_list.extend(file_list)
+    log('[generate_time_data] all_list:\n%s' % all_list)
+
+    # 找出各事件所包含的資料,
+    event_file_list = []
+    for news_event in news_events:
+        event_dic = {}
+        event_dic['event_name'] = news_event
+
+        # 記錄所有相同事件的檔案路徑
+        temp_file_path = []
+
+        for file_name in all_list:
+            if news_event in file_name:
+                temp_file_path.append(file_name)
+
+        # 紀錄每一個路徑的日期
+        temp_file_day = []
+        for path in temp_file_path:
+            file_name = os.path.basename(path)
+            file_name = re.match("\d+", file_name).group(0)
+            temp_file_day.append(file_name)
+
+        # 開始時間
+        start_day = min(list(set(temp_file_day)))
+        # 結束時間
+        end_day = max(list(set(temp_file_day)))
+        # 總發生時間
+        diff = diff_day(start_day, end_day)
+
+        event_dic['start_day'] = start_day
+        event_dic['end_day'] = end_day
+        event_dic['diff_day'] = diff
+
+        # 紀錄路徑，日期，相差時間，來源，事件名稱
+        temp_result = []
+        for i in range(len(temp_file_path)):
+            # 路徑
+            file_path = temp_file_path[i]
+            # 日期
+            file_day = temp_file_day[i]
+            # 相差時間
+            file_diff = diff_day(start_day,file_day)
+            # 來源
+            file_source = ''
+            for source in sources:
+                if source in temp_file_path[i]:
+                    file_source = source
+            # 事件
+            file_event = news_event
+
+            temp_result.append([file_path,file_day,file_diff,file_source,file_event])
+
+        event_dic['file_info'] = temp_result
+
+        # 將資料寫入
+        event_file_list.append(event_dic)
+
+    log('[generate_time_data] file info:\n %s' % event_file_list)
+    log('[generate_time_data][end]', lvl='i')
+
 # 取得資料夾下所有檔案清單
 def get_file_list(path,pattern=None):
     log('[get_file_list][start] path: %s, pattern: %s' % (path,pattern), lvl='i')
     file_list = []
     for dir, subdir, files in os.walk(path):
+        log('[get_file_list] dir: %s, subdir: %s, files: %s' % (dir,subdir,files))
         for file in files:
             if pattern!=None:
-                if re.match(pattern,file):
+                if re.findall(pattern,os.path.join(dir,file)):
                     file_list.append(os.path.join(dir, file))
             else:
                 file_list.append(os.path.join(dir,file))
+
+    log(file_list)
     file_list.sort()
     log('[get_file_list] list: %s' % str(file_list))
     log('[get_file_list][end] path: %s, pattern: %s' % (path,pattern), lvl='i')
@@ -49,6 +124,7 @@ def diff_day(start_day,now):
 # 計算最近的日子，最久的日子，日子的差距
 def run_days(file_list):
     log('[run_days][start]',lvl='i')
+    log('[run_days] file_list: %s' % file_list)
     day_list=[]
     tmp = []
 
