@@ -27,12 +27,13 @@ def main():
     STEMMING_DATA_DIR = os.path.join(os.path.dirname(__file__),'stemming_data')
 
     # 執行檔案下載,設定來源路徑, 主題路徑名稱
-    # SOURCES = ['CNN', 'NewYorkTimes', 'Theguardian']
-    # NEWS_EVENTS = ['brexit', 'catalan', 'crimea', 'gravitational', 'hk', 'missile', 'sewol', 'syria', 'turkish']
+    SOURCES = ['CNN', 'NewYorkTimes', 'Theguardian']
+    NEWS_EVENTS = ['brexit', 'catalan', 'crimea', 'gravitational', 'hk', 'missile', 'sewol', 'syria', 'turkish']
 
-    # # 執行檔案下載,設定來源路徑, 主題路徑名稱
-    SOURCES = ['CNN', 'NewYorkTimes']
-    NEWS_EVENTS = ['brexit', 'catalan']
+    # 執行檔案下載,設定來源路徑, 主題路徑名稱
+    # 測試用資料
+    # SOURCES = ['CNN', 'NewYorkTimes']
+    # NEWS_EVENTS = ['brexit', 'catalan']
 
     # # 根據找到的url檔案，將新聞資料抓下來
     # news_creater(sources=SOURCES,file_list=NEWS_EVENTS)
@@ -42,9 +43,9 @@ def main():
     # create_stemming_data(news_sources=SOURCES,news_events=NEWS_EVENTS,output_path=STEMMING_DATA_DIR)
 
     # 輸入時間新聞來源，輸出的資料夾，分隔的時間區間
-    generate_time_data(STEMMING_DATA_DIR,STEMMING_DATA_DIR,30,SOURCES,NEWS_EVENTS)
-    # TODO: 要建立一個機制可以輸入分隔的時間，自動將文字作時間分割處理
-    # TODO: 要將分析的設置變數拉出來
+    ARRANGE_DATA_SOURCE = generate_time_data(STEMMING_DATA_DIR,STEMMING_DATA_DIR,30,SOURCES,NEWS_EVENTS)
+
+    # 產生需要分析的資料集
 
 if __name__ =='__main__':
     main()

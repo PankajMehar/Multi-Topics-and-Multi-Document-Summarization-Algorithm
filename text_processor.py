@@ -6,6 +6,7 @@
 import os
 import re
 import numpy as np
+import json
 import datetime
 from shutil import copyfile
 from doc_to_vector import *
@@ -27,6 +28,7 @@ def generate_time_data(input,output,day,sources,news_events):
 
     # 將所有的檔案全部找出來
     log('[generate_time_data] find all files and merge to one list')
+
     all_list = []
     for source in sources:
         for news_event in news_events:
@@ -85,13 +87,54 @@ def generate_time_data(input,output,day,sources,news_events):
 
             temp_result.append([file_path,file_day,file_diff,file_source,file_event])
 
-        event_dic['file_info'] = temp_result
+        # 重新計算應該要有的排列時間
+        res = arrange_day(temp_result,day)
+        event_dic['file_info'] = res
 
         # 將資料寫入
         event_file_list.append(event_dic)
 
+
+    output_path = os.path.join(output,'arrange_day_%s.json' % day)
+    log('[generate_time_data] out put result to %s' % output_path , lvl='i')
+    with open(output_path,'w') as fp:
+        json.dump(event_file_list,fp)
+
     log('[generate_time_data] file info:\n %s' % event_file_list)
     log('[generate_time_data][end]', lvl='i')
+    return output_path
+
+def arrange_day(file_info,day):
+    split_day = day
+    range_day = 0
+    total_day = 0
+    result = []
+    # 如果計算的時間不為正整數,就通通用原本的時間計算
+    if type(split_day) is int and split_day > 0:
+        # 用帶入的資料進行時間標記
+        # ['filepath', '20171221', 104, 'NewYorkTimes', 'catalan',27]
+        temp = []
+        for i in file_info:
+            temp.append(i[2])
+
+        total_day = max(temp)
+        range_day = total_day / split_day
+
+        for info in file_info:
+            i = info[2]
+            assign_day = int(i / range_day)
+            if assign_day >= split_day:
+                assign_day = assign_day - 1
+            info.append(assign_day)
+            result.append(info)
+    else:
+        # 將原本的時間直接加上去後回傳
+        # ['filepath', '20171221', 104, 'NewYorkTimes', 'catalan', 104]
+        for info in file_info:
+            info.append(info[2])
+            result.append(info)
+
+    return result
 
 # 取得資料夾下所有檔案清單
 def get_file_list(path,pattern=None):
