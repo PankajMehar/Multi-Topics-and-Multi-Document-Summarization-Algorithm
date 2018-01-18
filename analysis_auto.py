@@ -13,9 +13,10 @@ from text_processor import get_file_list
 import re
 import numpy as np
 import pandas
+from sklearn import metrics
 
 # 先取得目錄下所有的檔案名稱
-file_list = get_file_list('/Users/yuhsuan/Desktop/MEMDS/news_documents/')
+file_list = get_file_list('/Users/yuhsuan/Desktop/MEMDS/arrange_day_30/')
 
 file_info = []
 # 取得每個資料的日,來源,主題
@@ -62,7 +63,7 @@ for day in list(set(df['day'])):
     document_list=[]
     for data in day_one_data:
         # data = '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_cnn_cr_0_r.txt'
-        file = open(data, 'r')
+        file = open(data, 'r', encoding = 'utf8')
         # print(str(data))
         result = file.readline().strip().split(' ')
         document_list.append(result)
@@ -110,7 +111,7 @@ for day in list(set(df['day'])):
             matrix[j-1][i-1] = cos
     log('tf-idf: \n%s' % matrix,lvl='i')
     log('tf_idf_cos: %s,tf_idf_pre: %s, tf_idf_act: %s' % (tf_idf_cos,tf_idf_pre,tf_idf_act),lvl='i')
-    from sklearn import metrics
+    # from sklearn import metrics
 
     log('\n\nday: %s, files: %s, accuracy: %s, precision: %s, recall: %s, f1-score: %s\n\n' % (day,len(df),metrics.accuracy_score(tf_idf_act, tf_idf_pre),metrics.precision_score(tf_idf_act, tf_idf_pre),metrics.recall_score(tf_idf_act, tf_idf_pre),metrics.f1_score(tf_idf_act, tf_idf_pre)),lvl='i')
     # 計算tf_pdf資料

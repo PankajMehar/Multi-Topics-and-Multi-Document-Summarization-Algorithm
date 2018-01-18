@@ -6,6 +6,7 @@
 import os
 from data_downloader import news_creater
 from text_processor import *
+from data_generator import *
 
 # 產生文字處理與字根還原的資料
 def create_stemming_data(news_sources,news_events,output_path):
@@ -23,6 +24,8 @@ def create_stemming_data(news_sources,news_events,output_path):
             format_document(matrix,output_path)
 
 def main():
+    # 根目錄
+    ROOT_DIR = os.path.dirname(__file__)
     # 處理後的文字資料路徑
     STEMMING_DATA_DIR = os.path.join(os.path.dirname(__file__),'stemming_data')
 
@@ -43,10 +46,13 @@ def main():
     # create_stemming_data(news_sources=SOURCES,news_events=NEWS_EVENTS,output_path=STEMMING_DATA_DIR)
 
     # 輸入時間新聞來源，輸出的資料夾，分隔的時間區間
+    # 輸出的檔案名稱為 arrange_day_{day}.json
     ARRANGE_DATA_SOURCE = generate_time_data(STEMMING_DATA_DIR,STEMMING_DATA_DIR,30,SOURCES,NEWS_EVENTS)
 
     # 產生需要分析的資料集
-
+    data_set_folder_name = os.path.basename(ARRANGE_DATA_SOURCE).replace('.json','')
+    data_set_folder_path = os.path.join(ROOT_DIR,data_set_folder_name)
+    generate_file_from_json(ARRANGE_DATA_SOURCE,data_set_folder_path)
 if __name__ =='__main__':
     main()
 
