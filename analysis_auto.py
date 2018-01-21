@@ -182,10 +182,40 @@ def similuity(file_path):
     output_path = os.path.join(file_path,'analysis_temp.json')
     with open(output_path,'w') as fp:
         json.dump(RESULT,fp)
+    return output_path
+
+def threshold_test(json_file_path,simple=None,tf_idf=None,tf_pdf=None):
+    json_file = {}
+    with open(json_file_path, 'r') as f:
+        json_file = json.load(f)
+
+    daily_data = json_file['daily_data']
+    for daily in daily_data:
+        log('process day %s data' % daily['day'],lvl = 'i')
+
+    # simple = (開始 每次增加數量 停止門檻)
+    if simple!=None and type(simple) is tuple:
+        start = simple[0]
+        add = simple[1]
+        stop = simple[2]
+
+        for i in np.arange(start,stop,add):
+            tf_result = []
+            for j in daily_data['cos']:
+                if j>=i:
+                    tf_result.append(True)
+                else:
+                    tf_result.append(False)
+
+            # todo: 要把各別的預測資料記錄下來，還要有平均值的資料
+            log('\n\nday: %s, files: %s, accuracy: %s, precision: %s, recall: %s, f1-score: %s\n\n' % (
+            day, len(df), metrics.accuracy_score(tf_idf_act, tf_idf_pre), metrics.precision_score(tf_idf_act, tf_idf_pre),
+            metrics.recall_score(tf_idf_act, tf_idf_pre), metrics.f1_score(tf_idf_act, tf_idf_pre)), lvl='i')
+
 
 def main():
     file_path = '/Users/yuhsuan/Desktop/MEMDS/arrange_day_30/'
-    similuity(file_path)
+    temp_file = similuity(file_path)
 
 
 if __name__ == '__main__':
