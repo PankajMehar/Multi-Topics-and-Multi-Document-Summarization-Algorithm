@@ -257,6 +257,10 @@ def main():
     # path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_30\\analysis_temp.json'
     threshold_test(temp_file,simple_testing=(0.1,0.1,1))
 
+    # 直接指定檔案根據你限定的門檻做計算
+    # path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_15\\analysis_temp.json'
+    # threshold_test(path, simple_testing=(0.1, 0.1, 1))
+
 
 if __name__ == '__main__':
     main()
