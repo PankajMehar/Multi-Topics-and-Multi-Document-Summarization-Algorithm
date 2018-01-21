@@ -34,7 +34,7 @@ def text_to_vector(corpus_list):
             corpus_list[raw] = [word.lower() for word in corpus_list[raw]]
             temp.append(corpus_list[raw].count(word_list[word]))
         word_array.append(temp)
-    log("[text_to_vector]\n%s" % np.asarray(word_array), lvl="i")
+    log("[text_to_vector]\n%s" % np.asarray(word_array))
     log("[text_to_vector][end]\n", lvl="i")
     return word_array
 
@@ -48,7 +48,7 @@ def tf(array):
         word_cout = sum(tf_array[raw])
         for i in range(len(tf_array[raw])):
             tf_array[raw][i] = tf_array[raw][i]/word_cout
-    log("[tf] \n%s" % np.asarray(tf_array), lvl="i")
+    log("[tf] \n%s" % np.asarray(tf_array))
     log("[tf][end]\n",lvl="i")
 
     return tf_array
@@ -78,7 +78,7 @@ def idf(array):
             # normal
             temp[j][word] = abs(np.log10(file_count/(1+word_in_file)))
 
-    log("[idf] \n%s" % np.asarray(temp), lvl="i")
+    log("[idf] \n%s" % np.asarray(temp))
     log("[idf][end]\n", lvl="i")
     return temp
 
@@ -137,7 +137,7 @@ def pdf(array,group):
         temp.append(pdf)
     pdf_array.append(temp)
 
-    log("[pdf] \n%s" % np.asarray(pdf_array), lvl="i")
+    log("[pdf] \n%s" % np.asarray(pdf_array))
     log("[pdf][end]\n",lvl="i")
     return pdf_array
 
@@ -164,7 +164,7 @@ def tf_idf(corpus_list):
             tf_idf_vect[i][j] = tf_vect[i][j]*idf_vect[i][j]
             # log((tf_vect[i][j],idf_vect[i][j],tf_idf_veict[i][j]))
 
-    log("[tf_idf] \n%s" % np.asarray(tf_idf_vect), lvl="i")
+    log("[tf_idf] \n%s" % np.asarray(tf_idf_vect))
     log("[tf_idf][end]\n", lvl="i")
     return tf_idf_vect
 
@@ -214,7 +214,7 @@ def cosines(list_a,list_b):
             btn_left = btn_left + pow(list_a[i],2)
             btn_right = btn_right + pow(list_b[i],2)
         cosine = top / (math.sqrt(btn_left)*math.sqrt(btn_right))
-        log("[cosines] cosine: %s" % cosine,lvl='i')
+        log("[cosines] cosine: %s" % cosine)
         log("[cosines][end]", lvl="i")
         return cosine
     else:
