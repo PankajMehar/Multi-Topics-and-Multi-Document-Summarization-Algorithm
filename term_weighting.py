@@ -141,6 +141,14 @@ def pdf(array,group):
     log("[pdf][end]\n",lvl="i")
     return pdf_array
 
+# 單純要用來計算兩字詞的距離
+def simple(corpus_list):
+    log("[simple][start]", lvl="i")
+    vector = text_to_vector(corpus_list)
+    simple_vect = copy.deepcopy(vector)
+    log("[simple][end]", lvl="i")
+    return simple_vect
+
 # 計算tf_idf
 def tf_idf(corpus_list):
     log("[tf_idf][start]", lvl="i")
@@ -216,6 +224,19 @@ def cosines(list_a,list_b):
         return -1
 
 def main():
+    #一班陣列測試資料
+    corpus_simaple = [
+        ['a','a','b'],
+        ['b','a','a']
+    ]
+    res = simple(corpus_simaple)
+    print(res)
+
+    for i in range(1,len(res)):
+        for j in range(1,i):
+            log("%s, %s" % (i,j))
+            print(cosines(res[i],res[j]))
+
     # tf-idf測試資料
     corpus_tf_idf = [
         ["this", "is", "a", "a","sample"],

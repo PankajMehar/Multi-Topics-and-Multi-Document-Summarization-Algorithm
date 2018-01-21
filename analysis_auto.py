@@ -15,11 +15,12 @@ import numpy as np
 import pandas
 from sklearn import metrics
 import json
+import os
 
 
 def similuity(file_path):
     # 儲存用的資料結構
-    result = {}
+    RESULT = {}
 
     # 先取得目錄下所有的檔案名稱
     file_list = get_file_list(file_path)
@@ -27,8 +28,9 @@ def similuity(file_path):
     file_info = []
     # 取得每個資料的日,來源,主題
     for i in file_list:
-        m = re.match('.*day(\d+)_(.*)_(.*)_.*.txt', i)
-        file_info.append([m.group(0), int(m.group(1)), m.group(2), m.group(3)])
+        if '.json' not in i:
+            m = re.match('.*day(\d+)_(.*)_(.*)_.*.txt', i)
+            file_info.append([m.group(0), int(m.group(1)), m.group(2), m.group(3)])
 
     # 顯示所有的資料
     log('%s\n\n' % file_info, lvl='i')
@@ -38,9 +40,9 @@ def similuity(file_path):
     max_day = max(df['day'])
     log('max_day: %s' % max_day, lvl='i')
 
-    result['max_day']=max_day
-    result['daily_data'] = []
-    result_daily_data = result['daily_data']
+    RESULT['max_day']=max_day
+    RESULT['daily_data'] = []
+    result_daily_data = RESULT['daily_data']
     # 處理每一天的數據
     for day in list(set(df['day'])):
         log('====' * 20, lvl='i')
@@ -96,6 +98,23 @@ def similuity(file_path):
         tf_pdf_pre = []
         tf_pdf_act = []
         tf_pdf_criteria = 0.1
+
+        #計算一般的字詞資料
+        log('計算一般字詞資料' + '====' * 20, lvl='i')
+        res = simple(document_list)
+        log('====' * 20)
+        log('一般字詞: %s' % res)
+        log('====' * 20)
+        log(len(res[0]))
+
+        # 計算一般的字詞相似度
+        log('計算一般的字詞相似度' + '====' * 20, lvl='i')
+        matrix = [[None] * (len(res) - 1) for i in range(len(res) - 1)]
+        for i in range(1, len(res)):
+            for j in range(1, i):
+                log("%s, %s" % (i, j), lvl='i')
+                cos = cosines(res[i], res[j])
+                daily_result['cos'].append(cos)
 
         # 計算tf_idf資料
         log('計算tf-idf資料' + '====' * 20, lvl='i')
@@ -158,9 +177,11 @@ def similuity(file_path):
                 daily_result['tf-pdf'].append(cos)
                 matrix[j - 1][i - 1] = cos
         log('tf-pdf: \n%s' % matrix, lvl='i')
-        print(daily_result)
-        # result['daily_data'].append(daily_result)
         result_daily_data.append(daily_result)
+
+    output_path = os.path.join(file_path,'analysis_temp.json')
+    with open(output_path,'w') as fp:
+        json.dump(RESULT,fp)
 
 def main():
     file_path = '/Users/yuhsuan/Desktop/MEMDS/arrange_day_30/'
@@ -169,3 +190,8 @@ def main():
 
 if __name__ == '__main__':
     main()
+    # import requests
+    #
+    # url = 'https://www.lnb.com.tw/api/market-place?page=1&per_page=10&sendback=2'
+    # res = requests.get(url,verify=False)
+    # print(res.json())
