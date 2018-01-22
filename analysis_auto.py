@@ -261,7 +261,7 @@ def threshold_test(json_file_path,simple_testing=None):
     df.to_csv(csv_file_path, sep=',', encoding='utf-8')
 
 def main():
-    file_path = '/Users/yuhsuan/Desktop/MEMDS/arrange_day_15/'
+    file_path = '/Users/yuhsuan/Desktop/MEMDS/arrange_day_113/'
     temp_file = similuity(file_path)
     threshold_test(temp_file,simple_testing=(1,100,1))
 

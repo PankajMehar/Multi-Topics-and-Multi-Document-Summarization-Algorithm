@@ -9,7 +9,7 @@ import numpy as np
 import os
 
 def main():
-    csv_file_path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_15\\analysis.csv'
+    csv_file_path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_113\\analysis.csv'
     df = pd.read_csv(csv_file_path, sep=",")
     ana_list = ['cos','tf_idf','tf_pdf']
     for ana_type in ana_list:
