@@ -30,8 +30,10 @@ def similuity(file_path):
 
     # 取得每個資料的日,來源,主題
     for i in file_list:
+        # 只取用.txt的檔案
+        if '.txt' in i:
         # 將.json與.csv剔除
-        if '.json' not in i and '.csv' not in i:
+        # if '.json' not in i and '.csv' not in i:
             m = re.match('.*day(\d+)_(.*)_(.*)_.*.txt', i)
             file_info.append([m.group(0), int(m.group(1)), m.group(2), m.group(3)])
 
@@ -201,10 +203,10 @@ def metrics_value(day,type,testing_data,real_data,start,add,stop):
     temp_result = []
 
     # log('start: %s, add: %s, stop: %s' % (start, add, stop))
-    for i in np.arange(start, stop, add):
+    for i in range(start, stop, add):
         prediction_result = []
         for j in testing_data:
-            if j >= i:
+            if j >= i/100:
                 prediction_result.append(True)
             else:
                 prediction_result.append(False)
@@ -215,14 +217,22 @@ def metrics_value(day,type,testing_data,real_data,start,add,stop):
         precision = metrics.precision_score(real_data, prediction_result)
         recall = metrics.recall_score(real_data, prediction_result)
         f1_score = metrics.f1_score(real_data, prediction_result)
-        threshold = i
+        threshold = i/100
         res = [day,type,accuracy,precision,recall,f1_score,threshold]
         # print(res)
         # print('====' * 20)
         temp_result.append(res)
     return temp_result
 
-def threshold_test(json_file_path,simple_testing=None,tf_idf_testing=None,tf_pdf_testing=None):
+def threshold_test(json_file_path,simple_testing=None):
+    start = 0
+    stop = 0
+    add = 0
+    if simple_testing is not None and type(simple_testing) is tuple:
+        start = simple_testing[0]
+        stop = simple_testing[1]
+        add = simple_testing[2]
+
     # 預讀資料到記憶體
     json_file = {}
     with open(json_file_path, 'r') as f:
@@ -236,15 +246,15 @@ def threshold_test(json_file_path,simple_testing=None,tf_idf_testing=None,tf_pdf
     daily_data = json_file['daily_data']
     for daily in daily_data:
         log('process day %s data' % daily['day'],lvl = 'i')
-
-        TEMP_RESULT_COS = metrics_value(day = daily['day'],type='cos',testing_data = daily['cos'],real_data = daily['real_data'], start = 0.01,add = 0.01,stop = 1)
+        TEMP_RESULT_COS = metrics_value(day = daily['day'],type='cos',testing_data = daily['cos'],real_data = daily['real_data'], start = start,add = add,stop = stop)
         TEMP_RESULT.extend(TEMP_RESULT_COS)
-        TEMP_RESULT_TF_IDF = metrics_value(day = daily['day'],type='tf_idf',testing_data = daily['tf_idf'],real_data = daily['real_data'], start = 0.01,add = 0.01,stop = 1)
+        TEMP_RESULT_TF_IDF = metrics_value(day = daily['day'],type='tf_idf',testing_data = daily['tf_idf'],real_data = daily['real_data'], start = start,add = add,stop = stop)
         TEMP_RESULT.extend(TEMP_RESULT_TF_IDF)
-        TEMP_RESULT_TF_PDF = metrics_value(day = daily['day'],type='tf_pdf',testing_data = daily['tf_pdf'],real_data = daily['real_data'], start = 0.01,add = 0.01,stop = 1)
+        TEMP_RESULT_TF_PDF = metrics_value(day = daily['day'],type='tf_pdf',testing_data = daily['tf_pdf'],real_data = daily['real_data'], start = start,add = add,stop = stop)
         TEMP_RESULT.extend(TEMP_RESULT_TF_PDF)
 
     log(TEMP_RESULT)
+
     # 將資料寫到dataframe並且輸出
     df = pandas.DataFrame(TEMP_RESULT,columns=['day', 'type', 'accuracy', 'precision','recall','f1-score','threshold'])
     csv_file_path = os.path.join(os.path.dirname(json_file_path),'analysis.csv')
@@ -253,9 +263,7 @@ def threshold_test(json_file_path,simple_testing=None,tf_idf_testing=None,tf_pdf
 def main():
     file_path = '/Users/yuhsuan/Desktop/MEMDS/arrange_day_15/'
     temp_file = similuity(file_path)
-
-    # path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_30\\analysis_temp.json'
-    threshold_test(temp_file,simple_testing=(0.1,0.1,1))
+    threshold_test(temp_file,simple_testing=(1,100,1))
 
     # 直接指定檔案根據你限定的門檻做計算
     # path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_15\\analysis_temp.json'
