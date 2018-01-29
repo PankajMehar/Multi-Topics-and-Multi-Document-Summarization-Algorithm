@@ -55,6 +55,7 @@ def similuity(file_path):
 
         # 紀錄第幾天的資料
         daily_result = {}
+        daily_result['file_list'] = []
         daily_result['day'] = day
         daily_result['process_day'] = []
         daily_result['real_data'] = []
@@ -85,6 +86,9 @@ def similuity(file_path):
 
         # 建立day_one_data取得每一天內的檔案們
         day_one_data = df['file_name']
+
+        # 將每天分析的檔案紀錄起來
+        daily_result['file_list'] = [i for i in day_one_data]
 
         document_list = []
         for data in day_one_data:
@@ -261,19 +265,14 @@ def threshold_test(json_file_path,simple_testing=None):
     df.to_csv(csv_file_path, sep=',', encoding='utf-8')
 
 def main():
-    file_path = '/Users/yuhsuan/Desktop/MEMDS/arrange_day_113/'
+    file_path = '/Users/yuhsuan/Desktop/MEMDS/arrange_day_0/'
     temp_file = similuity(file_path)
-    threshold_test(temp_file,simple_testing=(1,100,1))
+    # threshold_test(temp_file,simple_testing=(1,100,1))
 
     # 直接指定檔案根據你限定的門檻做計算
-    # path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_15\\analysis_temp.json'
+    # path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\analysis_temp.json'
     # threshold_test(path, simple_testing=(0.1, 0.1, 1))
 
 
 if __name__ == '__main__':
     main()
-    # import requests
-    #
-    # url = 'https://www.lnb.com.tw/api/market-place?page=1&per_page=10&sendback=2'
-    # res = requests.get(url,verify=False)
-    # print(res.json())
