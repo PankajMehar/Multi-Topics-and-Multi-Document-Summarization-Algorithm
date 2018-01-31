@@ -10,7 +10,6 @@
 import json
 
 import networkx as nx
-from networkx.algorithms import approximation
 import matplotlib.pyplot as plt
 
 from log_module import log
@@ -49,6 +48,7 @@ def threshold(dict):
         G.add_edges_from(edges)
         # G.add_edge(1,2)
         pos = nx.spring_layout(G)
+        pos = nx.kamada_kawai_layout(G)
         nx.draw(G,pos,with_labels=True)
 
         # log('max_clique: %s' % approximation.max_clique(G))
@@ -60,8 +60,8 @@ def threshold(dict):
         # print(approximation.k_components(G,min_density=0.98))
 
 def byweight(dict):
-    for days in [1]:
-    # for days in range(len(dict['daily_data'])):
+    # for days in [5]:
+    for days in range(len(dict['daily_data'])):
         data = dict['daily_data'][days]
         print(data)
         print('days: %s' % days)
@@ -70,12 +70,22 @@ def byweight(dict):
             print(i)
 
         nodes = [i+1 for i in range(len(data['file_list']))]
-        labels = [i+1 for i in range(len(data['file_list']))]
+        labels = {i+1:i+1 for i in range(len(data['file_list']))}
+        # labels = {}
+        # x=1
+        # for i in data['file_list']:
+        #     import re
+        #     pattern = re.compile(".*day\d+_.*_(.*)_.*")
+        #     m = re.match(pattern,i)
+        #     labels[x] = m.group(1)
+        #     x+=1
+        #
+        # print(labels)
 
         G = nx.Graph()
-        G.add_nodes_from(nodes, labels=labels)
+        G.add_nodes_from(nodes)
 
-        pos = nx.spring_layout(G)
+
         print('edges:')
         for i in range(len(data['process_day'])):
             weight = data['cos'][i]
@@ -84,19 +94,65 @@ def byweight(dict):
             if weight>0.25:
                 G.add_edge(edges[0],edges[1],weight=data['real_data'][i])
 
-        elarge = [(u, v) for (u, v, d) in G.edges(data=True) if d['weight'] ==True]
+        elarge = [(u, v) for (u, v, d) in G.edges(data=True) if d['weight'] == True]
         esmall = [(u, v) for (u, v, d) in G.edges(data=True) if d['weight'] == False]
 
-        nx.draw_networkx_edges(G, pos=pos, edgelist=elarge,
-                               width=1)
-        nx.draw_networkx(G, pos=pos, edgelist=esmall,
-                               width=1, alpha=0.5, edge_color='b', style='dashed')
-        nx.draw_networkx(G, pos=pos, node_size=100)
-        nx.draw_networkx(G,pos=pos)
-        plt.axis('off')
-        plt.draw_if_interactive()
+        layout = [
+                  # nx.circular_layout(G),
+                  # nx.kamada_kawai_layout(G),
+                  # nx.random_layout(G),
+                  # nx.rescale_layout(G),
+                  # nx.shell_layout(G),
+                  nx.spring_layout(G,random_state=1),
+                  # nx.spectral_layout(G)
+                ]
+        for pos in layout:
+            # 正確的關聯線
+            # nx.draw_networkx_edges(G, pos=pos, edgelist=elarge,width=1)
+            # 錯誤的關聯線
+            # nx.draw_networkx_edges(G, pos=pos, edgelist=esmall,width=1, edge_color='b', style='dashed')
+            # 節點
+            nx.draw_networkx_nodes(G, pos=pos)
+            # 標籤
+            nx.draw_networkx_labels(G, pos, labels=labels, font_size=10)
+
+            # plt.axis('off')
+            # plt.savefig("C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\pics\\day_%s.png" % days, dpi=75)
+
+            positions = []
+            for i in pos:
+                positions.append(list(pos[i]))
+            print(positions)
+            plt.show()
+            plt.cla()
+
+def layout_test(dict):
+    G = nx.Graph()
+
+
+    data = dict['daily_data'][1]
+
+    nodes = [i + 1 for i in range(len(data['file_list']))]
+    labels = [i + 1 for i in range(len(data['file_list']))]
+
+    edges = []
+    for i in range(len(data['process_day'])):
+        if data['cos'][i] >= 0.25:
+            edges.append(tuple(data['process_day'][i]))
+    G.add_nodes_from(nodes, labels=labels)
+    G.add_edges_from(edges)
+    layout = [nx.circular_layout(G),
+              # nx.kamada_kawai_layout(G),
+              nx.random_layout(G),
+              # nx.rescale_layout(G),
+              nx.shell_layout(G),
+              nx.spring_layout(G),
+              nx.spectral_layout(G)]
+    for pos in layout:
+        nx.draw(G, pos, with_labels=True)
         plt.show()
         plt.cla()
+
 
 def test():
     G = nx.Graph()
@@ -130,5 +186,6 @@ def test():
 
 if __name__=='__main__':
     byweight(data())
-    threshold(data())
+    # threshold(data())
     # test()
+    # layout_test(data())
