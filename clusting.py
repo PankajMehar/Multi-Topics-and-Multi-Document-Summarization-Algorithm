@@ -22,30 +22,72 @@ def identify_group(dict):
     for i in range(len(dict['cos'])):
         if dict['cos'][i] >0.25:
             temp.append(dict['process_day'][i])
-
+    # print(temp)
     for relation in temp:
         # 定位第一個元件的位置
         pos1=0
         for i in range(1,len(dict['file_list'])+1):
             if relation[0] in clust_temp[i]:
                 pos1 = i
+                break
         # 定位第二個元件的位置
         pos2=0
         for i in range(1,len(dict['file_list'])+1):
             if relation[1] in clust_temp[i]:
                 pos2 = i
+                break
 
         if pos1 != pos2:
             clust_temp[pos1].extend(clust_temp[pos2])
-            clust_temp[pos1]=list(set(clust_temp[pos1]))
             clust_temp[pos2]=[]
+    # print(clust_temp)
 
     group={}
-    # 將暫存的資料找出來看誰不是空的就新加進去
+    # 將暫存的資料找出來看誰不是空的就新加進去\
+    group['group']={}
     for i in range(1,len(clust_temp)+1):
         if len(clust_temp[i])>0:
-            group[len(group)] = clust_temp[i]
+            group['group'][len(group['group'])] = clust_temp[i]
 
+    # 計算各點的權重
+    group['group_weight']={}
+    for i in range(len(group['group'])):
+
+        if len(group['group'][i])==1:
+            group['group_weight'][i]=group['group'][i]
+        else:
+            res = [[],[],[]]
+            for node in group['group'][i]:
+                weight = 1
+                count = 0
+                for j in range(len(dict['cos'])):
+                    # print(node,group['group'][i])
+                    if node in dict['process_day'][j]:
+                        count=count+1
+                        weight = weight * dict['cos'][j]
+                res[0].append(node)
+                res[1].append(weight)
+                res[2].append(count)
+            # 比較res中誰最大
+            # print('res: %s' % res)
+            # 確認count中誰最大
+            temp=[]
+            for x in range(len(res[2])):
+                if max(res[2])==res[2][x]:
+                    temp.append(x)
+            # print('temp: %s' % temp)
+
+            # 判斷temp中是否有多個資料
+            if len(temp)==1:
+                group['group_weight'][i]=res[0][temp[0]]
+            else:
+                # 判斷weight中誰大
+                temp2 = []
+                for y in range(len(res[1])):
+                    if max(res[1])==res[1][y]:
+                        temp2.append(y)
+                # print('temp2: %s' % temp2)
+                group['group_weight'][i] = [res[0][temp2[0]]]
     return group
 
 def main(json_file_path):

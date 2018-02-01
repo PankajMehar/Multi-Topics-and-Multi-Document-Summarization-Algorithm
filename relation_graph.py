@@ -108,9 +108,9 @@ def byweight(dict):
                 ]
         for pos in layout:
             # 正確的關聯線
-            # nx.draw_networkx_edges(G, pos=pos, edgelist=elarge,width=1)
+            nx.draw_networkx_edges(G, pos=pos, edgelist=elarge,width=1)
             # 錯誤的關聯線
-            # nx.draw_networkx_edges(G, pos=pos, edgelist=esmall,width=1, edge_color='b', style='dashed')
+            nx.draw_networkx_edges(G, pos=pos, edgelist=esmall,width=1, edge_color='b', style='dashed')
             # 節點
             nx.draw_networkx_nodes(G, pos=pos)
             # 標籤
