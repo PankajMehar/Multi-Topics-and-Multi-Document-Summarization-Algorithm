@@ -43,6 +43,9 @@ def identify_group(dict):
     # print(clust_temp)
 
     group={}
+    # 先寫入是哪天的資料
+    group['day'] = dict['day']
+    group['file_list'] = dict['file_list']
     # 將暫存的資料找出來看誰不是空的就新加進去\
     group['group']={}
     for i in range(1,len(clust_temp)+1):
@@ -61,7 +64,7 @@ def identify_group(dict):
                 weight = 1
                 count = 0
                 for j in range(len(dict['cos'])):
-                    print(node,group['group'][i])
+                    # print(node,group['group'][i])
                     if node in dict['process_day'][j] and dict['cos'][j]>0.25:
                         count=count+1
                         weight = weight * dict['cos'][j]
@@ -69,13 +72,13 @@ def identify_group(dict):
                 res[1].append(weight)
                 res[2].append(count)
             # 比較res中誰最大
-            print('res: %s' % res)
+            # print('res: %s' % res)
             # 確認count中誰最大
             temp=[]
             for x in range(len(res[2])):
                 if max(res[2])==res[2][x]:
                     temp.append(x)
-            print('temp: %s' % temp)
+            # print('temp: %s' % temp)
 
             # 判斷temp中是否有多個資料
             if len(temp)==1:
@@ -86,15 +89,21 @@ def identify_group(dict):
                 for y in range(len(res[1])):
                     if max(res[1])==res[1][y]:
                         temp2.append(y)
-                print('temp2: %s' % temp2)
+                # print('temp2: %s' % temp2)
                 group['group_weight'][i] = [res[0][temp2[0]]]
     return group
 
-def main(json_file_path):
+def main(json_file_path,json_output_path):
     dict = data(json_file_path)
+    res = []
     for i in dict['daily_data']:
         print(identify_group(i))
+        res.append(identify_group(i))
+
+    with open (json_output_path,'w') as fp:
+        json.dump(res, fp)
 
 if __name__ == "__main__":
     json_file_path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\analysis_temp.json'
-    main(json_file_path)
+    json_output_path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\first_clusting_result.json'
+    main(json_file_path,json_output_path)
