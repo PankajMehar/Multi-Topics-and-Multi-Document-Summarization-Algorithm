@@ -61,21 +61,21 @@ def identify_group(dict):
                 weight = 1
                 count = 0
                 for j in range(len(dict['cos'])):
-                    # print(node,group['group'][i])
-                    if node in dict['process_day'][j]:
+                    print(node,group['group'][i])
+                    if node in dict['process_day'][j] and dict['cos'][j]>0.25:
                         count=count+1
                         weight = weight * dict['cos'][j]
                 res[0].append(node)
                 res[1].append(weight)
                 res[2].append(count)
             # 比較res中誰最大
-            # print('res: %s' % res)
+            print('res: %s' % res)
             # 確認count中誰最大
             temp=[]
             for x in range(len(res[2])):
                 if max(res[2])==res[2][x]:
                     temp.append(x)
-            # print('temp: %s' % temp)
+            print('temp: %s' % temp)
 
             # 判斷temp中是否有多個資料
             if len(temp)==1:
@@ -86,7 +86,7 @@ def identify_group(dict):
                 for y in range(len(res[1])):
                     if max(res[1])==res[1][y]:
                         temp2.append(y)
-                # print('temp2: %s' % temp2)
+                print('temp2: %s' % temp2)
                 group['group_weight'][i] = [res[0][temp2[0]]]
     return group
 
