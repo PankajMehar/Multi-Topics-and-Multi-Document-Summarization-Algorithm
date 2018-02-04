@@ -82,7 +82,7 @@ def identify_group(dict):
 
             # 判斷temp中是否有多個資料
             if len(temp)==1:
-                group['group_weight'][i]=res[0][temp[0]]
+                group['group_weight'][i]=[res[0][temp[0]]]
             else:
                 # 判斷weight中誰大
                 temp2 = []
@@ -91,17 +91,27 @@ def identify_group(dict):
                         temp2.append(y)
                 # print('temp2: %s' % temp2)
                 group['group_weight'][i] = [res[0][temp2[0]]]
+                # print(group['group_weight'][i])
+    # 將對應的gorup檔案列出來
+    # print(group['group_weight'])
+    group['group_file'] = {}
+    for file_number in group['group_weight']:
+        highest_file_number = group['group_weight'][file_number][0]
+        # print('highest_file_number: %s' % highest_file_number)
+        group['group_file'][file_number] = group['file_list'][highest_file_number-1]
+        # print(file_number,group['group_file'][file_number])
+
     return group
 
 def main(json_file_path,json_output_path):
     dict = data(json_file_path)
     res = []
     for i in dict['daily_data']:
-        print(identify_group(i))
+        # print(identify_group(i))
         res.append(identify_group(i))
 
     with open (json_output_path,'w') as fp:
-        json.dump(res, fp)
+        json.dump(res, fp, indent=4, sort_keys=True)
 
 if __name__ == "__main__":
     json_file_path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\analysis_temp.json'
