@@ -8,9 +8,11 @@
           "daily_data": [
             {
               "day": 0,
+              "file_info":[]
               "compare_day": [
                 {
                   "day": 1,
+                  "file_info":[]
                   "process_group": [[]],
                   "cos": [],
                   "tf_idf": [],
@@ -18,7 +20,7 @@
                 },
                 {
                   "day": 2,
-                  "process_group": [],
+                  "process_group": [[]],
                   "cos": [],
                   "tf_idf": [],
                   "tf_pdf": []
