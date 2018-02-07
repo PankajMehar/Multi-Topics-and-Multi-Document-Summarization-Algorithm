@@ -220,7 +220,7 @@ def main():
     # OUTPUT_DATA = json.dumps(OUTPUT_DATA, indent=4, sort_keys=True, ensure_ascii=False)
     log(OUTPUT_DATA, lvl='i')
 
-    json_input_path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\clsuting_tree_values.json'
+    json_input_path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\clusting_tree_values.json'
     with open(json_input_path, 'w') as outfile:
         json.dump(OUTPUT_DATA, outfile)
 
