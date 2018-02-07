@@ -95,7 +95,7 @@ def similuity(file_path):
         document_list = []
         for data in day_one_data:
             # data = '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_cnn_cr_0_r.txt'
-            file = open(data, 'r', encoding='utf8')
+            file = open(data, 'r', encoding='utf-8')
             # print(str(data))
             result = file.readline().strip().split(' ')
             document_list.append(result)

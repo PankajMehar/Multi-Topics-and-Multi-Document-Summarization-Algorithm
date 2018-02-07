@@ -174,6 +174,9 @@ def tf_idf(corpus_list):
 def tf_pdf(corpus_list,group_info):
     log("[tf_pdf][start]", lvl ="i")
     # 先判斷進來的矩陣與group資料是否相同
+    log("corpus_list: %s" % corpus_list)
+    log("group_info: %s" % group_info)
+    log("%s, %s" % (len(corpus_list),len(group_info)))
     if len(corpus_list)==len(group_info):
         vector = text_to_vector(corpus_list)
         tf_vect = tf(vector)
