@@ -17,7 +17,6 @@ from sklearn import metrics
 import json
 import os
 
-
 def similuity(file_path):
     # 儲存用的資料結構
     RESULT = {}
@@ -84,12 +83,15 @@ def similuity(file_path):
                     channel_list.append(j + 1)
         log('channel_list: %s' % channel_list)
 
-        # 建立day_one_data取得每一天內的檔案們
+        # 把要分析的檔案全部存到一個list中
+        # 接著將檔案一個一個讀出來存成一個很大的文字矩陣
         day_one_data = df['file_name']
 
         # 將每天分析的檔案紀錄起來
         daily_result['file_list'] = [i for i in day_one_data]
 
+        # 這個document_list就是一個很大的文字矩陣
+        # 把這個文字矩陣丟進各計算中就可以取得各資料值
         document_list = []
         for data in day_one_data:
             # data = '/Users/yuhsuan/Desktop/MEMDS/news_documents_r/day0_cnn_cr_0_r.txt'
@@ -97,6 +99,8 @@ def similuity(file_path):
             # print(str(data))
             result = file.readline().strip().split(' ')
             document_list.append(result)
+
+        # document_list: [['year', 'publish', 'general',...],[...]...]
         log('document_list: %s' % document_list)
 
         # tf_idf的預測與結果
@@ -265,7 +269,7 @@ def threshold_test(json_file_path,simple_testing=None):
     df.to_csv(csv_file_path, sep=',', encoding='utf-8')
 
 def main():
-    file_path = '/Users/yuhsuan/Desktop/MEMDS/arrange_day_0/'
+    file_path = '/Users/yuhsuan/Desktop/MEMDS/arrange_day_15/'
     temp_file = similuity(file_path)
     # threshold_test(temp_file,simple_testing=(1,100,1))
 

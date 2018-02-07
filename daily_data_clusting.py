@@ -111,8 +111,8 @@ def main(json_file_path,json_output_path):
         res.append(identify_group(i))
 
     with open (json_output_path,'w') as fp:
-        json.dump(res, fp, indent=4, sort_keys=True)
-
+        # json.dump(res, fp, indent=4, sort_keys=True)
+        json.dump(res, fp)
 if __name__ == "__main__":
     json_file_path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\analysis_temp.json'
     json_output_path = 'C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\first_clusting_result.json'
