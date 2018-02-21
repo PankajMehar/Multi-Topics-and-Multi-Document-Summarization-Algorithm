@@ -1,5 +1,7 @@
 # MEMDS
-
+#### 2017/02/21
+* 利用clusting_tree_analysis輸入自訂的門檻值，顯示出完整的樹狀圖
+---------------------------------------
 #### 2017/02/07
 * 每天的預算分析數據完成，透過daily_group_relation.py產生clusting_tree_values.json
 - [ ] 找出可以做完整路徑的演算法
