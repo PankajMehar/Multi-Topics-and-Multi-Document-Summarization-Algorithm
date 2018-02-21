@@ -41,6 +41,7 @@ def threshold(dict):
         for i in range(len(data['process_day'])):
             if data['cos'][i] >= 0.25:
                 edges.append(tuple(data['process_day'][i]))
+                log(edges)
                 log('%s, %s, %s' % (tuple(data['process_day'][i]),data['real_data'][i],data['cos'][i]))
         G = nx.Graph()
 
@@ -185,7 +186,7 @@ def test():
     plt.show()
 
 if __name__=='__main__':
-    byweight(data())
-    # threshold(data())
+    # byweight(data())
+    threshold(data())
     # test()
     # layout_test(data())

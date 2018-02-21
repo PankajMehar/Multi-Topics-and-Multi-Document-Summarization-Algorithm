@@ -4,6 +4,10 @@
 # @File    : clusting_tree_analysis.py
 # @Software: PyCharm
 import json
+
+import networkx as nx
+import matplotlib.pyplot as plt
+
 from log_module import log
 
 def read_json(json_file_path):
@@ -45,6 +49,31 @@ def analysis_connection(SOURCE_DATA,threshold):
 
         log(single_day_compare_result,lvl="i")
 
+def draw_tree():
+    G = nx.Graph()
+
+    nodes = ["1-0","1-1","1-2","2-1","2-3"]
+    edges = [("1-0","1-1"),("1-0","2-3")]
+    labels = nodes
+    G.add_nodes_from(nodes,labels=labels)
+    G.add_edges_from(edges)
+
+    pos = {}
+    for i in nodes:
+        # pos[i] = [int(i[0]),int(i[2])]
+        pos[i] = [(i[0]), (i[2])]
+    # pos = nx.get_node_attributes(G, 'pos')
+    # pos = nx.spring_layout(G)
+    nx.draw_networkx_edges(G, pos)
+    nx.draw_networkx_nodes(G, pos)
+    nx.draw_networkx_labels(G, pos)
+    print(pos)
+    # nx.draw(G, pos,with_labels=True)
+
+    plt.axis('off')
+    plt.show()
+    plt.cla()
+
 def main(json_file_path,threshold):
     SOURCE_DATA = read_json(json_file_path)
     RES = analysis_connection(SOURCE_DATA,threshold)
@@ -52,4 +81,5 @@ def main(json_file_path,threshold):
 if __name__ == "__main__":
     json_file_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\clusting_tree_values.json"
     threshold = 0.5
-    main(json_file_path,threshold)
+    # main(json_file_path,threshold)
+    draw_tree()
