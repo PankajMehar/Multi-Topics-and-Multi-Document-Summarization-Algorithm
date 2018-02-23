@@ -22,7 +22,7 @@ def identify_group(dict):
     for i in range(len(dict['cos'])):
         if dict['cos'][i] >0.25:
             temp.append(dict['process_day'][i])
-    # print(temp)
+    print(temp)
     for relation in temp:
         # 定位第一個元件的位置
         pos1=0
