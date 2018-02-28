@@ -126,19 +126,58 @@ def analysis_connection(SOURCE_DATA,threshold):
         if pos1 != pos2:
             clust_temp[pos1].extend(clust_temp[pos2])
             clust_temp[pos2]=[]
-    print(clust_temp)
+    # print(clust_temp)
 
     clust_res = {}
     id = 0
     for i in range(len(clust_temp)):
-        if clust_temp[i]!=[]:
+        if clust_temp[i]!=[] and len(clust_temp[i])>1:
             clust_res[id]=clust_temp[i]
             id=id+1
 
     for i in range(len(clust_res)):
         clust_res[i].sort()
     print(clust_res)
+    group_file_list(clust_res)
     return nodes,edges
+
+def find_files(item,DICT):
+    group_file_list = []
+    pattern = "(\d+)-(\d+)"
+    pattern = re.compile(pattern)
+    m = re.match(pattern,item)
+
+    number_day = m.group(1)
+    number_group = m.group(2)
+
+    for i in DICT:
+        if i['day'] == int(number_day):
+            file_list = i['group'][number_group]
+            for file in file_list:
+                # print(i['file_list'][(file-1)])
+                group_file_list.append(i['file_list'][(file-1)])
+    return group_file_list
+
+
+def group_file_list(group_list):
+    GROUP_FILE_LISTS = {}
+    group_file_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\first_clusting_result.json"
+    DICT = read_json(group_file_path)
+    for i in group_list:
+        GROUP_FILE_LISTS[i]=[]
+        for j in group_list[i]:
+            # print("j: %s" % j)
+            res = find_files(j,DICT)
+            GROUP_FILE_LISTS[i].extend(res)
+
+    # 最後分群出來的檔案們
+    print(GROUP_FILE_LISTS)
+    pass
+
+
+
+
+
 
 def draw_tree(nodes, edges):
     # pos = nx.get_node_attributes(G, 'pos')
