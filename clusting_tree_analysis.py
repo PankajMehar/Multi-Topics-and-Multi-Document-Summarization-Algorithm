@@ -174,6 +174,11 @@ def group_file_list(group_list):
     # 最後分群出來的檔案們
     log("GROUP_FILE_LISTS:\n%s" % GROUP_FILE_LISTS,lvl="i")
 
+    # 儲存一份還沒轉換前的資料
+    group_file_result_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\final_group_file_reference.json"
+    with open(group_file_result_path, "w") as file:
+        json.dump(GROUP_FILE_LISTS, file)
+
     # 載入比對的檔案們
     file_reference = []
     with open(file_reference_path,"r") as file:
