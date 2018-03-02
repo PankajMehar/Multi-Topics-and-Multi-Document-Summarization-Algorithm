@@ -162,6 +162,7 @@ def find_files(item,DICT):
 def group_file_list(group_list):
     GROUP_FILE_LISTS = {}
     group_file_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\first_clusting_result.json"
+    file_reference_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\file_reference.json"
     DICT = read_json(group_file_path)
     for i in group_list:
         GROUP_FILE_LISTS[i]=[]
@@ -171,13 +172,31 @@ def group_file_list(group_list):
             GROUP_FILE_LISTS[i].extend(res)
 
     # 最後分群出來的檔案們
+    log("GROUP_FILE_LISTS:\n%s" % GROUP_FILE_LISTS,lvl="i")
+
+    # 載入比對的檔案們
+    file_reference = []
+    with open(file_reference_path,"r") as file:
+        file_reference = json.load(file)
+    log("file_reference:\n%s" % file_reference, lvl="i")
+
+
+    # 進行最後的檔案轉換
+    for i in GROUP_FILE_LISTS:
+        for file_list in range(len(GROUP_FILE_LISTS[i])):
+            for reference in file_reference:
+                # print(reference[1].replace("\\","/"))
+                # print(GROUP_FILE_LISTS[i][file_list])
+                pattern = ".*\/(.*.txt)"
+                pattern = re.compile(pattern)
+                m = re.match(pattern,GROUP_FILE_LISTS[i][file_list])
+                if m.group(1) in reference[1].replace("\\","/"):
+                    GROUP_FILE_LISTS[i][file_list] = reference[0]
     print(GROUP_FILE_LISTS)
-    pass
 
-
-
-
-
+    group_file_result_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\final_group_file.json"
+    with open(group_file_result_path,"w") as file:
+        json.dump(GROUP_FILE_LISTS,file)
 
 def draw_tree(nodes, edges):
     # pos = nx.get_node_attributes(G, 'pos')

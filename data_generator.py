@@ -16,6 +16,8 @@ from log_module import log
 def generate_file_from_json(source_json_file,output_folder):
     # 先建立輸出資料夾
     path_is_exists(output_folder)
+    print(source_json_file)
+    file_reference = []
 
     # 先確輸入的檔案路徑是否存在
     if os.path.exists(source_json_file):
@@ -37,4 +39,11 @@ def generate_file_from_json(source_json_file,output_folder):
                 # ('.*day(\d+)_(.*)_(.*)_.*.txt',i)
                 copy_dist_file_name = 'day%s_%s_%s_%s.txt' % (file_info[5],file_info[3],file_info[4],j)
                 copy_dist_file_path = os.path.join(output_folder,copy_dist_file_name)
+                # print(copy_source,copy_dist_file_path)
+                file_reference.append((copy_source,copy_dist_file_path))
                 copyfile(copy_source,copy_dist_file_path)
+
+    #將轉換的檔案參照表儲存
+    file_reference_path =output_folder+"\\file_reference.json"
+    with open(file_reference_path,"w") as file:
+        json.dump(file_reference,file)
