@@ -39,7 +39,7 @@ logger = logging.getLogger(__name__)
 # 5MB = 5*1000*1000 Bytes
 # MaxCount = 5
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s',datefmt="%Y-%m-%d %H:%M:%S")
-handler = RotatingFileHandler(file_path, maxBytes=5000000,backupCount=5)
+handler = RotatingFileHandler(file_path, maxBytes=5000000,backupCount=5, encoding = "UTF-8")
 handler.setFormatter(formatter)
 logger.addHandler(handler)
 
