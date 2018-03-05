@@ -9,10 +9,22 @@ import os
 import pandas as pd
 from log_module import log
 from doc_to_vector import*
+from term_weighting import tf_pdf,cosines
+
+# 畫圖的原件
+import networkx as nx
+import matplotlib.pyplot as plt
+from matplotlib import colors as mcolors
 
 def main():
-    DATA = news_data_transformer()
+    # DATA = news_data_transformer()
+    # relation = relatioin_analysis(DATA)
 
+    relation={}
+    with open('group_22_tf_pdf.json','r',encoding='utf8') as file:
+        relation = json.load(file)
+
+    get_relation_and_draw(relation,0.25)
 
 # 將原始資料做整理成方便使用的格式
 def news_data_transformer():
@@ -86,6 +98,9 @@ def news_data_transformer():
     GROUP['group_number']=22
     GROUP['source']={}
     GROUP['steamming']={}
+    GROUP['tf_pdf_group_info']=[]
+    GROUP['daily_sentence_group_count']=[]
+    GROUP['sentence_group'] = []
 
     last_sg_number=0
     worker = DocToSG('english')
@@ -102,25 +117,134 @@ def news_data_transformer():
         if num == 0:
             for i in range(line_number):
                 sg = "d%s_sg%s" % (day_number[num], i)
+                GROUP['sentence_group'].append(sg)
                 GROUP['source'][sg] = lines[i]
                 GROUP['steamming'][sg] = worker.ProcessText(lines[i]).split(" ")
+                # 為了tf-pdf的日子加上這個屬性
+                GROUP['tf_pdf_group_info'].append(day_number[num])
             last_sg_number = line_number
         if num > 0 and day_number[num]!=day_number[num-1]:
             for i in range(line_number):
                 sg = "d%s_sg%s" % (day_number[num], i)
+                GROUP['sentence_group'].append(sg)
                 GROUP['source'][sg] = lines[i]
                 GROUP['steamming'][sg] = worker.ProcessText(lines[i]).split(" ")
+                # 為了tf-pdf的日子加上這個屬性
+                GROUP['tf_pdf_group_info'].append(day_number[num])
             last_sg_number = line_number
         if num > 0 and day_number[num] == day_number[num - 1]:
             for i in range(line_number):
                 sg = "d%s_sg%s" % (day_number[num], last_sg_number+i)
+                GROUP['sentence_group'].append(sg)
                 GROUP['source'][sg] = lines[i]
                 GROUP['steamming'][sg] = worker.ProcessText(lines[i]).split(" ")
+                # 為了tf-pdf的日子加上這個屬性
+                GROUP['tf_pdf_group_info'].append(day_number[num])
             last_sg_number = line_number+last_sg_number
+
+    items = list(set(GROUP['tf_pdf_group_info']))
+    for i in items:
+        count = 0
+        for j in GROUP['tf_pdf_group_info']:
+            if i==j:
+                count = count+1
+        GROUP['daily_sentence_group_count'].append(count)
 
     with open('group_22.json','w',encoding='utf8') as file:
         json.dump(GROUP,file)
 
     # 用來記錄群組22內的資料結構-------上面
+    return GROUP
+
+def relatioin_analysis(GROUP):
+    #TFPDF中用來記錄屬於哪個日子用的list
+    corpus_list = []
+
+    for i in GROUP['steamming']:
+        corpus_list.append(GROUP['steamming'][i])
+
+    tf_pdf_vect = tf_pdf(corpus_list,GROUP['tf_pdf_group_info'])
+
+    # 開始針對下一天的資料進行相似度的比較
+    daily_sentence_group_count = GROUP['daily_sentence_group_count']
+    # 先選取要比較的數量,reference_count是前一天的數量,compare_count是後一天的數量
+
+    count_len = len(daily_sentence_group_count)
+    last_day_count = 0
+    compare_count = 0
+    relation = []
+    log('start cosing analysis',lvl='w')
+    for i in range(count_len):
+        if i == count_len - 1:
+            pass
+        else:
+            compare_count = compare_count + daily_sentence_group_count[i]
+            reference_count = compare_count + daily_sentence_group_count[i + 1]
+            for j in range(1 + last_day_count, 1 + compare_count):
+                for k in range(1 + compare_count, 1 + reference_count):
+                    res = cosines(tf_pdf_vect[j],tf_pdf_vect[k])
+                    # log("%s,%s,%s" % (GROUP['sentence_group'][j-1],GROUP['sentence_group'][k-1],res))
+                    relation.append([GROUP['sentence_group'][j-1],GROUP['sentence_group'][k-1],res])
+            print(1 + last_day_count, 1 + compare_count, 1 + reference_count)
+            last_day_count = compare_count
+
+    # log("\n\n\n\n", lvl="i")
+    # log(relation,lvl="i")
+
+    relation_json={}
+    relation_json['relation'] = relation
+
+    with open('group_22_tf_pdf.json','w',encoding='utf8') as file:
+        json.dump(relation_json,file)
+
+    return relation_json
+
+def get_relation_and_draw(relation,threshold):
+    edges = []
+    nodes = []
+    for i in relation['relation']:
+        if i[2] >= threshold:
+            edges.append((i[0],i[1]))
+            nodes.append(i[0])
+            nodes.append(i[1])
+
+    G = nx.DiGraph()
+    pos = {}
+
+    pattern = "d(\d+)_sg(\d+)"
+    pattern = re.compile(pattern)
+
+    G.add_nodes_from(nodes)
+    for node in nodes:
+        m = re.match(pattern,node)
+        pos[node] = [int(m.group(1)), int(m.group(2))]
+    nx.draw_networkx_nodes(G,pos=pos,nodelist=nodes)
+
+    G.add_edges_from(edges)
+    nx.draw_networkx_edges(G,pos)
+    nx.draw_networkx_labels(G,pos)
+
+    nx.write_pajek(G, "test.net")
+
+    fig = plt.gcf()
+    fig.set_size_inches(100, 20)
+    plt.axis('off')
+    plt.show()
+    plt.cla()
+
+    # 主路徑分析的操作方法
+    # 1. Extract the largest component from the network:
+    #     a. Network > Create partition > Component > Weak
+    #     b. Operations > Network + Partition > Extract subnetwork > Choose cluster 1;
+    # 2. Remove strong components from the largest component:
+    #     a. Network > Create partition > Component > Strong
+    #     b. Operations > Network + Partition > Shrink network > [use default values]
+    # 3. Remove loops:
+    #     a. Network > Create new network > Transform > Remove > Loops
+    #
+    # 4. Create main path (or critical path):
+    #     a. Network > Acyclic network > Create weighted > Traversal > SPC
+    #     b. Network > Acyclic network > Create (Sub)Network > Main Paths
+    # The subsequent choice among the options of Main Path for “> Global Search > Standard”,
 if __name__=="__main__":
     main()

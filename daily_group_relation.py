@@ -73,6 +73,9 @@ def process_group_info(daily_data_file_info,compare_day_file_info):
         daily_data_len: 主要的檔案長度
         compare_day_len: 比對的檔案長度
     """
+    log("daily_data_file_info: %s" % daily_data_file_info)
+    log("compare_day_file_info: %s" % compare_day_file_info)
+
     process_group = []
     daily_data_len = len(daily_data_file_info)
     compare_day_len = len(compare_day_file_info)
@@ -212,6 +215,7 @@ def main():
             # 進行cosine的相似度比較
             compare_day_temp['cos'] = words_matrix_cosine_compare(words_matrix, daily_data_len, compare_day_len)
             compare_day_temp['tf_idf'] = words_matrix_tf_idf_compare(words_matrix_temp, daily_data_len, compare_day_len)
+            # print(daily_data_len, compare_day_len,channel_list)
             compare_day_temp['tf_pdf'] = words_matrix_tf_pdf_compare(words_matrix_temp, daily_data_len, compare_day_len,channel_list)
 
             compare_day.append(compare_day_temp)

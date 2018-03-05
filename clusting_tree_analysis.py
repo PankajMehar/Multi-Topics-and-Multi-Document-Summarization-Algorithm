@@ -244,11 +244,12 @@ def draw_tree(nodes, edges):
                 pos[i] = [int(m.group(1)),int(m.group(2))*2-0.3]
             else:
                 pos[i] = [int(m.group(1)), int(m.group(2))+0.5]
-
+        print(nodes[node])
         point = nx.draw_networkx_nodes(G,pos,nodelist=nodes[node],node_color=color)
         point.set_edgecolor('#000000')
 
-    # print(pos)
+    print(pos)
+    print(edges)
     G.add_edges_from(edges)
 
     nx.draw_networkx_edges(G,pos)
@@ -265,6 +266,7 @@ def draw_tree(nodes, edges):
 def main(json_file_path,threshold):
     SOURCE_DATA = read_json(json_file_path)
     nodes, edges = analysis_connection(SOURCE_DATA,threshold)
+    # print(edges)
     draw_tree(nodes, edges)
 
 if __name__ == "__main__":
