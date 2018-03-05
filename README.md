@@ -4,6 +4,7 @@
 * 將資料繪圖
 * 將資料儲存成pejak可以操作的結構
 * 透過pajek找出主路徑，並存圖為pajek_mainpath.jpg
+![image](https://github.com/moveurbody/MEMDS/blob/master/pajek_main_path.png)
 ---------------------------------------
 #### 2017/03/04
 * 將第22群的資料擷取出來，轉變成json檔案，並完成sentence group的定義
