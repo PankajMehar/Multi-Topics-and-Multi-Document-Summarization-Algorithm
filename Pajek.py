@@ -110,24 +110,27 @@ class pajek:
             if "Arcs" in data[end]:
                 line_end = end - 1
                 break
+        # print(line_start,line_end)
+        if line_start != 0:
+            main_path = data[line_start:line_end + 1]
 
-        main_path = data[line_start:line_end + 1]
-
-        # 處理main_path只剩下sg
-        pattern = re.compile('.* \d+.* \"(.*)\".*')
-        for i in range(len(main_path)):
-            m = re.match(pattern, main_path[i])
-            main_path[i] = m.group(1)
-        self.MAIN_PATH = main_path
+            # 處理main_path只剩下sg
+            pattern = re.compile('.* \d+.* \"(.*)\".*')
+            for i in range(len(main_path)):
+                m = re.match(pattern, main_path[i])
+                main_path[i] = m.group(1)
+            self.MAIN_PATH = main_path
+        else:
+            return self.MAIN_PATH
 
     def run(self):
         self.generate_log_file(self.NET_FILE_PATH, self.OUTPUT_PAJ, self.OUTPUT_JPG)
         time.sleep(1)
         self.execute()
-        time.sleep(3)
+        time.sleep(5)
         self.analysis_main_path()
         return self.MAIN_PATH
 
 if __name__ == "__main__":
-    p = pajek("1").run()
+    p = pajek("25").run()
     print(p)
