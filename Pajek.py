@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @Time    : 2018/3/8 下午 03:42
+# @Time    : 2018/3/8 下午 06:17
 # @Author  : Yuhsuan
 # @File    : Pajek.py
 # @Software: PyCharm
@@ -9,17 +9,18 @@ import re
 import time
 import subprocess
 
+
 class pajek:
-    def __init__(self,FILE_NAME,FOLDER=None,EXE_FILE=None):
+    def __init__(self, FILE_NAME, FOLDER=None, EXE_FILE=None):
         # 預設的Pajek的資料夾路徑
-        if FOLDER==None:
-            self.PAJEK_FORDER_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)),"pajek")
+        if FOLDER == None:
+            self.PAJEK_FORDER_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "pajek")
         else:
             self.PAJEK_FORDER_PATH = FOLDER
 
         # 預設的Pajek執行檔案路徑
-        if EXE_FILE==None:
-            self.EXE_FILE_PATH = os.path.join(self.PAJEK_FORDER_PATH,"Pajek.exe")
+        if EXE_FILE == None:
+            self.EXE_FILE_PATH = os.path.join(self.PAJEK_FORDER_PATH, "Pajek.exe")
         else:
             self.EXE_FILE_PATH = EXE_FILE
 
@@ -27,18 +28,18 @@ class pajek:
         self.FILE_NAME = FILE_NAME
 
         # 輸入的NET檔案路徑
-        self.NET_FILE_PATH = os.path.join(self.PAJEK_FORDER_PATH,self.FILE_NAME+".net")
+        self.NET_FILE_PATH = os.path.join(self.PAJEK_FORDER_PATH, self.FILE_NAME + ".net")
 
         # 輸出的LOG檔案路徑
-        self.LOG_PATH = os.path.join(self.PAJEK_FORDER_PATH,self.FILE_NAME+".log")
+        self.LOG_PATH = os.path.join(self.PAJEK_FORDER_PATH, self.FILE_NAME + ".log")
         # 輸出的PAJ檔案路徑
-        self.OUTPUT_PAJ = os.path.join(self.PAJEK_FORDER_PATH,self.FILE_NAME+".paj")
+        self.OUTPUT_PAJ = os.path.join(self.PAJEK_FORDER_PATH, self.FILE_NAME + ".paj")
         # 輸出的JPG檔案路徑
-        self.OUTPUT_JPG = os.path.join(self.PAJEK_FORDER_PATH,self.FILE_NAME+".jpg")
+        self.OUTPUT_JPG = os.path.join(self.PAJEK_FORDER_PATH, self.FILE_NAME + ".jpg")
         # 最後的main_path
-        self.MAIN_PATH=[]
+        self.MAIN_PATH = []
 
-    def generate_log_file(self,NET_FILE_PATH,OUTPUT_PAJ,OUTPUT_JPG):
+    def generate_log_file(self, NET_FILE_PATH, OUTPUT_PAJ, OUTPUT_JPG):
         LOG = """
         NETBEGIN 1
         CLUBEGIN 1
@@ -46,7 +47,7 @@ class pajek:
         CLSBEGIN 1
         HIEBEGIN 1
         VECBEGIN 1
-        
+
         % Reading Network   ---    {net_file_path}
         N 1 RDN "{net_file_path}" (203)
         % Weak Components
@@ -81,51 +82,52 @@ class pajek:
         EXIT
         """.format(net_file_path=NET_FILE_PATH, output_paj=OUTPUT_PAJ, output_jpg=OUTPUT_JPG)
 
-        self.LOG_PATH = os.path.join(self.PAJEK_FORDER_PATH,self.FILE_NAME+".log")
-        with open(self.LOG_PATH,"w",encoding='utf8') as file:
+        self.LOG_PATH = os.path.join(self.PAJEK_FORDER_PATH, self.FILE_NAME + ".log")
+        with open(self.LOG_PATH, "w", encoding='utf8') as file:
             file.write(LOG)
 
     def execute(self):
-        cmd = "{exe} {log}".format(exe = self.EXE_FILE_PATH, log = self.LOG_PATH)
+        cmd = "{exe} {log}".format(exe=self.EXE_FILE_PATH, log=self.LOG_PATH)
         print(cmd)
         p = subprocess.Popen(cmd, shell=True)
 
     def analysis_main_path(self):
         data = []
-        with open(self.OUTPUT_PAJ,"r",encoding="utf8") as file:
+        with open(self.OUTPUT_PAJ, "r", encoding="utf8") as file:
             data = file.readlines()
 
-        line_start=0
-        line_end=0
+        line_start = 0
+        line_end = 0
 
         # 找開始記錄main path的行數
         for start in range(len(data)):
             if "Network Standard Global Main Path of N4" in data[start]:
-                line_start=start+2
+                line_start = start + 2
                 break
 
         # 找main path的最後一行
-        for end in range(line_start,len(data)):
+        for end in range(line_start, len(data)):
             if "Arcs" in data[end]:
-                line_end=end-1
+                line_end = end - 1
                 break
 
-        main_path = data[line_start:line_end+1]
+        main_path = data[line_start:line_end + 1]
 
         # 處理main_path只剩下sg
         pattern = re.compile('.* \d+.* \"(.*)\".*')
         for i in range(len(main_path)):
-            m = re.match(pattern,main_path[i])
+            m = re.match(pattern, main_path[i])
             main_path[i] = m.group(1)
         self.MAIN_PATH = main_path
 
     def run(self):
-        self.generate_log_file(self.NET_FILE_PATH,self.OUTPUT_PAJ,self.OUTPUT_JPG)
+        self.generate_log_file(self.NET_FILE_PATH, self.OUTPUT_PAJ, self.OUTPUT_JPG)
         time.sleep(1)
         self.execute()
         time.sleep(3)
         self.analysis_main_path()
         return self.MAIN_PATH
+
 
 if __name__ == "__main__":
     p = pajek("test").run()
