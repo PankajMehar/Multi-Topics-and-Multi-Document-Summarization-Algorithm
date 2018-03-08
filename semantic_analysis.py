@@ -6,6 +6,7 @@
 import json
 import re
 import os
+import time
 import pandas as pd
 from log_module import log
 from doc_to_vector import*
@@ -14,7 +15,8 @@ from term_weighting import tf_pdf,cosines
 # 畫圖的原件
 import networkx as nx
 import matplotlib.pyplot as plt
-from matplotlib import colors as mcolors
+
+from Pajek import pajek
 
 def main():
     # DATA = news_data_transformer()
@@ -24,7 +26,11 @@ def main():
     with open('group_22_tf_pdf.json','r',encoding='utf8') as file:
         relation = json.load(file)
 
-    get_relation_and_draw(relation,0.25)
+    for i in range(1,10):
+        get_relation_and_draw(relation,i/100,str(i))
+        time.sleep(2)
+        res = pajek(str(i)).run()
+        print(res)
 
 # 將原始資料做整理成方便使用的格式
 def news_data_transformer():
@@ -199,7 +205,7 @@ def relatioin_analysis(GROUP):
 
     return relation_json
 
-def get_relation_and_draw(relation,threshold):
+def get_relation_and_draw(relation,threshold,file_name):
     edges = []
     nodes = []
     for i in relation['relation']:
@@ -224,12 +230,12 @@ def get_relation_and_draw(relation,threshold):
     nx.draw_networkx_edges(G,pos)
     nx.draw_networkx_labels(G,pos)
 
-    nx.write_pajek(G, "test.net")
+    nx.write_pajek(G, os.path.join(os.path.dirname(os.path.abspath(__file__)),"pajek/"+file_name+".net"))
 
     fig = plt.gcf()
     fig.set_size_inches(100, 20)
     plt.axis('off')
-    plt.show()
+    # plt.show()
     plt.cla()
 
     # 主路徑分析的操作方法
@@ -246,5 +252,6 @@ def get_relation_and_draw(relation,threshold):
     #     a. Network > Acyclic network > Create weighted > Traversal > SPC
     #     b. Network > Acyclic network > Create (Sub)Network > Main Paths
     # The subsequent choice among the options of Main Path for “> Global Search > Standard”,
+
 if __name__=="__main__":
     main()
