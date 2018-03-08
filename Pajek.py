@@ -128,7 +128,6 @@ class pajek:
         self.analysis_main_path()
         return self.MAIN_PATH
 
-
 if __name__ == "__main__":
-    p = pajek("test").run()
+    p = pajek("1").run()
     print(p)
