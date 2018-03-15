@@ -83,7 +83,7 @@ def analysis_connection(SOURCE_DATA,threshold):
                 tf_pdf = compare_daily_data["tf_pdf"]
 
                 for i in range(process_group_len):
-                    if process_group[i][0] == source_group and tf_idf[i]>=threshold:
+                    if process_group[i][0] == source_group and tf_idf[i]>=(threshold/100):
                         if single_day_compare_result[source_group] == "":
                             edges.append((str(single_day["day"])+"-"+str(source_group),str(compare_daily_data["day"])+"-"+str(process_group[i][1])))
                             single_day_compare_result[source_group] = "Source Day: %s, Source Group: %s, Compare Day: %s, Compare Group: %s" % (single_day["day"],source_group,compare_daily_data["day"],process_group[i][1])
@@ -138,7 +138,7 @@ def analysis_connection(SOURCE_DATA,threshold):
     for i in range(len(clust_res)):
         clust_res[i].sort()
     print(clust_res)
-    group_file_list(clust_res)
+    group_file_list(clust_res,threshold)
     return nodes,edges
 
 def find_files(item,DICT):
@@ -159,7 +159,7 @@ def find_files(item,DICT):
     return group_file_list
 
 
-def group_file_list(group_list):
+def group_file_list(group_list,threshold):
     GROUP_FILE_LISTS = {}
     group_file_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\first_clusting_result.json"
     file_reference_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\file_reference.json"
@@ -175,7 +175,7 @@ def group_file_list(group_list):
     log("GROUP_FILE_LISTS:\n%s" % GROUP_FILE_LISTS,lvl="i")
 
     # 儲存一份還沒轉換前的資料
-    group_file_result_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\final_group_file_reference.json"
+    group_file_result_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\final_group_file_reference\\"+str(threshold)+".json"
     with open(group_file_result_path, "w") as file:
         json.dump(GROUP_FILE_LISTS, file)
 
@@ -199,11 +199,11 @@ def group_file_list(group_list):
                     GROUP_FILE_LISTS[i][file_list] = reference[0]
     print(GROUP_FILE_LISTS)
 
-    group_file_result_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\final_group_file.json"
+    group_file_result_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\final_group_file\\"+str(threshold)+".json"
     with open(group_file_result_path,"w") as file:
         json.dump(GROUP_FILE_LISTS,file)
 
-def draw_tree(nodes, edges):
+def draw_tree(nodes, edges,threshold):
     # pos = nx.get_node_attributes(G, 'pos')
     # print(pos)
     # nodes = [(1,0),"1-1","1-2","2-1","2-3"]
@@ -259,17 +259,18 @@ def draw_tree(nodes, edges):
     fig = plt.gcf()
     fig.set_size_inches(100,20)
     plt.axis('off')
-    plt.savefig('file.jpg', dpi=100)
-    plt.show()
-    plt.cla()
+    plt.savefig('C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\file\\'+str(threshold)+'.jpg', dpi=100)
+    # plt.show()
+    # plt.cla()
 
 def main(json_file_path,threshold):
     SOURCE_DATA = read_json(json_file_path)
     nodes, edges = analysis_connection(SOURCE_DATA,threshold)
     # print(edges)
-    draw_tree(nodes, edges)
+    draw_tree(nodes, edges,threshold)
 
 if __name__ == "__main__":
     json_file_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\clusting_tree_values.json"
-    threshold = 0.2
-    main(json_file_path,threshold)
+    for i in range(1,100):
+        threshold = i
+        main(json_file_path,threshold)

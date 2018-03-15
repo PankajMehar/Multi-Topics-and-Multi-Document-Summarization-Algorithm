@@ -20,19 +20,22 @@ from matplotlib import colors as mcolors
 from Pajek import pajek
 
 def main():
-    # DATA = news_data_transformer()
-    # relation = relatioin_analysis(DATA)
+    DATA = news_data_transformer()
+    relation = relatioin_analysis(DATA)
 
-    relation={}
-    with open('group_22_tf_pdf.json','r',encoding='utf8') as file:
-        relation = json.load(file)
+    # relation={}
+    # with open('group_22_tf_pdf.json','r',encoding='utf8') as file:
+    #     relation = json.load(file)
 
-    for i in range(1,100):
+    for i in range(30,31):
         get_relation_and_draw(relation, i / 100, str(i))
         time.sleep(3)
         res = pajek(str(i)).run()
         log(i,lvl='w')
         log(res,lvl='w')
+
+    # res = ['d0_sg0', 'd3_sg20', 'd0_sg1', 'd0_sg4', 'd0_sg5', 'd0_sg6', 'd0_sg9', 'd0_sg10', 'd0_sg11', 'd0_sg12', 'd0_sg13', 'd0_sg16', 'd0_sg18', 'd0_sg19', 'd0_sg20', 'd0_sg22', 'd0_sg26', 'd0_sg28', 'd0_sg31', 'd0_sg32', 'd0_sg33', 'd0_sg34', 'd0_sg35', 'd0_sg38', 'd0_sg39', 'd0_sg40', 'd0_sg41', 'd4_sg39', 'd6_sg21', 'd8_sg11', 'd14_sg72', 'd15_sg4', 'd16_sg1', 'd16_sg2', 'd16_sg3', 'd16_sg9', 'd16_sg30', 'd16_sg6', 'd16_sg7', 'd16_sg11', 'd16_sg13', 'd16_sg15', 'd16_sg16', 'd16_sg18', 'd16_sg19', 'd16_sg21', 'd16_sg26', 'd16_sg28', 'd16_sg14', 'd16_sg29', 'd16_sg5', 'd16_sg0', 'd16_sg20', 'd16_sg27']
+    system_summary(res)
 
 # 將原始資料做整理成方便使用的格式
 def news_data_transformer():
@@ -255,6 +258,21 @@ def get_relation_and_draw(relation,threshold,file_name):
     #     a. Network > Acyclic network > Create weighted > Traversal > SPC
     #     b. Network > Acyclic network > Create (Sub)Network > Main Paths
     # The subsequent choice among the options of Main Path for “> Global Search > Standard”,
+
+def system_summary(sg_list):
+    # 結果
+    summary = ""
+
+    # 比對用的檔案
+    with open('group_22.json','r',encoding='utf8') as file:
+        relation = json.load(file)
+
+    for group in sg_list:
+        for source_group in relation['source']:
+            if group == source_group:
+                # print(relation['source'][source_group])
+                summary=summary+relation['source'][source_group]
+    print(summary)
 
 if __name__=="__main__":
     main()
