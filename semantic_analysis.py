@@ -20,29 +20,35 @@ from matplotlib import colors as mcolors
 from Pajek import pajek
 
 def main():
-    DATA = news_data_transformer()
-    relation = relatioin_analysis(DATA)
+    # DATA = news_data_transformer()
+
+    for group_day in range(19):
+        DATA = {}
+        with open("group_"+str(group_day)+".json") as file:
+            DATA = json.load(file)
+        log('group_day: %s' % group_day, lvl='w')
+        relation = relatioin_analysis(DATA,group_day)
 
     # relation={}
     # with open('group_22_tf_pdf.json','r',encoding='utf8') as file:
     #     relation = json.load(file)
 
-    for i in range(30,31):
-        get_relation_and_draw(relation, i / 100, str(i))
-        time.sleep(3)
-        res = pajek(str(i)).run()
-        log(i,lvl='w')
-        log(res,lvl='w')
-
-    # res = ['d0_sg0', 'd3_sg20', 'd0_sg1', 'd0_sg4', 'd0_sg5', 'd0_sg6', 'd0_sg9', 'd0_sg10', 'd0_sg11', 'd0_sg12', 'd0_sg13', 'd0_sg16', 'd0_sg18', 'd0_sg19', 'd0_sg20', 'd0_sg22', 'd0_sg26', 'd0_sg28', 'd0_sg31', 'd0_sg32', 'd0_sg33', 'd0_sg34', 'd0_sg35', 'd0_sg38', 'd0_sg39', 'd0_sg40', 'd0_sg41', 'd4_sg39', 'd6_sg21', 'd8_sg11', 'd14_sg72', 'd15_sg4', 'd16_sg1', 'd16_sg2', 'd16_sg3', 'd16_sg9', 'd16_sg30', 'd16_sg6', 'd16_sg7', 'd16_sg11', 'd16_sg13', 'd16_sg15', 'd16_sg16', 'd16_sg18', 'd16_sg19', 'd16_sg21', 'd16_sg26', 'd16_sg28', 'd16_sg14', 'd16_sg29', 'd16_sg5', 'd16_sg0', 'd16_sg20', 'd16_sg27']
-    system_summary(res)
+    # for i in range(30,31):
+    #     get_relation_and_draw(relation, i / 100, str(i))
+    #     time.sleep(3)
+    #     res = pajek(str(i)).run()
+    #     log(i,lvl='w')
+    #     log(res,lvl='w')
+    #
+    # # res = ['d0_sg0', 'd3_sg20', 'd0_sg1', 'd0_sg4', 'd0_sg5', 'd0_sg6', 'd0_sg9', 'd0_sg10', 'd0_sg11', 'd0_sg12', 'd0_sg13', 'd0_sg16', 'd0_sg18', 'd0_sg19', 'd0_sg20', 'd0_sg22', 'd0_sg26', 'd0_sg28', 'd0_sg31', 'd0_sg32', 'd0_sg33', 'd0_sg34', 'd0_sg35', 'd0_sg38', 'd0_sg39', 'd0_sg40', 'd0_sg41', 'd4_sg39', 'd6_sg21', 'd8_sg11', 'd14_sg72', 'd15_sg4', 'd16_sg1', 'd16_sg2', 'd16_sg3', 'd16_sg9', 'd16_sg30', 'd16_sg6', 'd16_sg7', 'd16_sg11', 'd16_sg13', 'd16_sg15', 'd16_sg16', 'd16_sg18', 'd16_sg19', 'd16_sg21', 'd16_sg26', 'd16_sg28', 'd16_sg14', 'd16_sg29', 'd16_sg5', 'd16_sg0', 'd16_sg20', 'd16_sg27']
+    # system_summary(res)
 
 # 將原始資料做整理成方便使用的格式
 def news_data_transformer():
     # 最後分群，依照原始檔案路徑的資料
-    final_group_file_path = "C://Users//Yuhsuan//Desktop//MEMDS//arrange_day_0//final_group_file.json"
+    final_group_file_path = "C://Users//Yuhsuan//Desktop//MEMDS//arrange_day_0//final_group_file//17.json"
     # 最後分群，依照參考檔案路徑的資料
-    final_group_file_reference_path = "C://Users//Yuhsuan//Desktop//MEMDS//arrange_day_0//final_group_file_reference.json"
+    final_group_file_reference_path = "C://Users//Yuhsuan//Desktop//MEMDS//arrange_day_0//final_group_file_reference//17.json"
 
     final_group_file = {}
     final_group_file_reference = {}
@@ -89,8 +95,8 @@ def news_data_transformer():
             day_number = m2.group(1)
             news_numer_in_day = m2.group(4)
             temp_data_list.append([int(group_number),int(day_number),source_file,reference_file,news_srouce,news_event,news_event_date,news_numer_in_day])
-        # print("group: %s\n%s" % (group_number,temp_data_list))
-        # print(temp_data_list)
+        print("group: %s\n%s" % (group_number,temp_data_list))
+        print(temp_data_list)
 
         res.extend(temp_data_list)
     # 儲存dataframe資料並排序
@@ -98,85 +104,92 @@ def news_data_transformer():
     df.sort_values(by=['group', 'day_number'], ascending=[True, True],inplace=True)
     # df.to_csv('data_group_info.csv', sep=',', encoding='utf-8')
 
-    day_number = list(df.loc[df['group']==22]['day_number'])
-    source_file = list(df.loc[df['group']==22]['source_file'])
+    log("開始處理各群組",lvl='W')
 
-    # 用來記錄共有多少筆資料
-    file_number = len(day_number)
+    for process_group in range(19):
+        log("Group %s" % process_group, lvl='W')
+        day_number = list(df.loc[df['group']==process_group]['day_number'])
+        source_file = list(df.loc[df['group']==process_group]['source_file'])
 
-    # 用來記錄群組22內的資料結構-------下面
-    GROUP = {}
-    GROUP['group_number']=22
-    GROUP['source']={}
-    GROUP['steamming']={}
-    GROUP['tf_pdf_group_info']=[]
-    GROUP['daily_sentence_group_count']=[]
-    GROUP['sentence_group'] = []
+        # 用來記錄共有多少筆資料
+        file_number = len(day_number)
 
-    last_sg_number=0
-    worker = DocToSG('english')
-    for num in range(file_number):
-        lines = []
-        file = open(source_file[num],'r',encoding='utf8')
-        lines = file.readlines()
-        file.close()
+        # 用來記錄群組22內的資料結構-------下面
+        GROUP = {}
+        GROUP['group_number']=process_group
+        GROUP['source']={}
+        GROUP['steamming']={}
+        GROUP['tf_pdf_group_info']=[]
+        GROUP['daily_sentence_group_count']=[]
+        GROUP['sentence_group'] = []
 
-        # 計算共讀出多少行數
-        line_number = len(lines)
-        # sg = "d%s_sg%s" % (day_number[num], i)
+        last_sg_number=0
+        worker = DocToSG('english')
+        for num in range(file_number):
+            lines = []
+            file = open(source_file[num],'r',encoding='utf8')
+            lines = file.readlines()
+            file.close()
 
-        if num == 0:
-            for i in range(line_number):
-                sg = "d%s_sg%s" % (day_number[num], i)
-                GROUP['sentence_group'].append(sg)
-                GROUP['source'][sg] = lines[i]
-                GROUP['steamming'][sg] = worker.ProcessText(lines[i]).split(" ")
-                # 為了tf-pdf的日子加上這個屬性
-                GROUP['tf_pdf_group_info'].append(day_number[num])
-            last_sg_number = line_number
-        if num > 0 and day_number[num]!=day_number[num-1]:
-            for i in range(line_number):
-                sg = "d%s_sg%s" % (day_number[num], i)
-                GROUP['sentence_group'].append(sg)
-                GROUP['source'][sg] = lines[i]
-                GROUP['steamming'][sg] = worker.ProcessText(lines[i]).split(" ")
-                # 為了tf-pdf的日子加上這個屬性
-                GROUP['tf_pdf_group_info'].append(day_number[num])
-            last_sg_number = line_number
-        if num > 0 and day_number[num] == day_number[num - 1]:
-            for i in range(line_number):
-                sg = "d%s_sg%s" % (day_number[num], last_sg_number+i)
-                GROUP['sentence_group'].append(sg)
-                GROUP['source'][sg] = lines[i]
-                GROUP['steamming'][sg] = worker.ProcessText(lines[i]).split(" ")
-                # 為了tf-pdf的日子加上這個屬性
-                GROUP['tf_pdf_group_info'].append(day_number[num])
-            last_sg_number = line_number+last_sg_number
+            # 計算共讀出多少行數
+            line_number = len(lines)
+            # sg = "d%s_sg%s" % (day_number[num], i)
 
-    items = list(set(GROUP['tf_pdf_group_info']))
-    for i in items:
-        count = 0
-        for j in GROUP['tf_pdf_group_info']:
-            if i==j:
-                count = count+1
-        GROUP['daily_sentence_group_count'].append(count)
+            if num == 0:
+                for i in range(line_number):
+                    sg = "d%s_sg%s" % (day_number[num], i)
+                    GROUP['sentence_group'].append(sg)
+                    GROUP['source'][sg] = lines[i]
+                    GROUP['steamming'][sg] = worker.ProcessText(lines[i]).split(" ")
+                    # 為了tf-pdf的日子加上這個屬性
+                    GROUP['tf_pdf_group_info'].append(day_number[num])
+                last_sg_number = line_number
+            if num > 0 and day_number[num]!=day_number[num-1]:
+                for i in range(line_number):
+                    sg = "d%s_sg%s" % (day_number[num], i)
+                    GROUP['sentence_group'].append(sg)
+                    GROUP['source'][sg] = lines[i]
+                    GROUP['steamming'][sg] = worker.ProcessText(lines[i]).split(" ")
+                    # 為了tf-pdf的日子加上這個屬性
+                    GROUP['tf_pdf_group_info'].append(day_number[num])
+                last_sg_number = line_number
+            if num > 0 and day_number[num] == day_number[num - 1]:
+                for i in range(line_number):
+                    sg = "d%s_sg%s" % (day_number[num], last_sg_number+i)
+                    GROUP['sentence_group'].append(sg)
+                    GROUP['source'][sg] = lines[i]
+                    GROUP['steamming'][sg] = worker.ProcessText(lines[i]).split(" ")
+                    # 為了tf-pdf的日子加上這個屬性
+                    GROUP['tf_pdf_group_info'].append(day_number[num])
+                last_sg_number = line_number+last_sg_number
 
-    with open('group_22.json','w',encoding='utf8') as file:
-        json.dump(GROUP,file)
+        items = list(set(GROUP['tf_pdf_group_info']))
+        for i in items:
+            count = 0
+            for j in GROUP['tf_pdf_group_info']:
+                if i==j:
+                    count = count+1
+            GROUP['daily_sentence_group_count'].append(count)
+        print(GROUP)
+        with open('group_'+str(process_group)+'.json','w',encoding='utf8') as file:
+            json.dump(GROUP,file)
 
-    # 用來記錄群組22內的資料結構-------上面
-    return GROUP
 
-def relatioin_analysis(GROUP):
+    # # 用來記錄群組22內的資料結構-------上面
+    # return GROUP
+
+def relatioin_analysis(GROUP,group_day):
     #TFPDF中用來記錄屬於哪個日子用的list
     corpus_list = []
 
     for i in GROUP['steamming']:
         corpus_list.append(GROUP['steamming'][i])
-
+    # print(corpus_list)
+    log('處理tf_pdf', lvl='w')
     tf_pdf_vect = tf_pdf(corpus_list,GROUP['tf_pdf_group_info'])
 
     # 開始針對下一天的資料進行相似度的比較
+    log('開始針對下一天的資料進行相似度的比較', lvl='w')
     daily_sentence_group_count = GROUP['daily_sentence_group_count']
     # 先選取要比較的數量,reference_count是前一天的數量,compare_count是後一天的數量
 
@@ -205,7 +218,7 @@ def relatioin_analysis(GROUP):
     relation_json={}
     relation_json['relation'] = relation
 
-    with open('group_22_tf_pdf.json','w',encoding='utf8') as file:
+    with open('group_'+str(group_day)+'_tf_pdf.json','w',encoding='utf8') as file:
         json.dump(relation_json,file)
 
     return relation_json
