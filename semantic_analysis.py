@@ -199,6 +199,7 @@ def relatioin_analysis(GROUP,group_day):
     relation = []
     log('start cosing analysis',lvl='w')
     for i in range(count_len):
+        log("count_len: %s, i: %s" % (count_len,i),lvl='W')
         if i == count_len - 1:
             pass
         else:
