@@ -30,20 +30,68 @@ def main():
     #     log('group_day: %s' % group_day, lvl='w')
     #     relation = relatioin_analysis(DATA, group_day)
 
-    relation={}
-    with open('group_22_tf_pdf.json','r',encoding='utf8') as file:
-        relation = json.load(file)
-
-    for i in range(30,31):
-        get_relation_and_draw(relation, i / 100, str(i))
-        time.sleep(3)
-        res = pajek(str(i)).run()
-        log(i,lvl='w')
-        log(res,lvl='w')
+    # 用來產生main_path.json的資料
+    # for file_number in range(19):
+    #     relation={}
+    #     with open('group_data/%s/group_%s_tf_pdf.json' % (file_number,file_number),'r',encoding='utf8') as file:
+    #         relation = json.load(file)
+    #     print(relation)
+    #     log("load file finish")
+    #     res = {}
+    #     for i in range(1,100):
+    #         directory = os.path.dirname(__file__)
+    #         directory = "/group_data/%s/pajek/" % file_number
+    #         log("get_relation_and_draw start")
+    #         get_relation_and_draw(relation, i / 100, str(i),file_number)
+    #         log("get_relation_and_draw end")
+    #         time.sleep(3)
     #
-    # # res = ['d0_sg0', 'd3_sg20', 'd0_sg1', 'd0_sg4', 'd0_sg5', 'd0_sg6', 'd0_sg9', 'd0_sg10', 'd0_sg11', 'd0_sg12', 'd0_sg13', 'd0_sg16', 'd0_sg18', 'd0_sg19', 'd0_sg20', 'd0_sg22', 'd0_sg26', 'd0_sg28', 'd0_sg31', 'd0_sg32', 'd0_sg33', 'd0_sg34', 'd0_sg35', 'd0_sg38', 'd0_sg39', 'd0_sg40', 'd0_sg41', 'd4_sg39', 'd6_sg21', 'd8_sg11', 'd14_sg72', 'd15_sg4', 'd16_sg1', 'd16_sg2', 'd16_sg3', 'd16_sg9', 'd16_sg30', 'd16_sg6', 'd16_sg7', 'd16_sg11', 'd16_sg13', 'd16_sg15', 'd16_sg16', 'd16_sg18', 'd16_sg19', 'd16_sg21', 'd16_sg26', 'd16_sg28', 'd16_sg14', 'd16_sg29', 'd16_sg5', 'd16_sg0', 'd16_sg20', 'd16_sg27']
-    # system_summary(res)
+    #         data=""
+    #         file_path = os.path.join(os.path.dirname(__file__),'group_data/%s/%s.net' % (file_number,i))
+    #         with open(file_path,"r") as file:
+    #             data = file.readlines()
+    #         print(data)
+    #         if "*vertices 0\n" not in data:
+    #             log("pajek start")
+    #             res_ = pajek(str(i),EXE_FILE="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\pajek\\Pajek.exe",FOLDER="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\group_data\\%s\\" % file_number).run()
+    #             log("pajek end")
+    #             res[i]=res_
+    #             log(i,lvl='w')
+    #             log(res,lvl='w')
+    #         else:
+    #             log("No result",lvl='w')
+    #             res[i]={}
+    #             log(i, lvl='w')
+    #             log(res, lvl='w')
+    #
+    #     with open("group_data/%s/main_path.json" % file_number,"w") as file:
+    #         json.dump(res,file)
+    #
 
+
+    # # res = ['d0_sg0', 'd3_sg20', 'd0_sg1', 'd0_sg4', 'd0_sg5', 'd0_sg6', 'd0_sg9', 'd0_sg10', 'd0_sg11', 'd0_sg12', 'd0_sg13', 'd0_sg16', 'd0_sg18', 'd0_sg19', 'd0_sg20', 'd0_sg22', 'd0_sg26', 'd0_sg28', 'd0_sg31', 'd0_sg32', 'd0_sg33', 'd0_sg34', 'd0_sg35', 'd0_sg38', 'd0_sg39', 'd0_sg40', 'd0_sg41', 'd4_sg39', 'd6_sg21', 'd8_sg11', 'd14_sg72', 'd15_sg4', 'd16_sg1', 'd16_sg2', 'd16_sg3', 'd16_sg9', 'd16_sg30', 'd16_sg6', 'd16_sg7', 'd16_sg11', 'd16_sg13', 'd16_sg15', 'd16_sg16', 'd16_sg18', 'd16_sg19', 'd16_sg21', 'd16_sg26', 'd16_sg28', 'd16_sg14', 'd16_sg29', 'd16_sg5', 'd16_sg0', 'd16_sg20', 'd16_sg27']
+    system_summary(res)
+
+# 補救資料
+def rescue_data():
+    for file_number in range(0,18):
+        file_path =  os.path.join(os.path.dirname(__file__),'group_data/%s/main_path.json' % (file_number))
+        if not os.path.exists(file_path):
+            res = {}
+            for i in range(1,100):
+                file_path = os.path.join(os.path.dirname(__file__), 'group_data/%s/%s.paj' % (file_number, i))
+                if os.path.exists(file_path):
+                    p = pajek(str(i), EXE_FILE="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\pajek\\Pajek.exe",
+                            FOLDER="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\group_data\\%s\\" % file_number)
+                    p.analysis_main_path()
+                    res[i]=p.MAIN_PATH
+                else:
+                    res[i]=[]
+
+            print(res)
+
+            with open("group_data/%s/main_path.json" % file_number, "w") as file:
+                json.dump(res, file)
 
 # 將原始資料做整理成方便使用的格式
 def news_data_transformer():
@@ -182,7 +230,6 @@ def news_data_transformer():
     # # 用來記錄群組22內的資料結構-------上面
     # return GROUP
 
-
 def relatioin_analysis(GROUP, group_day):
     # TFPDF中用來記錄屬於哪個日子用的list
     corpus_list = []
@@ -232,8 +279,7 @@ def relatioin_analysis(GROUP, group_day):
 
     return relation_json
 
-
-def get_relation_and_draw(relation, threshold, file_name):
+def get_relation_and_draw(relation, threshold, file_name,file_number):
     edges = []
     nodes = []
     for i in relation['relation']:
@@ -241,29 +287,33 @@ def get_relation_and_draw(relation, threshold, file_name):
             edges.append((i[0], i[1]))
             nodes.append(i[0])
             nodes.append(i[1])
-
+    # print(nodes,edges)
     G = nx.DiGraph()
     pos = {}
 
     pattern = "d(\d+)_sg(\d+)"
     pattern = re.compile(pattern)
-
+    log("add_nodes")
     G.add_nodes_from(nodes)
     for node in nodes:
         m = re.match(pattern, node)
         pos[node] = [int(m.group(1)), int(m.group(2))]
     nx.draw_networkx_nodes(G, pos=pos, nodelist=nodes)
-
+    # print(pos)
+    # print(nodes)
+    log("add edges")
     G.add_edges_from(edges)
+    log("draw net")
     nx.draw_networkx_edges(G, pos)
     nx.draw_networkx_labels(G, pos)
-
-    nx.write_pajek(G, os.path.join(os.path.dirname(os.path.abspath(__file__)), "pajek/" + file_name + ".net"))
+    log("write net")
+    nx.write_pajek(G, os.path.join(os.path.dirname(os.path.abspath(__file__)), "group_data/"+str(file_number)+"/" + str(file_name) + ".net"))
 
     fig = plt.gcf()
     fig.set_size_inches(100, 20)
     plt.axis('off')
-    plt.savefig(os.path.join(os.path.dirname(os.path.abspath(__file__)), "pajek/" + file_name + ".png"), dpi=100)
+    log("save jpg")
+    plt.savefig(os.path.join(os.path.dirname(os.path.abspath(__file__)), "group_data/"+str(file_number)+"/" + str(file_name) + ".png"), dpi=100)
     # plt.show()
     plt.cla()
 
@@ -282,7 +332,6 @@ def get_relation_and_draw(relation, threshold, file_name):
     #     b. Network > Acyclic network > Create (Sub)Network > Main Paths
     # The subsequent choice among the options of Main Path for “> Global Search > Standard”,
 
-
 def system_summary(sg_list):
     # 結果
     summary = ""
@@ -297,7 +346,6 @@ def system_summary(sg_list):
                 # print(relation['source'][source_group])
                 summary = summary + relation['source'][source_group]
     print(summary)
-
 
 if __name__ == "__main__":
     main()

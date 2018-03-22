@@ -125,9 +125,9 @@ class pajek:
 
     def run(self):
         self.generate_log_file(self.NET_FILE_PATH, self.OUTPUT_PAJ, self.OUTPUT_JPG)
-        time.sleep(1)
+        time.sleep(10)
         self.execute()
-        time.sleep(5)
+        time.sleep(10)
         self.analysis_main_path()
         return self.MAIN_PATH
 
