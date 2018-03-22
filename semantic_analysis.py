@@ -70,7 +70,24 @@ def main():
 
 
     # # res = ['d0_sg0', 'd3_sg20', 'd0_sg1', 'd0_sg4', 'd0_sg5', 'd0_sg6', 'd0_sg9', 'd0_sg10', 'd0_sg11', 'd0_sg12', 'd0_sg13', 'd0_sg16', 'd0_sg18', 'd0_sg19', 'd0_sg20', 'd0_sg22', 'd0_sg26', 'd0_sg28', 'd0_sg31', 'd0_sg32', 'd0_sg33', 'd0_sg34', 'd0_sg35', 'd0_sg38', 'd0_sg39', 'd0_sg40', 'd0_sg41', 'd4_sg39', 'd6_sg21', 'd8_sg11', 'd14_sg72', 'd15_sg4', 'd16_sg1', 'd16_sg2', 'd16_sg3', 'd16_sg9', 'd16_sg30', 'd16_sg6', 'd16_sg7', 'd16_sg11', 'd16_sg13', 'd16_sg15', 'd16_sg16', 'd16_sg18', 'd16_sg19', 'd16_sg21', 'd16_sg26', 'd16_sg28', 'd16_sg14', 'd16_sg29', 'd16_sg5', 'd16_sg0', 'd16_sg20', 'd16_sg27']
-    system_summary(res)
+    for file_number in range(0,19):
+        main_path={}
+
+        with open("group_data/%s/main_path.json" % file_number,"r") as file:
+            main_path = json.load(file)
+
+        ref_path = "group_data/%s/group_%s.json" % (file_number,file_number)
+        # print(main_path)
+        for i in range(1,100):
+            if main_path[str(i)]!=[]:
+                res = main_path[str(i)]
+                summary = system_summary(res,ref_path)
+                # print(summary)
+                log("%s,%s" % (file_number,i),lvl="w")
+                summary_path = "group_data/%s/%s.txt" % (file_number,i)
+                with open(summary_path,'w',encoding='utf8') as file:
+                    file.write(summary)
+                time.sleep(3)
 
 # 補救資料
 def rescue_data():
@@ -332,12 +349,12 @@ def get_relation_and_draw(relation, threshold, file_name,file_number):
     #     b. Network > Acyclic network > Create (Sub)Network > Main Paths
     # The subsequent choice among the options of Main Path for “> Global Search > Standard”,
 
-def system_summary(sg_list):
+def system_summary(sg_list,ref_path):
     # 結果
     summary = ""
 
     # 比對用的檔案
-    with open('group_22.json', 'r', encoding='utf8') as file:
+    with open(ref_path, 'r', encoding='utf8') as file:
         relation = json.load(file)
 
     for group in sg_list:
@@ -345,7 +362,8 @@ def system_summary(sg_list):
             if group == source_group:
                 # print(relation['source'][source_group])
                 summary = summary + relation['source'][source_group]
-    print(summary)
+    # print(summary)
+    return summary
 
 if __name__ == "__main__":
     main()
