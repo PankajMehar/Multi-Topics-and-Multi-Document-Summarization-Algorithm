@@ -1,5 +1,10 @@
 # MEMDS
 #### 2017/03/22
+* main_path的文本計算完成 -> semantic_analysis.py
+* textrank的文本計算完成 -> mainpath_textrank_summary.py
+* lexrank的文本計算完成 - > lexrank_summary.py
+---------------------------------------
+#### 2017/03/22
 * 所有的主路徑都算出來了
 ---------------------------------------
 #### 2017/03/17

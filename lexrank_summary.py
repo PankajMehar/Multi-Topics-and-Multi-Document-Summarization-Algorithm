@@ -7,17 +7,19 @@
 from lexrank import STOPWORDS, LexRank
 import os
 import json
+from log_module import log
 
+log("load reference doc")
 documents = []
-document_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),"bbc")
+document_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "bbc")
 
 for dirPath, dirNames, fileNames in os.walk(document_dir):
     for f in fileNames:
         try:
-            with open(os.path.join(dirPath, f),"rt",encoding="utf8") as file:
+            with open(os.path.join(dirPath, f), "rt", encoding="utf8") as file:
                 documents.append(file.readlines())
         except Exception as e:
-            print(dirPath,f)
+            log("path: %s%s" % (dirPath, f))
 
 lxr = LexRank(documents, stopwords=STOPWORDS['en'])
 
@@ -50,54 +52,24 @@ sentences = [
     'banking sector, education and the welfare state.',
 ]
 
-a = {}
-with open("group_22.json","r",encoding="utf8") as file:
-    a = json.load(file)
 
-sen=[]
-for i in a["source"]:
-    sen.append(a["source"][i])
+for file_group in range(19):
+    log(str(file_group))
 
-sentences=sen
-print(sentences)
+    group_data = {}
+    with open("group_data/%s/group_%s.json" % (file_group,file_group),"r",encoding="utf8") as file:
+        group_data = json.load(file)
 
-print("\n\n\n\n\n\n\n")
-# get summary with classical LexRank algorithm
-summary = lxr.get_summary(sentences, summary_size=2, threshold=.1)
-print(summary)
-print("\n\n\n\n\n\n\n")
+    sen = []
+    for i in group_data["source"]:
+        sen.append(group_data["source"][i])
 
-# ['Mr Osborne said the coalition government was planning to change the tax '
-#  'system "to make it fairer for people on low and middle incomes", and '
-#  'undertake "long-term structural reform" of the banking sector, education and '
-#  'the welfare state.',
-#  'The BBC understands that as chancellor, Mr Osborne, along with the Treasury '
-#  'will retain responsibility for overseeing banks and financial regulation.']
+    sentences = sen
+    log("start summary")
+    summary = lxr.get_summary(sentences, summary_size=10, threshold=.1)
+    # print(summary)
+    if not os.path.exists("lexrank"):
+        os.mkdir("lexrank")
 
-
-# get summary with continuous LexRank
-# default value for 'summary_size' is 1 and 'threshold' is not referenced
-summary_cont = lxr.get_summary(sentences, discretize=False)
-print(summary_cont)
-
-# ['The BBC understands that as chancellor, Mr Osborne, along with the Treasury '
-#  'will retain responsibility for overseeing banks and financial regulation.']
-
-# get LexRank scores for sentences
-# when 'normalize' is True, all the scores are divided by the maximal one
-# 'fast_power_method' speeds up the calculation, but requires more memory
-scores_cont = lxr.rank_sentences(
-    sentences,
-    discretize=False,
-    normalize=True,
-    fast_power_method=False,
-)
-print(scores_cont)
-
-#  [1.0896493024505858,
-#  0.9010711968859021,
-#  1.1139166497016315,
-#  0.8279523250808547,
-#  0.8112028559566362,
-#  1.185228912485382,
-#  1.0709787574388283]
+    with open("lexrank/%s.text" % file_group, "w", encoding="utf8") as file:
+        file.writelines(summary)
