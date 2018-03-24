@@ -1,8 +1,28 @@
 # MEMDS
-#### 2017/03/22
+#### 2017/03/24
 * main_path的文本計算完成 -> semantic_analysis.py
 * textrank的文本計算完成 -> mainpath_textrank_summary.py
 * lexrank的文本計算完成 - > lexrank_summary.py
+* 以0.17為標準穩各文件的比對應該為
+  -  group 0 is: {'brexit'} 
+  -  group 1 is: {'missile'} 
+  -  group 2 is: {'brexit'} 
+  -  group 3 is: {'brexit'} 
+  -  group 4 is: {'brexit'} 
+  -  group 5 is: {'brexit'} 
+  -  group 6 is: {'catalan'} 
+  -  group 7 is: {'catalan'} 
+  -  group 8 is: {'crimea'} 
+  -  group 9 is: {'crimea'} 
+  -  group 10 is: {'gravitational'} 
+  -  group 11 is: {'gravitational'} 
+  -  group 12 is: {'brexit'} 
+  -  group 13 is: {'hk'} 
+  -  group 14 is: {'catalan'} 
+  -  group 15 is: {'sewol'} 
+  -  group 16 is: {'syria'} 
+  -  group 17 is: {'syria'} 
+  -  group 18 is: {'turkish'} 
 ---------------------------------------
 #### 2017/03/22
 * 所有的主路徑都算出來了
