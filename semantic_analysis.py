@@ -68,47 +68,55 @@ def main():
     #         json.dump(res,file)
     #
 
-
     # # res = ['d0_sg0', 'd3_sg20', 'd0_sg1', 'd0_sg4', 'd0_sg5', 'd0_sg6', 'd0_sg9', 'd0_sg10', 'd0_sg11', 'd0_sg12', 'd0_sg13', 'd0_sg16', 'd0_sg18', 'd0_sg19', 'd0_sg20', 'd0_sg22', 'd0_sg26', 'd0_sg28', 'd0_sg31', 'd0_sg32', 'd0_sg33', 'd0_sg34', 'd0_sg35', 'd0_sg38', 'd0_sg39', 'd0_sg40', 'd0_sg41', 'd4_sg39', 'd6_sg21', 'd8_sg11', 'd14_sg72', 'd15_sg4', 'd16_sg1', 'd16_sg2', 'd16_sg3', 'd16_sg9', 'd16_sg30', 'd16_sg6', 'd16_sg7', 'd16_sg11', 'd16_sg13', 'd16_sg15', 'd16_sg16', 'd16_sg18', 'd16_sg19', 'd16_sg21', 'd16_sg26', 'd16_sg28', 'd16_sg14', 'd16_sg29', 'd16_sg5', 'd16_sg0', 'd16_sg20', 'd16_sg27']
-    for file_number in range(0,19):
-        main_path={}
+    for file_number in range(0, 19):
+        main_path = {}
 
-        with open("group_data/%s/main_path.json" % file_number,"r") as file:
+        with open("group_data/%s/main_path.json" % file_number, "r") as file:
             main_path = json.load(file)
 
-        ref_path = "group_data/%s/group_%s.json" % (file_number,file_number)
-        # print(main_path)
-        for i in range(1,100):
-            if main_path[str(i)]!=[]:
+        ref_path = "group_data/%s/group_%s.json" % (file_number, file_number)
+
+        # 確認是否有特定路徑，沒有就建立一個，並將資料儲存在裡面
+        main_path_summary_folder = "main_path_summary/"
+        main_path_summary_folder = os.path.join(os.path.dirname(__file__),main_path_summary_folder)
+        # print(main_path_summary_folder)
+        if not os.path.exists(main_path_summary_folder):
+            os.mkdir(main_path_summary_folder)
+
+        for i in range(1, 100):
+            if main_path[str(i)] != []:
                 res = main_path[str(i)]
-                summary = system_summary(res,ref_path)
+                summary = system_summary(res, ref_path)
                 # print(summary)
-                log("%s,%s" % (file_number,i),lvl="w")
-                summary_path = "group_data/%s/%s.txt" % (file_number,i)
-                with open(summary_path,'w',encoding='utf8') as file:
+                log("%s,%s" % (file_number, i), lvl="w")
+                summary_path = "main_path_summary/%s_%s.txt" % (file_number, i)
+                with open(summary_path, 'w', encoding='utf8') as file:
                     file.write(summary)
-                time.sleep(3)
+                # time.sleep(3)
+
 
 # 補救資料
 def rescue_data():
-    for file_number in range(0,18):
-        file_path =  os.path.join(os.path.dirname(__file__),'group_data/%s/main_path.json' % (file_number))
+    for file_number in range(0, 18):
+        file_path = os.path.join(os.path.dirname(__file__), 'group_data/%s/main_path.json' % (file_number))
         if not os.path.exists(file_path):
             res = {}
-            for i in range(1,100):
+            for i in range(1, 100):
                 file_path = os.path.join(os.path.dirname(__file__), 'group_data/%s/%s.paj' % (file_number, i))
                 if os.path.exists(file_path):
                     p = pajek(str(i), EXE_FILE="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\pajek\\Pajek.exe",
-                            FOLDER="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\group_data\\%s\\" % file_number)
+                              FOLDER="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\group_data\\%s\\" % file_number)
                     p.analysis_main_path()
-                    res[i]=p.MAIN_PATH
+                    res[i] = p.MAIN_PATH
                 else:
-                    res[i]=[]
+                    res[i] = []
 
             print(res)
 
             with open("group_data/%s/main_path.json" % file_number, "w") as file:
                 json.dump(res, file)
+
 
 # 將原始資料做整理成方便使用的格式
 def news_data_transformer():
@@ -247,6 +255,7 @@ def news_data_transformer():
     # # 用來記錄群組22內的資料結構-------上面
     # return GROUP
 
+
 def relatioin_analysis(GROUP, group_day):
     # TFPDF中用來記錄屬於哪個日子用的list
     corpus_list = []
@@ -282,7 +291,7 @@ def relatioin_analysis(GROUP, group_day):
                     # log("%s,%s,%s" % (GROUP['sentence_group'][j-1],GROUP['sentence_group'][k-1], res), lvl='w')
                     relation.append([GROUP['sentence_group'][j - 1], GROUP['sentence_group'][k - 1], res])
             log("last_day_count: %s, compare_count: %s, reference_count: %s" % (
-            1 + last_day_count, 1 + compare_count, 1 + reference_count), lvl='w')
+                1 + last_day_count, 1 + compare_count, 1 + reference_count), lvl='w')
             last_day_count = compare_count
 
     # log("\n\n\n\n", lvl="i")
@@ -296,7 +305,8 @@ def relatioin_analysis(GROUP, group_day):
 
     return relation_json
 
-def get_relation_and_draw(relation, threshold, file_name,file_number):
+
+def get_relation_and_draw(relation, threshold, file_name, file_number):
     edges = []
     nodes = []
     for i in relation['relation']:
@@ -324,13 +334,15 @@ def get_relation_and_draw(relation, threshold, file_name,file_number):
     nx.draw_networkx_edges(G, pos)
     nx.draw_networkx_labels(G, pos)
     log("write net")
-    nx.write_pajek(G, os.path.join(os.path.dirname(os.path.abspath(__file__)), "group_data/"+str(file_number)+"/" + str(file_name) + ".net"))
+    nx.write_pajek(G, os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                   "group_data/" + str(file_number) + "/" + str(file_name) + ".net"))
 
     fig = plt.gcf()
     fig.set_size_inches(100, 20)
     plt.axis('off')
     log("save jpg")
-    plt.savefig(os.path.join(os.path.dirname(os.path.abspath(__file__)), "group_data/"+str(file_number)+"/" + str(file_name) + ".png"), dpi=100)
+    plt.savefig(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                             "group_data/" + str(file_number) + "/" + str(file_name) + ".png"), dpi=100)
     # plt.show()
     plt.cla()
 
@@ -349,7 +361,8 @@ def get_relation_and_draw(relation, threshold, file_name,file_number):
     #     b. Network > Acyclic network > Create (Sub)Network > Main Paths
     # The subsequent choice among the options of Main Path for “> Global Search > Standard”,
 
-def system_summary(sg_list,ref_path):
+
+def system_summary(sg_list, ref_path):
     # 結果
     summary = ""
 
@@ -364,6 +377,7 @@ def system_summary(sg_list,ref_path):
                 summary = summary + relation['source'][source_group]
     # print(summary)
     return summary
+
 
 if __name__ == "__main__":
     main()
