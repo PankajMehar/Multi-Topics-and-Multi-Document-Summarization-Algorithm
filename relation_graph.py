@@ -24,8 +24,8 @@ def data():
 
 def threshold(dict):
     # print(dict['daily_data'][0])
-    for days in [1]:
-    # for days in range(len(dict['daily_data'])):
+    # for days in [1]:
+    for days in range(len(dict['daily_data'])):
         data = dict['daily_data'][days]
 
         log('days: %s' % days)
