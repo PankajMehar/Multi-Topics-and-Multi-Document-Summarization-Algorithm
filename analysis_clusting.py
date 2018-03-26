@@ -19,6 +19,7 @@ def main():
 
     res = []
     for i in range(1, 100):
+    # for i in [17]:
         pre = process_file("arrange_day_0/final_group_file_reference/{}.json".format(i))
         log(i, lvl='i')
         res.append(metrics_value(answer, pre))
@@ -83,8 +84,8 @@ def correct_group():
             break
 
     answer = "arrange_day_0/answer.json"
-    with open(answer, 'w') as file:
-        json.dump(source_data, file)
+    # with open(answer, 'w') as file:
+    #     json.dump(source_data, file)
 
 
 # 處理檔案
@@ -158,10 +159,12 @@ def process_file(file_path):
         temp.append({lisr[0]: les})
     log("temp: %s" % temp)
     group_number = 0
+    log("=============================================\n")
     for i in temp:
         log("group %s is: %s" %(group_number,i))
         group_number=group_number+1
 
+    log("=============================================\n")
     system_group = {}
 
     check_list = ['missile', 'turkish', 'catalan', 'brexit', 'gravitational', 'hk', 'sewol', 'syria', 'crimea']
