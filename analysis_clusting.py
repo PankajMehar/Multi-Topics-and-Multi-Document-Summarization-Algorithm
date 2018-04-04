@@ -20,12 +20,12 @@ def main():
     res = []
     for i in range(1, 100):
     # for i in [17]:
-        pre = process_file("arrange_day_0/final_group_file_reference/{}.json".format(i))
+        pre = process_file("arrange_day_0/final_group_file_reference/{}_cos.json".format(i))
         log(i, lvl='i')
         res.append(metrics_value(answer, pre))
     df = pd.DataFrame(res)
     print(df)
-    # df.to_csv(r"C:\Users\Yuhsuan\Desktop\MEMDS\arrange_day_0\res.csv", sep=',', encoding='utf-8')
+    df.to_csv("arrange_day_0/res_cos.csv", sep=',', encoding='utf-8')
 
 
 # 計算正確的GROUP

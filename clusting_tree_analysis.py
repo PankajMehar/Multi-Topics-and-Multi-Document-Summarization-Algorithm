@@ -83,7 +83,7 @@ def analysis_connection(SOURCE_DATA,threshold):
                 tf_pdf = compare_daily_data["tf_pdf"]
 
                 for i in range(process_group_len):
-                    if process_group[i][0] == source_group and tf_idf[i]>=(threshold/100):
+                    if process_group[i][0] == source_group and cos[i]>=(threshold/100):
                         if single_day_compare_result[source_group] == "":
                             edges.append((str(single_day["day"])+"-"+str(source_group),str(compare_daily_data["day"])+"-"+str(process_group[i][1])))
                             single_day_compare_result[source_group] = "Source Day: %s, Source Group: %s, Compare Day: %s, Compare Group: %s" % (single_day["day"],source_group,compare_daily_data["day"],process_group[i][1])
@@ -161,8 +161,8 @@ def find_files(item,DICT):
 
 def group_file_list(group_list,threshold):
     GROUP_FILE_LISTS = {}
-    group_file_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\first_clusting_result.json"
-    file_reference_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\file_reference.json"
+    group_file_path = "/Users/yu_hsuan_chen/PycharmProjects/MEMDS/arrange_day_0/first_clusting_result.json"
+    file_reference_path = "/Users/yu_hsuan_chen/PycharmProjects/MEMDS/arrange_day_0/file_reference.json"
     DICT = read_json(group_file_path)
     for i in group_list:
         GROUP_FILE_LISTS[i]=[]
@@ -175,7 +175,7 @@ def group_file_list(group_list,threshold):
     log("GROUP_FILE_LISTS:\n%s" % GROUP_FILE_LISTS,lvl="i")
 
     # 儲存一份還沒轉換前的資料
-    group_file_result_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\final_group_file_reference\\"+str(threshold)+".json"
+    group_file_result_path = "/Users/yu_hsuan_chen/PycharmProjects/MEMDS/arrange_day_0/final_group_file_reference/"+str(threshold)+"_cos.json"
     with open(group_file_result_path, "w") as file:
         json.dump(GROUP_FILE_LISTS, file)
 
@@ -199,7 +199,7 @@ def group_file_list(group_list,threshold):
                     GROUP_FILE_LISTS[i][file_list] = reference[0]
     print(GROUP_FILE_LISTS)
 
-    group_file_result_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\final_group_file\\"+str(threshold)+".json"
+    group_file_result_path = "/Users/yu_hsuan_chen/PycharmProjects/MEMDS/arrange_day_0/final_group_file/"+str(threshold)+"_cos.json"
     with open(group_file_result_path,"w") as file:
         json.dump(GROUP_FILE_LISTS,file)
 
@@ -259,9 +259,9 @@ def draw_tree(nodes, edges,threshold):
     fig = plt.gcf()
     fig.set_size_inches(100,20)
     plt.axis('off')
-    plt.savefig('C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\file\\'+str(threshold)+'.jpg', dpi=100)
+    # plt.savefig('/Users/yu_hsuan_chen/PycharmProjects/MEMDS/arrange_day_0/file/'+str(threshold)+'_tfpdf.jpg', dpi=100)
     # plt.show()
-    # plt.cla()
+    plt.cla()
 
 def main(json_file_path,threshold):
     SOURCE_DATA = read_json(json_file_path)
@@ -270,7 +270,7 @@ def main(json_file_path,threshold):
     draw_tree(nodes, edges,threshold)
 
 if __name__ == "__main__":
-    json_file_path = "C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\arrange_day_0\\clusting_tree_values.json"
+    json_file_path = "/Users/yu_hsuan_chen/PycharmProjects/MEMDS/arrange_day_0/clusting_tree_values.json"
     for i in range(1,100):
         threshold = i
         main(json_file_path,threshold)

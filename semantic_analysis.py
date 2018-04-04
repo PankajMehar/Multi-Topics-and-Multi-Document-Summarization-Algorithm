@@ -10,7 +10,7 @@ import time
 import pandas as pd
 from log_module import log
 from doc_to_vector import *
-from term_weighting import tf_pdf, cosines
+from term_weighting import tf_pdf, cosines, tf_idf, simple
 
 # 畫圖的原件
 import networkx as nx
@@ -21,52 +21,67 @@ from Pajek import pajek
 
 
 def main():
-    # DATA = news_data_transformer()
+    # step1()
+    # step2()
+    step3()
 
-    # for group_day in [8, 17, 0]:
-    #     DATA = {}
-    #     with open("group_" + str(group_day) + ".json") as file:
-    #         DATA = json.load(file)
-    #     log('group_day: %s' % group_day, lvl='w')
-    #     relation = relatioin_analysis(DATA, group_day)
 
+def step1():
+    # 產生各群組的資料，並在最後產生出group_number.json的資料
+    DATA = news_data_transformer()
+
+
+def step2():
+    # 根據各群組的資料進行相似度比較, 最後產生group_' + str(group_day) + '_%s.json檔案
+    for group_day in range(19):
+        DATA = {}
+        with open("group_" + str(group_day) + ".json") as file:
+            DATA = json.load(file)
+        log('group_day: %s' % group_day, lvl='w')
+        relation = relation_analysis(DATA, group_day, "tf_pdf")
+        # relation = relation_analysis(DATA, group_day, "tf_idf")
+        # relation = relation_analysis(DATA, group_day, "simple")
+
+
+def step3():
+    # 根據group_' + str(group_day) + '_%s.json的資料組合
     # 用來產生main_path.json的資料
-    # for file_number in range(19):
-    #     relation={}
-    #     with open('group_data/%s/group_%s_tf_pdf.json' % (file_number,file_number),'r',encoding='utf8') as file:
-    #         relation = json.load(file)
-    #     print(relation)
-    #     log("load file finish")
-    #     res = {}
-    #     for i in range(1,100):
-    #         directory = os.path.dirname(__file__)
-    #         directory = "/group_data/%s/pajek/" % file_number
-    #         log("get_relation_and_draw start")
-    #         get_relation_and_draw(relation, i / 100, str(i),file_number)
-    #         log("get_relation_and_draw end")
-    #         time.sleep(3)
-    #
-    #         data=""
-    #         file_path = os.path.join(os.path.dirname(__file__),'group_data/%s/%s.net' % (file_number,i))
-    #         with open(file_path,"r") as file:
-    #             data = file.readlines()
-    #         print(data)
-    #         if "*vertices 0\n" not in data:
-    #             log("pajek start")
-    #             res_ = pajek(str(i),EXE_FILE="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\pajek\\Pajek.exe",FOLDER="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\group_data\\%s\\" % file_number).run()
-    #             log("pajek end")
-    #             res[i]=res_
-    #             log(i,lvl='w')
-    #             log(res,lvl='w')
-    #         else:
-    #             log("No result",lvl='w')
-    #             res[i]={}
-    #             log(i, lvl='w')
-    #             log(res, lvl='w')
-    #
-    #     with open("group_data/%s/main_path.json" % file_number,"w") as file:
-    #         json.dump(res,file)
-    #
+    for file_number in range(19):
+        relation = {}
+        with open('group_data/%s/group_%s_tf_pdf.json' % (file_number, file_number), 'r', encoding='utf8') as file:
+            relation = json.load(file)
+        print(relation)
+        log("load file finish")
+        res = {}
+        for i in range(1, 100):
+            directory = os.path.dirname(__file__)
+            directory = "/group_data/%s/pajek/" % file_number
+            log("get_relation_and_draw start")
+            get_relation_and_draw(relation, i / 100, str(i), file_number)
+            log("get_relation_and_draw end")
+            time.sleep(3)
+
+            data = ""
+            file_path = os.path.join(os.path.dirname(__file__), 'group_data/%s/%s.net' % (file_number, i))
+            with open(file_path, "r") as file:
+                data = file.readlines()
+            print(data)
+            if "*vertices 0\n" not in data:
+                log("pajek start")
+                res_ = pajek(str(i), EXE_FILE="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\pajek\\Pajek.exe",
+                             FOLDER="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\group_data\\%s\\" % file_number).run()
+                log("pajek end")
+                res[i] = res_
+                log(i, lvl='w')
+                log(res, lvl='w')
+            else:
+                log("No result", lvl='w')
+                res[i] = {}
+                log(i, lvl='w')
+                log(res, lvl='w')
+
+        with open("group_data/%s/main_path.json" % file_number, "w") as file:
+            json.dump(res, file)
 
     # # res = ['d0_sg0', 'd3_sg20', 'd0_sg1', 'd0_sg4', 'd0_sg5', 'd0_sg6', 'd0_sg9', 'd0_sg10', 'd0_sg11', 'd0_sg12', 'd0_sg13', 'd0_sg16', 'd0_sg18', 'd0_sg19', 'd0_sg20', 'd0_sg22', 'd0_sg26', 'd0_sg28', 'd0_sg31', 'd0_sg32', 'd0_sg33', 'd0_sg34', 'd0_sg35', 'd0_sg38', 'd0_sg39', 'd0_sg40', 'd0_sg41', 'd4_sg39', 'd6_sg21', 'd8_sg11', 'd14_sg72', 'd15_sg4', 'd16_sg1', 'd16_sg2', 'd16_sg3', 'd16_sg9', 'd16_sg30', 'd16_sg6', 'd16_sg7', 'd16_sg11', 'd16_sg13', 'd16_sg15', 'd16_sg16', 'd16_sg18', 'd16_sg19', 'd16_sg21', 'd16_sg26', 'd16_sg28', 'd16_sg14', 'd16_sg29', 'd16_sg5', 'd16_sg0', 'd16_sg20', 'd16_sg27']
     for file_number in range(0, 19):
@@ -79,13 +94,13 @@ def main():
 
         # 確認是否有特定路徑，沒有就建立一個，並將資料儲存在裡面
         main_path_summary_folder = "main_path_summary/"
-        main_path_summary_folder = os.path.join(os.path.dirname(__file__),main_path_summary_folder)
+        main_path_summary_folder = os.path.join(os.path.dirname(__file__), main_path_summary_folder)
         # print(main_path_summary_folder)
         if not os.path.exists(main_path_summary_folder):
             os.mkdir(main_path_summary_folder)
 
         for i in range(1, 100):
-            if main_path[str(i)] != []:
+            if main_path[str(i)]:
                 res = main_path[str(i)]
                 summary = system_summary(res, ref_path)
                 # print(summary)
@@ -121,9 +136,9 @@ def rescue_data():
 # 將原始資料做整理成方便使用的格式
 def news_data_transformer():
     # 最後分群，依照原始檔案路徑的資料
-    final_group_file_path = "C://Users//Yuhsuan//Desktop//MEMDS//arrange_day_0//final_group_file//17.json"
+    final_group_file_path = "arrange_day_0/final_group_file/17.json"
     # 最後分群，依照參考檔案路徑的資料
-    final_group_file_reference_path = "C://Users//Yuhsuan//Desktop//MEMDS//arrange_day_0//final_group_file_reference//17.json"
+    final_group_file_reference_path = "arrange_day_0/final_group_file_reference/17.json"
 
     final_group_file = {}
     final_group_file_reference = {}
@@ -133,6 +148,8 @@ def news_data_transformer():
 
     with open(final_group_file_reference_path, "r") as file:
         final_group_file_reference = json.load(file)
+
+    log(final_group_file)
 
     # 計算有多少個群組
     len_group = len(final_group_file)
@@ -159,8 +176,15 @@ def news_data_transformer():
             # 參考檔案中的最後一個第幾天的新聞事件
             news_numer_in_day = ""
 
-            source_file = final_group_file[str(group_number)][list_number].replace("\stemming_data", "")
+            log(final_group_file[str(group_number)][list_number])
+
+            source_file = final_group_file[str(group_number)][list_number].replace(
+                "C:/Users/Yuhsuan/Desktop/MEMDS\stemming_data\\",
+                "/Users/yu_hsuan_chen/PycharmProjects/MEMDS/").replace("\\", "/")
             reference_file = final_group_file_reference[str(group_number)][list_number]
+
+            log(source_file)
+            log(reference_file)
 
             m1 = re.match(re.compile("(\d+) \d+.txt"), os.path.basename(source_file))
             news_event_date = m1.group(1)
@@ -253,18 +277,26 @@ def news_data_transformer():
             json.dump(GROUP, file)
 
     # # 用來記錄群組22內的資料結構-------上面
-    # return GROUP
+    return GROUP
 
 
-def relatioin_analysis(GROUP, group_day):
+def relation_analysis(GROUP, group_day, similarity):
     # TFPDF中用來記錄屬於哪個日子用的list
     corpus_list = []
 
     for i in GROUP['steamming']:
         corpus_list.append(GROUP['steamming'][i])
     # print(corpus_list)
-    log('處理tf_pdf', lvl='w')
-    tf_pdf_vect = tf_pdf(corpus_list, GROUP['tf_pdf_group_info'])
+    log('處理%s' % similarity, lvl='w')
+
+    if similarity == "tf_pdf":
+        vect = tf_pdf(corpus_list, GROUP['tf_pdf_group_info'])
+    elif similarity == "tf_idf":
+        vect = tf_idf(corpus_list)
+    elif similarity == "simple":
+        vect = simple(corpus_list)
+    else:
+        vect = simple(corpus_list)
 
     # 開始針對下一天的資料進行相似度的比較
     log('開始針對下一天的資料進行相似度的比較', lvl='w')
@@ -287,7 +319,7 @@ def relatioin_analysis(GROUP, group_day):
             reference_count = compare_count + daily_sentence_group_count[i + 1]
             for j in range(1 + last_day_count, 1 + compare_count):
                 for k in range(1 + compare_count, 1 + reference_count):
-                    res = cosines(tf_pdf_vect[j], tf_pdf_vect[k])
+                    res = cosines(vect[j], vect[k])
                     # log("%s,%s,%s" % (GROUP['sentence_group'][j-1],GROUP['sentence_group'][k-1], res), lvl='w')
                     relation.append([GROUP['sentence_group'][j - 1], GROUP['sentence_group'][k - 1], res])
             log("last_day_count: %s, compare_count: %s, reference_count: %s" % (
@@ -300,7 +332,7 @@ def relatioin_analysis(GROUP, group_day):
     relation_json = {}
     relation_json['relation'] = relation
 
-    with open('group_' + str(group_day) + '_tf_pdf.json', 'w', encoding='utf8') as file:
+    with open('group_' + str(group_day) + '_%s.json' % similarity, 'w', encoding='utf8') as file:
         json.dump(relation_json, file)
 
     return relation_json
