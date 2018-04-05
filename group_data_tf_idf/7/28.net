@@ -1,0 +1,218 @@
+*vertices 117
+1 d0_sg9 0.0 0.0 ellipse
+2 d3_sg29 0.0 0.0 ellipse
+3 d0_sg21 0.0 0.0 ellipse
+4 d0_sg23 0.0 0.0 ellipse
+5 d3_sg28 0.0 0.0 ellipse
+6 d0_sg31 0.0 0.0 ellipse
+7 d3_sg5 0.0 0.0 ellipse
+8 d8_sg0 0.0 0.0 ellipse
+9 d8_sg8 0.0 0.0 ellipse
+10 d19_sg4 0.0 0.0 ellipse
+11 d21_sg2 0.0 0.0 ellipse
+12 d21_sg6 0.0 0.0 ellipse
+13 d21_sg11 0.0 0.0 ellipse
+14 d21_sg20 0.0 0.0 ellipse
+15 d21_sg24 0.0 0.0 ellipse
+16 d19_sg9 0.0 0.0 ellipse
+17 d19_sg14 0.0 0.0 ellipse
+18 d21_sg61 0.0 0.0 ellipse
+19 d19_sg22 0.0 0.0 ellipse
+20 d21_sg108 0.0 0.0 ellipse
+21 d19_sg25 0.0 0.0 ellipse
+22 d21_sg109 0.0 0.0 ellipse
+23 d19_sg34 0.0 0.0 ellipse
+24 d21_sg76 0.0 0.0 ellipse
+25 d19_sg40 0.0 0.0 ellipse
+26 d21_sg4 0.0 0.0 ellipse
+27 d19_sg44 0.0 0.0 ellipse
+28 d21_sg66 0.0 0.0 ellipse
+29 d19_sg45 0.0 0.0 ellipse
+30 d21_sg12 0.0 0.0 ellipse
+31 d19_sg46 0.0 0.0 ellipse
+32 d21_sg49 0.0 0.0 ellipse
+33 d19_sg60 0.0 0.0 ellipse
+34 d21_sg74 0.0 0.0 ellipse
+35 d24_sg2 0.0 0.0 ellipse
+36 d24_sg4 0.0 0.0 ellipse
+37 d21_sg71 0.0 0.0 ellipse
+38 d24_sg1 0.0 0.0 ellipse
+39 d31_sg0 0.0 0.0 ellipse
+40 d33_sg164 0.0 0.0 ellipse
+41 d31_sg1 0.0 0.0 ellipse
+42 d33_sg215 0.0 0.0 ellipse
+43 d31_sg7 0.0 0.0 ellipse
+44 d33_sg65 0.0 0.0 ellipse
+45 d33_sg79 0.0 0.0 ellipse
+46 d33_sg93 0.0 0.0 ellipse
+47 d33_sg105 0.0 0.0 ellipse
+48 d33_sg117 0.0 0.0 ellipse
+49 d33_sg127 0.0 0.0 ellipse
+50 d33_sg138 0.0 0.0 ellipse
+51 d33_sg150 0.0 0.0 ellipse
+52 d33_sg161 0.0 0.0 ellipse
+53 d31_sg10 0.0 0.0 ellipse
+54 d33_sg77 0.0 0.0 ellipse
+55 d33_sg91 0.0 0.0 ellipse
+56 d33_sg108 0.0 0.0 ellipse
+57 d31_sg14 0.0 0.0 ellipse
+58 d33_sg72 0.0 0.0 ellipse
+59 d33_sg103 0.0 0.0 ellipse
+60 d33_sg130 0.0 0.0 ellipse
+61 d33_sg153 0.0 0.0 ellipse
+62 d31_sg19 0.0 0.0 ellipse
+63 d33_sg243 0.0 0.0 ellipse
+64 d35_sg14 0.0 0.0 ellipse
+65 d33_sg251 0.0 0.0 ellipse
+66 d35_sg12 0.0 0.0 ellipse
+67 d37_sg2 0.0 0.0 ellipse
+68 d38_sg60 0.0 0.0 ellipse
+69 d38_sg38 0.0 0.0 ellipse
+70 d41_sg6 0.0 0.0 ellipse
+71 d38_sg44 0.0 0.0 ellipse
+72 d41_sg7 0.0 0.0 ellipse
+73 d41_sg19 0.0 0.0 ellipse
+74 d41_sg29 0.0 0.0 ellipse
+75 d38_sg46 0.0 0.0 ellipse
+76 d41_sg17 0.0 0.0 ellipse
+77 d38_sg48 0.0 0.0 ellipse
+78 d41_sg26 0.0 0.0 ellipse
+79 d41_sg42 0.0 0.0 ellipse
+80 d42_sg2 0.0 0.0 ellipse
+81 d44_sg32 0.0 0.0 ellipse
+82 d46_sg13 0.0 0.0 ellipse
+83 d46_sg24 0.0 0.0 ellipse
+84 d48_sg1 0.0 0.0 ellipse
+85 d49_sg15 0.0 0.0 ellipse
+86 d48_sg4 0.0 0.0 ellipse
+87 d49_sg75 0.0 0.0 ellipse
+88 d48_sg6 0.0 0.0 ellipse
+89 d49_sg1 0.0 0.0 ellipse
+90 d49_sg6 0.0 0.0 ellipse
+91 d51_sg43 0.0 0.0 ellipse
+92 d49_sg52 0.0 0.0 ellipse
+93 d51_sg60 0.0 0.0 ellipse
+94 d49_sg67 0.0 0.0 ellipse
+95 d51_sg34 0.0 0.0 ellipse
+96 d49_sg71 0.0 0.0 ellipse
+97 d51_sg26 0.0 0.0 ellipse
+98 d52_sg32 0.0 0.0 ellipse
+99 d51_sg68 0.0 0.0 ellipse
+100 d51_sg71 0.0 0.0 ellipse
+101 d52_sg0 0.0 0.0 ellipse
+102 d53_sg12 0.0 0.0 ellipse
+103 d53_sg3 0.0 0.0 ellipse
+104 d54_sg10 0.0 0.0 ellipse
+105 d54_sg4 0.0 0.0 ellipse
+106 d53_sg15 0.0 0.0 ellipse
+107 d53_sg36 0.0 0.0 ellipse
+108 d54_sg8 0.0 0.0 ellipse
+109 d53_sg39 0.0 0.0 ellipse
+110 d53_sg42 0.0 0.0 ellipse
+111 d54_sg13 0.0 0.0 ellipse
+112 d54_sg1 0.0 0.0 ellipse
+113 d55_sg31 0.0 0.0 ellipse
+114 d55_sg16 0.0 0.0 ellipse
+115 d55_sg11 0.0 0.0 ellipse
+116 d55_sg0 0.0 0.0 ellipse
+117 d56_sg2 0.0 0.0 ellipse
+*arcs
+1 2 1.0
+3 2 1.0
+4 5 1.0
+6 2 1.0
+7 8 1.0
+7 9 1.0
+10 11 1.0
+10 12 1.0
+10 13 1.0
+10 14 1.0
+10 15 1.0
+11 35 1.0
+11 36 1.0
+12 35 1.0
+12 36 1.0
+13 35 1.0
+13 36 1.0
+14 35 1.0
+14 36 1.0
+15 35 1.0
+15 36 1.0
+16 11 1.0
+16 12 1.0
+16 13 1.0
+16 14 1.0
+16 15 1.0
+17 18 1.0
+19 20 1.0
+21 22 1.0
+23 24 1.0
+25 26 1.0
+27 28 1.0
+29 30 1.0
+31 32 1.0
+33 34 1.0
+37 38 1.0
+39 40 1.0
+41 42 1.0
+43 44 1.0
+43 45 1.0
+43 46 1.0
+43 47 1.0
+43 48 1.0
+43 49 1.0
+43 50 1.0
+43 51 1.0
+43 52 1.0
+53 54 1.0
+53 55 1.0
+53 56 1.0
+57 58 1.0
+57 59 1.0
+57 60 1.0
+57 61 1.0
+62 44 1.0
+62 45 1.0
+62 46 1.0
+62 47 1.0
+62 48 1.0
+62 49 1.0
+62 50 1.0
+62 51 1.0
+62 52 1.0
+63 64 1.0
+65 66 1.0
+67 68 1.0
+68 79 1.0
+69 70 1.0
+71 72 1.0
+71 73 1.0
+71 74 1.0
+75 76 1.0
+77 78 1.0
+79 80 1.0
+81 82 1.0
+81 83 1.0
+84 85 1.0
+86 87 1.0
+87 97 1.0
+88 89 1.0
+90 91 1.0
+92 93 1.0
+93 98 1.0
+94 95 1.0
+96 93 1.0
+99 98 1.0
+100 98 1.0
+101 102 1.0
+102 105 1.0
+103 104 1.0
+104 114 1.0
+105 113 1.0
+106 104 1.0
+107 108 1.0
+109 108 1.0
+110 111 1.0
+111 115 1.0
+112 113 1.0
+116 117 1.0

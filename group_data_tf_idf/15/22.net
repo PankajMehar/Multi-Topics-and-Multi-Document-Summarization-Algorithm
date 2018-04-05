@@ -1,0 +1,72 @@
+*vertices 41
+1 d0_sg12 0.0 0.0 ellipse
+2 d3_sg4 0.0 0.0 ellipse
+3 d0_sg18 0.0 0.0 ellipse
+4 d0_sg28 0.0 0.0 ellipse
+5 d3_sg23 0.0 0.0 ellipse
+6 d0_sg45 0.0 0.0 ellipse
+7 d4_sg22 0.0 0.0 ellipse
+8 d5_sg12 0.0 0.0 ellipse
+9 d5_sg6 0.0 0.0 ellipse
+10 d7_sg66 0.0 0.0 ellipse
+11 d7_sg17 0.0 0.0 ellipse
+12 d5_sg18 0.0 0.0 ellipse
+13 d7_sg46 0.0 0.0 ellipse
+14 d7_sg75 0.0 0.0 ellipse
+15 d5_sg25 0.0 0.0 ellipse
+16 d7_sg34 0.0 0.0 ellipse
+17 d7_sg62 0.0 0.0 ellipse
+18 d7_sg67 0.0 0.0 ellipse
+19 d5_sg30 0.0 0.0 ellipse
+20 d7_sg73 0.0 0.0 ellipse
+21 d5_sg31 0.0 0.0 ellipse
+22 d7_sg69 0.0 0.0 ellipse
+23 d5_sg32 0.0 0.0 ellipse
+24 d7_sg68 0.0 0.0 ellipse
+25 d5_sg33 0.0 0.0 ellipse
+26 d5_sg37 0.0 0.0 ellipse
+27 d7_sg52 0.0 0.0 ellipse
+28 d7_sg76 0.0 0.0 ellipse
+29 d5_sg38 0.0 0.0 ellipse
+30 d7_sg53 0.0 0.0 ellipse
+31 d5_sg39 0.0 0.0 ellipse
+32 d7_sg45 0.0 0.0 ellipse
+33 d5_sg43 0.0 0.0 ellipse
+34 d5_sg46 0.0 0.0 ellipse
+35 d5_sg57 0.0 0.0 ellipse
+36 d7_sg25 0.0 0.0 ellipse
+37 d5_sg58 0.0 0.0 ellipse
+38 d12_sg5 0.0 0.0 ellipse
+39 d12_sg12 0.0 0.0 ellipse
+40 d12_sg2 0.0 0.0 ellipse
+41 d15_sg11 0.0 0.0 ellipse
+*arcs
+1 2 1.0
+3 2 1.0
+4 5 1.0
+6 5 1.0
+7 8 1.0
+8 11 1.0
+9 10 1.0
+12 13 1.0
+12 14 1.0
+15 16 1.0
+15 17 1.0
+15 18 1.0
+19 20 1.0
+21 18 1.0
+21 22 1.0
+23 24 1.0
+25 22 1.0
+26 27 1.0
+26 28 1.0
+29 30 1.0
+31 32 1.0
+32 39 1.0
+33 11 1.0
+34 32 1.0
+35 36 1.0
+35 20 1.0
+36 38 1.0
+37 36 1.0
+40 41 1.0

@@ -7,6 +7,9 @@ import json
 import re
 import os
 import time
+
+from shutil import copyfile,move
+
 import pandas as pd
 from log_module import log
 from doc_to_vector import *
@@ -21,9 +24,11 @@ from Pajek import pajek
 
 
 def main():
-    # step1()
-    # step2()
-    step3()
+    # step1() # 產生各群組的資料，並在最後產生出group_number.json的資料
+    # step2() # 根據各群組的資料進行相似度比較, 最後產生group_' + str(group_day) + '_%s.json檔案
+    step3() # 將group_data_%s/%s內的json檔案讀出來，並轉換成pajek 的.net檔案
+    # step4() # 進行main path分析後產生group_data_%s/%s/main_path.json
+    # step5() # 根據主路境內的檔案產生摘要
 
 
 def step1():
@@ -44,71 +49,91 @@ def step2():
 
 
 def step3():
-    # 根據group_' + str(group_day) + '_%s.json的資料組合
-    # 用來產生main_path.json的資料
-    for file_number in range(19):
-        relation = {}
-        with open('group_data/%s/group_%s_tf_pdf.json' % (file_number, file_number), 'r', encoding='utf8') as file:
-            relation = json.load(file)
-        print(relation)
-        log("load file finish")
-        res = {}
-        for i in range(1, 100):
-            directory = os.path.dirname(__file__)
-            directory = "/group_data/%s/pajek/" % file_number
-            log("get_relation_and_draw start")
-            get_relation_and_draw(relation, i / 100, str(i), file_number)
-            log("get_relation_and_draw end")
-            time.sleep(3)
+    """
+    # 如果沒有移動檔案的話可以用這段來移動
+    # dir = os.path.dirname(__file__)+"/"
+    # for sim_type in ["tf_idf", "tf_pdf", "simple"]:
+    #     for i in range(19):
+    #         if not os.path.exists("group_data_%s/%s" % (sim_type, i)):
+    #             os.mkdir("group_data_%s/%s" % (sim_type, i))
+    #         copyfile(dir+"group_data_%s/group_%s.json" % (sim_type, i), dir+"group_data_%s/%s/group_%s.json" % (sim_type, i, i))
+    #         move(dir+"group_data_%s/group_%s_%s.json" % (sim_type, i,sim_type), dir+"group_data_%s/%s/group_%s_%s.json" % (sim_type, i, i,sim_type))
+    #         pass
+    """
+    # 將group_data_%s/%s內的json檔案讀出來，並轉換成pajek 的.net檔案
+    for sim_type in ["tf_pdf", "tf_idf", "simple"]:
+        for file_number in range(13, 19):
+            relation = {}
+            with open('group_data_%s/%s/group_%s_%s.json' % (sim_type, file_number, file_number,sim_type), 'r', encoding='utf8') as file:
+                relation = json.load(file)
+            # print(relation)
+            log("load file finish")
+            res = {}
+            for i in range(1, 100):
+                print(sim_type,file_number,i)
+                log("get_relation_and_draw start")
+                get_relation_and_draw(relation, i / 100, str(i), file_number, sim_type)
+                log("get_relation_and_draw end")
 
-            data = ""
-            file_path = os.path.join(os.path.dirname(__file__), 'group_data/%s/%s.net' % (file_number, i))
-            with open(file_path, "r") as file:
-                data = file.readlines()
-            print(data)
-            if "*vertices 0\n" not in data:
-                log("pajek start")
-                res_ = pajek(str(i), EXE_FILE="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\pajek\\Pajek.exe",
-                             FOLDER="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\group_data\\%s\\" % file_number).run()
-                log("pajek end")
-                res[i] = res_
-                log(i, lvl='w')
-                log(res, lvl='w')
-            else:
-                log("No result", lvl='w')
-                res[i] = {}
-                log(i, lvl='w')
-                log(res, lvl='w')
 
-        with open("group_data/%s/main_path.json" % file_number, "w") as file:
-            json.dump(res, file)
+def step4():
+    # 進行main path分析後產生group_data_%s/%s/main_path.json
+    for sim_type in ["tf_pdf", "tf_idf", "simple"]:
+        for file_number in range(19):
+            res = {}
+            for i in range(1, 100):
+                data = ""
+                file_path = os.path.join(os.path.dirname(__file__), 'group_data_%s/%s/%s.net' % (sim_type, file_number, i))
+                with open(file_path, "r") as file:
+                    data = file.readlines()
+                print(data)
+                if "*vertices 0\n" not in data:
+                    log("pajek start")
+                    res_ = pajek(str(i), EXE_FILE="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\pajek\\Pajek.exe",
+                                 FOLDER="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\group_data_%s\\%s\\" % (sim_type, file_number)).run()
+                    log("pajek end")
+                    res[i] = res_
+                    log(i, lvl='w')
+                    log(res, lvl='w')
+                else:
+                    log("No result", lvl='w')
+                    res[i] = {}
+                    log(i, lvl='w')
+                    log(res, lvl='w')
 
+            with open("group_data_%s/%s/main_path.json" % (sim_type,file_number), "w") as file:
+                json.dump(res, file)
+
+
+def step5():
+    # 根據主路境內的檔案產生摘要
     # # res = ['d0_sg0', 'd3_sg20', 'd0_sg1', 'd0_sg4', 'd0_sg5', 'd0_sg6', 'd0_sg9', 'd0_sg10', 'd0_sg11', 'd0_sg12', 'd0_sg13', 'd0_sg16', 'd0_sg18', 'd0_sg19', 'd0_sg20', 'd0_sg22', 'd0_sg26', 'd0_sg28', 'd0_sg31', 'd0_sg32', 'd0_sg33', 'd0_sg34', 'd0_sg35', 'd0_sg38', 'd0_sg39', 'd0_sg40', 'd0_sg41', 'd4_sg39', 'd6_sg21', 'd8_sg11', 'd14_sg72', 'd15_sg4', 'd16_sg1', 'd16_sg2', 'd16_sg3', 'd16_sg9', 'd16_sg30', 'd16_sg6', 'd16_sg7', 'd16_sg11', 'd16_sg13', 'd16_sg15', 'd16_sg16', 'd16_sg18', 'd16_sg19', 'd16_sg21', 'd16_sg26', 'd16_sg28', 'd16_sg14', 'd16_sg29', 'd16_sg5', 'd16_sg0', 'd16_sg20', 'd16_sg27']
-    for file_number in range(0, 19):
-        main_path = {}
+    for sim_type in ["tf_pdf", "tf_idf", "simple"]:
+        for file_number in range(0, 19):
+            main_path = {}
 
-        with open("group_data/%s/main_path.json" % file_number, "r") as file:
-            main_path = json.load(file)
+            with open("group_data_%s/%s/main_path.json" % (sim_type, file_number), "r") as file:
+                main_path = json.load(file)
 
-        ref_path = "group_data/%s/group_%s.json" % (file_number, file_number)
+            ref_path = "group_data_%s/%s/group_%s.json" % (sim_type, file_number, file_number)
 
-        # 確認是否有特定路徑，沒有就建立一個，並將資料儲存在裡面
-        main_path_summary_folder = "main_path_summary/"
-        main_path_summary_folder = os.path.join(os.path.dirname(__file__), main_path_summary_folder)
-        # print(main_path_summary_folder)
-        if not os.path.exists(main_path_summary_folder):
-            os.mkdir(main_path_summary_folder)
+            # 確認是否有特定路徑，沒有就建立一個，並將資料儲存在裡面
+            main_path_summary_folder = "main_path_summary/%s/" % sim_type
+            main_path_summary_folder = os.path.join(os.path.dirname(__file__), main_path_summary_folder)
+            # print(main_path_summary_folder)
+            if not os.path.exists(main_path_summary_folder):
+                os.mkdir(main_path_summary_folder)
 
-        for i in range(1, 100):
-            if main_path[str(i)]:
-                res = main_path[str(i)]
-                summary = system_summary(res, ref_path)
-                # print(summary)
-                log("%s,%s" % (file_number, i), lvl="w")
-                summary_path = "main_path_summary/%s_%s.txt" % (file_number, i)
-                with open(summary_path, 'w', encoding='utf8') as file:
-                    file.write(summary)
-                # time.sleep(3)
+            for i in range(1, 100):
+                if main_path[str(i)]:
+                    res = main_path[str(i)]
+                    summary = system_summary(res, ref_path)
+                    # print(summary)
+                    log("%s,%s" % (file_number, i), lvl="w")
+                    summary_path = "main_path_summary/%s/%s_%s.txt" % (sim_type,file_number, i)
+                    with open(summary_path, 'w', encoding='utf8') as file:
+                        file.write(summary)
+                    # time.sleep(3)
 
 
 # 補救資料
@@ -332,13 +357,16 @@ def relation_analysis(GROUP, group_day, similarity):
     relation_json = {}
     relation_json['relation'] = relation
 
-    with open('group_' + str(group_day) + '_%s.json' % similarity, 'w', encoding='utf8') as file:
+    if not os.path.exists("group_data_%s\%s" % (similarity, str(group_day))):
+        os.mkdir("group_data_%s\%s"% (similarity, str(group_day)))
+
+    with open('group_data_%s\%s\group_' % (similarity, str(group_day)) + str(group_day) + '_%s.json' % similarity, 'w', encoding='utf8') as file:
         json.dump(relation_json, file)
 
     return relation_json
 
 
-def get_relation_and_draw(relation, threshold, file_name, file_number):
+def get_relation_and_draw(relation, threshold, file_name, file_number, sim_type):
     edges = []
     nodes = []
     for i in relation['relation']:
@@ -367,14 +395,14 @@ def get_relation_and_draw(relation, threshold, file_name, file_number):
     nx.draw_networkx_labels(G, pos)
     log("write net")
     nx.write_pajek(G, os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                                   "group_data/" + str(file_number) + "/" + str(file_name) + ".net"))
+                                   "group_data_%s/" % sim_type + str(file_number) + "/" + str(file_name) + ".net"))
 
     fig = plt.gcf()
-    fig.set_size_inches(100, 20)
-    plt.axis('off')
-    log("save jpg")
-    plt.savefig(os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                             "group_data/" + str(file_number) + "/" + str(file_name) + ".png"), dpi=100)
+    # fig.set_size_inches(100, 20)
+    # plt.axis('off')
+    # log("save jpg")
+    # plt.savefig(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+    #                          "group_data_%s/" % type + str(file_number) + "/" + str(file_name) + ".png"), dpi=100)
     # plt.show()
     plt.cla()
 

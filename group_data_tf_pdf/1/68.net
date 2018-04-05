@@ -1,0 +1,101 @@
+*vertices 53
+1 d0_sg9 0.0 0.0 ellipse
+2 d4_sg100 0.0 0.0 ellipse
+3 d0_sg18 0.0 0.0 ellipse
+4 d4_sg79 0.0 0.0 ellipse
+5 d0_sg23 0.0 0.0 ellipse
+6 d4_sg74 0.0 0.0 ellipse
+7 d5_sg4 0.0 0.0 ellipse
+8 d5_sg36 0.0 0.0 ellipse
+9 d4_sg80 0.0 0.0 ellipse
+10 d8_sg13 0.0 0.0 ellipse
+11 d9_sg168 0.0 0.0 ellipse
+12 d8_sg25 0.0 0.0 ellipse
+13 d9_sg205 0.0 0.0 ellipse
+14 d9_sg213 0.0 0.0 ellipse
+15 d9_sg216 0.0 0.0 ellipse
+16 d9_sg8 0.0 0.0 ellipse
+17 d10_sg25 0.0 0.0 ellipse
+18 d9_sg58 0.0 0.0 ellipse
+19 d10_sg7 0.0 0.0 ellipse
+20 d10_sg19 0.0 0.0 ellipse
+21 d10_sg29 0.0 0.0 ellipse
+22 d9_sg61 0.0 0.0 ellipse
+23 d10_sg17 0.0 0.0 ellipse
+24 d10_sg6 0.0 0.0 ellipse
+25 d10_sg15 0.0 0.0 ellipse
+26 d10_sg34 0.0 0.0 ellipse
+27 d11_sg22 0.0 0.0 ellipse
+28 d12_sg29 0.0 0.0 ellipse
+29 d19_sg8 0.0 0.0 ellipse
+30 d12_sg36 0.0 0.0 ellipse
+31 d19_sg3 0.0 0.0 ellipse
+32 d20_sg97 0.0 0.0 ellipse
+33 d20_sg125 0.0 0.0 ellipse
+34 d20_sg134 0.0 0.0 ellipse
+35 d20_sg406 0.0 0.0 ellipse
+36 d20_sg102 0.0 0.0 ellipse
+37 d20_sg116 0.0 0.0 ellipse
+38 d20_sg140 0.0 0.0 ellipse
+39 d20_sg404 0.0 0.0 ellipse
+40 d20_sg416 0.0 0.0 ellipse
+41 d20_sg27 0.0 0.0 ellipse
+42 d21_sg37 0.0 0.0 ellipse
+43 d20_sg414 0.0 0.0 ellipse
+44 d20_sg415 0.0 0.0 ellipse
+45 d20_sg435 0.0 0.0 ellipse
+46 d21_sg31 0.0 0.0 ellipse
+47 d20_sg450 0.0 0.0 ellipse
+48 d20_sg460 0.0 0.0 ellipse
+49 d20_sg473 0.0 0.0 ellipse
+50 d23_sg6 0.0 0.0 ellipse
+51 d23_sg10 0.0 0.0 ellipse
+52 d27_sg27 0.0 0.0 ellipse
+53 d31_sg14 0.0 0.0 ellipse
+*arcs
+1 2 1.0
+3 4 1.0
+4 8 1.0
+5 2 1.0
+6 7 1.0
+9 7 1.0
+10 11 1.0
+12 13 1.0
+12 14 1.0
+12 15 1.0
+13 24 1.0
+13 25 1.0
+13 26 1.0
+14 26 1.0
+16 17 1.0
+18 19 1.0
+18 20 1.0
+18 21 1.0
+22 23 1.0
+24 27 1.0
+26 27 1.0
+28 29 1.0
+29 36 1.0
+29 37 1.0
+29 38 1.0
+29 39 1.0
+29 40 1.0
+30 31 1.0
+31 32 1.0
+31 33 1.0
+31 34 1.0
+31 35 1.0
+41 42 1.0
+42 50 1.0
+42 51 1.0
+43 42 1.0
+44 42 1.0
+45 46 1.0
+45 42 1.0
+46 50 1.0
+46 51 1.0
+47 46 1.0
+47 42 1.0
+48 42 1.0
+49 42 1.0
+52 53 1.0

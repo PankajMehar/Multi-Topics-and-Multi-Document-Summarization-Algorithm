@@ -1,0 +1,3839 @@
+*vertices 1254
+1 d0_sg0 0.0 0.0 ellipse
+2 d1_sg402 0.0 0.0 ellipse
+3 d0_sg2 0.0 0.0 ellipse
+4 d1_sg37 0.0 0.0 ellipse
+5 d1_sg39 0.0 0.0 ellipse
+6 d1_sg58 0.0 0.0 ellipse
+7 d1_sg81 0.0 0.0 ellipse
+8 d1_sg84 0.0 0.0 ellipse
+9 d1_sg94 0.0 0.0 ellipse
+10 d1_sg98 0.0 0.0 ellipse
+11 d1_sg105 0.0 0.0 ellipse
+12 d1_sg174 0.0 0.0 ellipse
+13 d1_sg409 0.0 0.0 ellipse
+14 d0_sg3 0.0 0.0 ellipse
+15 d1_sg119 0.0 0.0 ellipse
+16 d0_sg4 0.0 0.0 ellipse
+17 d1_sg240 0.0 0.0 ellipse
+18 d0_sg6 0.0 0.0 ellipse
+19 d1_sg82 0.0 0.0 ellipse
+20 d0_sg7 0.0 0.0 ellipse
+21 d0_sg8 0.0 0.0 ellipse
+22 d0_sg10 0.0 0.0 ellipse
+23 d1_sg7 0.0 0.0 ellipse
+24 d1_sg15 0.0 0.0 ellipse
+25 d1_sg31 0.0 0.0 ellipse
+26 d1_sg95 0.0 0.0 ellipse
+27 d0_sg14 0.0 0.0 ellipse
+28 d3_sg3 0.0 0.0 ellipse
+29 d3_sg5 0.0 0.0 ellipse
+30 d1_sg144 0.0 0.0 ellipse
+31 d3_sg1 0.0 0.0 ellipse
+32 d1_sg276 0.0 0.0 ellipse
+33 d3_sg12 0.0 0.0 ellipse
+34 d3_sg14 0.0 0.0 ellipse
+35 d1_sg282 0.0 0.0 ellipse
+36 d3_sg8 0.0 0.0 ellipse
+37 d1_sg416 0.0 0.0 ellipse
+38 d3_sg7 0.0 0.0 ellipse
+39 d3_sg0 0.0 0.0 ellipse
+40 d3_sg21 0.0 0.0 ellipse
+41 d3_sg22 0.0 0.0 ellipse
+42 d3_sg23 0.0 0.0 ellipse
+43 d3_sg24 0.0 0.0 ellipse
+44 d3_sg26 0.0 0.0 ellipse
+45 d3_sg27 0.0 0.0 ellipse
+46 d3_sg31 0.0 0.0 ellipse
+47 d3_sg37 0.0 0.0 ellipse
+48 d3_sg42 0.0 0.0 ellipse
+49 d3_sg50 0.0 0.0 ellipse
+50 d3_sg17 0.0 0.0 ellipse
+51 d3_sg18 0.0 0.0 ellipse
+52 d3_sg19 0.0 0.0 ellipse
+53 d3_sg28 0.0 0.0 ellipse
+54 d3_sg29 0.0 0.0 ellipse
+55 d3_sg30 0.0 0.0 ellipse
+56 d3_sg39 0.0 0.0 ellipse
+57 d3_sg2 0.0 0.0 ellipse
+58 d3_sg25 0.0 0.0 ellipse
+59 d5_sg4 0.0 0.0 ellipse
+60 d5_sg16 0.0 0.0 ellipse
+61 d3_sg4 0.0 0.0 ellipse
+62 d3_sg6 0.0 0.0 ellipse
+63 d3_sg20 0.0 0.0 ellipse
+64 d3_sg32 0.0 0.0 ellipse
+65 d3_sg36 0.0 0.0 ellipse
+66 d3_sg44 0.0 0.0 ellipse
+67 d3_sg33 0.0 0.0 ellipse
+68 d3_sg40 0.0 0.0 ellipse
+69 d3_sg46 0.0 0.0 ellipse
+70 d5_sg1 0.0 0.0 ellipse
+71 d5_sg3 0.0 0.0 ellipse
+72 d3_sg9 0.0 0.0 ellipse
+73 d3_sg10 0.0 0.0 ellipse
+74 d3_sg11 0.0 0.0 ellipse
+75 d3_sg13 0.0 0.0 ellipse
+76 d3_sg43 0.0 0.0 ellipse
+77 d3_sg15 0.0 0.0 ellipse
+78 d3_sg16 0.0 0.0 ellipse
+79 d7_sg0 0.0 0.0 ellipse
+80 d7_sg13 0.0 0.0 ellipse
+81 d7_sg7 0.0 0.0 ellipse
+82 d5_sg24 0.0 0.0 ellipse
+83 d5_sg29 0.0 0.0 ellipse
+84 d7_sg1 0.0 0.0 ellipse
+85 d3_sg35 0.0 0.0 ellipse
+86 d7_sg4 0.0 0.0 ellipse
+87 d5_sg18 0.0 0.0 ellipse
+88 d5_sg2 0.0 0.0 ellipse
+89 d5_sg23 0.0 0.0 ellipse
+90 d5_sg32 0.0 0.0 ellipse
+91 d5_sg22 0.0 0.0 ellipse
+92 d5_sg33 0.0 0.0 ellipse
+93 d5_sg7 0.0 0.0 ellipse
+94 d5_sg28 0.0 0.0 ellipse
+95 d5_sg9 0.0 0.0 ellipse
+96 d5_sg11 0.0 0.0 ellipse
+97 d5_sg31 0.0 0.0 ellipse
+98 d5_sg14 0.0 0.0 ellipse
+99 d5_sg15 0.0 0.0 ellipse
+100 d5_sg17 0.0 0.0 ellipse
+101 d5_sg20 0.0 0.0 ellipse
+102 d5_sg21 0.0 0.0 ellipse
+103 d5_sg25 0.0 0.0 ellipse
+104 d7_sg37 0.0 0.0 ellipse
+105 d7_sg54 0.0 0.0 ellipse
+106 d7_sg43 0.0 0.0 ellipse
+107 d5_sg26 0.0 0.0 ellipse
+108 d7_sg46 0.0 0.0 ellipse
+109 d5_sg27 0.0 0.0 ellipse
+110 d7_sg24 0.0 0.0 ellipse
+111 d7_sg39 0.0 0.0 ellipse
+112 d5_sg30 0.0 0.0 ellipse
+113 d7_sg40 0.0 0.0 ellipse
+114 d7_sg30 0.0 0.0 ellipse
+115 d7_sg2 0.0 0.0 ellipse
+116 d7_sg22 0.0 0.0 ellipse
+117 d7_sg3 0.0 0.0 ellipse
+118 d7_sg26 0.0 0.0 ellipse
+119 d7_sg12 0.0 0.0 ellipse
+120 d7_sg20 0.0 0.0 ellipse
+121 d7_sg34 0.0 0.0 ellipse
+122 d7_sg16 0.0 0.0 ellipse
+123 d7_sg28 0.0 0.0 ellipse
+124 d12_sg16 0.0 0.0 ellipse
+125 d7_sg33 0.0 0.0 ellipse
+126 d12_sg5 0.0 0.0 ellipse
+127 d12_sg12 0.0 0.0 ellipse
+128 d7_sg35 0.0 0.0 ellipse
+129 d7_sg51 0.0 0.0 ellipse
+130 d8_sg19 0.0 0.0 ellipse
+131 d8_sg21 0.0 0.0 ellipse
+132 d8_sg29 0.0 0.0 ellipse
+133 d7_sg60 0.0 0.0 ellipse
+134 d8_sg0 0.0 0.0 ellipse
+135 d8_sg31 0.0 0.0 ellipse
+136 d8_sg2 0.0 0.0 ellipse
+137 d8_sg22 0.0 0.0 ellipse
+138 d8_sg24 0.0 0.0 ellipse
+139 d8_sg3 0.0 0.0 ellipse
+140 d8_sg4 0.0 0.0 ellipse
+141 d8_sg5 0.0 0.0 ellipse
+142 d8_sg18 0.0 0.0 ellipse
+143 d8_sg25 0.0 0.0 ellipse
+144 d8_sg9 0.0 0.0 ellipse
+145 d8_sg10 0.0 0.0 ellipse
+146 d8_sg13 0.0 0.0 ellipse
+147 d8_sg20 0.0 0.0 ellipse
+148 d8_sg14 0.0 0.0 ellipse
+149 d8_sg23 0.0 0.0 ellipse
+150 d8_sg15 0.0 0.0 ellipse
+151 d8_sg16 0.0 0.0 ellipse
+152 d12_sg41 0.0 0.0 ellipse
+153 d12_sg51 0.0 0.0 ellipse
+154 d12_sg53 0.0 0.0 ellipse
+155 d13_sg7 0.0 0.0 ellipse
+156 d13_sg9 0.0 0.0 ellipse
+157 d12_sg36 0.0 0.0 ellipse
+158 d12_sg42 0.0 0.0 ellipse
+159 d12_sg49 0.0 0.0 ellipse
+160 d12_sg31 0.0 0.0 ellipse
+161 d8_sg32 0.0 0.0 ellipse
+162 d12_sg59 0.0 0.0 ellipse
+163 d12_sg1 0.0 0.0 ellipse
+164 d12_sg30 0.0 0.0 ellipse
+165 d12_sg2 0.0 0.0 ellipse
+166 d12_sg17 0.0 0.0 ellipse
+167 d12_sg3 0.0 0.0 ellipse
+168 d12_sg7 0.0 0.0 ellipse
+169 d13_sg0 0.0 0.0 ellipse
+170 d13_sg10 0.0 0.0 ellipse
+171 d13_sg11 0.0 0.0 ellipse
+172 d13_sg14 0.0 0.0 ellipse
+173 d12_sg11 0.0 0.0 ellipse
+174 d12_sg24 0.0 0.0 ellipse
+175 d12_sg15 0.0 0.0 ellipse
+176 d12_sg20 0.0 0.0 ellipse
+177 d16_sg1 0.0 0.0 ellipse
+178 d12_sg32 0.0 0.0 ellipse
+179 d12_sg44 0.0 0.0 ellipse
+180 d16_sg2 0.0 0.0 ellipse
+181 d16_sg11 0.0 0.0 ellipse
+182 d13_sg1 0.0 0.0 ellipse
+183 d16_sg5 0.0 0.0 ellipse
+184 d13_sg8 0.0 0.0 ellipse
+185 d16_sg14 0.0 0.0 ellipse
+186 d16_sg0 0.0 0.0 ellipse
+187 d16_sg12 0.0 0.0 ellipse
+188 d16_sg13 0.0 0.0 ellipse
+189 d18_sg13 0.0 0.0 ellipse
+190 d16_sg4 0.0 0.0 ellipse
+191 d16_sg20 0.0 0.0 ellipse
+192 d16_sg10 0.0 0.0 ellipse
+193 d18_sg12 0.0 0.0 ellipse
+194 d16_sg19 0.0 0.0 ellipse
+195 d18_sg11 0.0 0.0 ellipse
+196 d16_sg18 0.0 0.0 ellipse
+197 d18_sg0 0.0 0.0 ellipse
+198 d20_sg15 0.0 0.0 ellipse
+199 d18_sg3 0.0 0.0 ellipse
+200 d18_sg17 0.0 0.0 ellipse
+201 d18_sg4 0.0 0.0 ellipse
+202 d20_sg13 0.0 0.0 ellipse
+203 d21_sg7 0.0 0.0 ellipse
+204 d21_sg2 0.0 0.0 ellipse
+205 d21_sg3 0.0 0.0 ellipse
+206 d21_sg17 0.0 0.0 ellipse
+207 d21_sg18 0.0 0.0 ellipse
+208 d21_sg6 0.0 0.0 ellipse
+209 d21_sg20 0.0 0.0 ellipse
+210 d21_sg12 0.0 0.0 ellipse
+211 d21_sg13 0.0 0.0 ellipse
+212 d21_sg19 0.0 0.0 ellipse
+213 d21_sg14 0.0 0.0 ellipse
+214 d21_sg15 0.0 0.0 ellipse
+215 d21_sg16 0.0 0.0 ellipse
+216 d22_sg189 0.0 0.0 ellipse
+217 d22_sg482 0.0 0.0 ellipse
+218 d22_sg576 0.0 0.0 ellipse
+219 d22_sg198 0.0 0.0 ellipse
+220 d22_sg81 0.0 0.0 ellipse
+221 d22_sg88 0.0 0.0 ellipse
+222 d22_sg92 0.0 0.0 ellipse
+223 d22_sg103 0.0 0.0 ellipse
+224 d22_sg104 0.0 0.0 ellipse
+225 d22_sg106 0.0 0.0 ellipse
+226 d22_sg145 0.0 0.0 ellipse
+227 d22_sg147 0.0 0.0 ellipse
+228 d22_sg191 0.0 0.0 ellipse
+229 d22_sg197 0.0 0.0 ellipse
+230 d22_sg200 0.0 0.0 ellipse
+231 d22_sg204 0.0 0.0 ellipse
+232 d22_sg212 0.0 0.0 ellipse
+233 d22_sg216 0.0 0.0 ellipse
+234 d22_sg230 0.0 0.0 ellipse
+235 d22_sg547 0.0 0.0 ellipse
+236 d23_sg13 0.0 0.0 ellipse
+237 d22_sg79 0.0 0.0 ellipse
+238 d22_sg199 0.0 0.0 ellipse
+239 d22_sg295 0.0 0.0 ellipse
+240 d22_sg483 0.0 0.0 ellipse
+241 d22_sg544 0.0 0.0 ellipse
+242 d22_sg600 0.0 0.0 ellipse
+243 d22_sg3 0.0 0.0 ellipse
+244 d22_sg530 0.0 0.0 ellipse
+245 d22_sg7 0.0 0.0 ellipse
+246 d22_sg232 0.0 0.0 ellipse
+247 d22_sg11 0.0 0.0 ellipse
+248 d22_sg505 0.0 0.0 ellipse
+249 d22_sg621 0.0 0.0 ellipse
+250 d22_sg13 0.0 0.0 ellipse
+251 d22_sg51 0.0 0.0 ellipse
+252 d22_sg140 0.0 0.0 ellipse
+253 d22_sg466 0.0 0.0 ellipse
+254 d22_sg14 0.0 0.0 ellipse
+255 d22_sg16 0.0 0.0 ellipse
+256 d22_sg21 0.0 0.0 ellipse
+257 d22_sg31 0.0 0.0 ellipse
+258 d22_sg39 0.0 0.0 ellipse
+259 d22_sg73 0.0 0.0 ellipse
+260 d22_sg329 0.0 0.0 ellipse
+261 d22_sg334 0.0 0.0 ellipse
+262 d22_sg335 0.0 0.0 ellipse
+263 d22_sg336 0.0 0.0 ellipse
+264 d22_sg17 0.0 0.0 ellipse
+265 d25_sg0 0.0 0.0 ellipse
+266 d25_sg3 0.0 0.0 ellipse
+267 d22_sg18 0.0 0.0 ellipse
+268 d23_sg111 0.0 0.0 ellipse
+269 d22_sg19 0.0 0.0 ellipse
+270 d22_sg20 0.0 0.0 ellipse
+271 d23_sg125 0.0 0.0 ellipse
+272 d22_sg38 0.0 0.0 ellipse
+273 d23_sg339 0.0 0.0 ellipse
+274 d22_sg46 0.0 0.0 ellipse
+275 d23_sg290 0.0 0.0 ellipse
+276 d23_sg296 0.0 0.0 ellipse
+277 d23_sg301 0.0 0.0 ellipse
+278 d23_sg330 0.0 0.0 ellipse
+279 d22_sg50 0.0 0.0 ellipse
+280 d23_sg342 0.0 0.0 ellipse
+281 d23_sg129 0.0 0.0 ellipse
+282 d22_sg54 0.0 0.0 ellipse
+283 d23_sg314 0.0 0.0 ellipse
+284 d22_sg55 0.0 0.0 ellipse
+285 d23_sg299 0.0 0.0 ellipse
+286 d23_sg307 0.0 0.0 ellipse
+287 d22_sg59 0.0 0.0 ellipse
+288 d23_sg340 0.0 0.0 ellipse
+289 d22_sg61 0.0 0.0 ellipse
+290 d23_sg310 0.0 0.0 ellipse
+291 d22_sg62 0.0 0.0 ellipse
+292 d23_sg288 0.0 0.0 ellipse
+293 d22_sg65 0.0 0.0 ellipse
+294 d23_sg143 0.0 0.0 ellipse
+295 d22_sg66 0.0 0.0 ellipse
+296 d22_sg68 0.0 0.0 ellipse
+297 d25_sg14 0.0 0.0 ellipse
+298 d22_sg70 0.0 0.0 ellipse
+299 d22_sg75 0.0 0.0 ellipse
+300 d25_sg7 0.0 0.0 ellipse
+301 d25_sg13 0.0 0.0 ellipse
+302 d25_sg15 0.0 0.0 ellipse
+303 d22_sg78 0.0 0.0 ellipse
+304 d23_sg184 0.0 0.0 ellipse
+305 d23_sg361 0.0 0.0 ellipse
+306 d23_sg167 0.0 0.0 ellipse
+307 d23_sg289 0.0 0.0 ellipse
+308 d23_sg17 0.0 0.0 ellipse
+309 d23_sg21 0.0 0.0 ellipse
+310 d23_sg34 0.0 0.0 ellipse
+311 d23_sg40 0.0 0.0 ellipse
+312 d23_sg43 0.0 0.0 ellipse
+313 d23_sg46 0.0 0.0 ellipse
+314 d23_sg51 0.0 0.0 ellipse
+315 d23_sg77 0.0 0.0 ellipse
+316 d23_sg79 0.0 0.0 ellipse
+317 d23_sg82 0.0 0.0 ellipse
+318 d23_sg84 0.0 0.0 ellipse
+319 d23_sg86 0.0 0.0 ellipse
+320 d23_sg88 0.0 0.0 ellipse
+321 d22_sg84 0.0 0.0 ellipse
+322 d22_sg85 0.0 0.0 ellipse
+323 d22_sg89 0.0 0.0 ellipse
+324 d23_sg325 0.0 0.0 ellipse
+325 d22_sg90 0.0 0.0 ellipse
+326 d23_sg197 0.0 0.0 ellipse
+327 d22_sg91 0.0 0.0 ellipse
+328 d23_sg175 0.0 0.0 ellipse
+329 d23_sg198 0.0 0.0 ellipse
+330 d23_sg229 0.0 0.0 ellipse
+331 d23_sg246 0.0 0.0 ellipse
+332 d23_sg255 0.0 0.0 ellipse
+333 d22_sg93 0.0 0.0 ellipse
+334 d22_sg94 0.0 0.0 ellipse
+335 d22_sg96 0.0 0.0 ellipse
+336 d22_sg100 0.0 0.0 ellipse
+337 d23_sg87 0.0 0.0 ellipse
+338 d23_sg152 0.0 0.0 ellipse
+339 d23_sg240 0.0 0.0 ellipse
+340 d22_sg102 0.0 0.0 ellipse
+341 d23_sg39 0.0 0.0 ellipse
+342 d23_sg142 0.0 0.0 ellipse
+343 d22_sg105 0.0 0.0 ellipse
+344 d22_sg108 0.0 0.0 ellipse
+345 d22_sg109 0.0 0.0 ellipse
+346 d23_sg254 0.0 0.0 ellipse
+347 d22_sg110 0.0 0.0 ellipse
+348 d23_sg322 0.0 0.0 ellipse
+349 d22_sg111 0.0 0.0 ellipse
+350 d23_sg316 0.0 0.0 ellipse
+351 d22_sg115 0.0 0.0 ellipse
+352 d22_sg116 0.0 0.0 ellipse
+353 d23_sg216 0.0 0.0 ellipse
+354 d22_sg117 0.0 0.0 ellipse
+355 d23_sg239 0.0 0.0 ellipse
+356 d22_sg119 0.0 0.0 ellipse
+357 d22_sg121 0.0 0.0 ellipse
+358 d23_sg65 0.0 0.0 ellipse
+359 d22_sg122 0.0 0.0 ellipse
+360 d23_sg37 0.0 0.0 ellipse
+361 d22_sg124 0.0 0.0 ellipse
+362 d23_sg295 0.0 0.0 ellipse
+363 d22_sg125 0.0 0.0 ellipse
+364 d23_sg341 0.0 0.0 ellipse
+365 d23_sg374 0.0 0.0 ellipse
+366 d22_sg126 0.0 0.0 ellipse
+367 d23_sg338 0.0 0.0 ellipse
+368 d22_sg128 0.0 0.0 ellipse
+369 d23_sg270 0.0 0.0 ellipse
+370 d23_sg390 0.0 0.0 ellipse
+371 d23_sg402 0.0 0.0 ellipse
+372 d22_sg130 0.0 0.0 ellipse
+373 d23_sg189 0.0 0.0 ellipse
+374 d23_sg190 0.0 0.0 ellipse
+375 d22_sg131 0.0 0.0 ellipse
+376 d23_sg302 0.0 0.0 ellipse
+377 d22_sg132 0.0 0.0 ellipse
+378 d23_sg363 0.0 0.0 ellipse
+379 d22_sg133 0.0 0.0 ellipse
+380 d23_sg349 0.0 0.0 ellipse
+381 d22_sg137 0.0 0.0 ellipse
+382 d23_sg148 0.0 0.0 ellipse
+383 d23_sg150 0.0 0.0 ellipse
+384 d23_sg168 0.0 0.0 ellipse
+385 d22_sg139 0.0 0.0 ellipse
+386 d23_sg31 0.0 0.0 ellipse
+387 d23_sg36 0.0 0.0 ellipse
+388 d23_sg38 0.0 0.0 ellipse
+389 d23_sg42 0.0 0.0 ellipse
+390 d23_sg131 0.0 0.0 ellipse
+391 d23_sg144 0.0 0.0 ellipse
+392 d23_sg199 0.0 0.0 ellipse
+393 d23_sg205 0.0 0.0 ellipse
+394 d23_sg209 0.0 0.0 ellipse
+395 d23_sg210 0.0 0.0 ellipse
+396 d23_sg212 0.0 0.0 ellipse
+397 d23_sg221 0.0 0.0 ellipse
+398 d23_sg279 0.0 0.0 ellipse
+399 d23_sg406 0.0 0.0 ellipse
+400 d23_sg18 0.0 0.0 ellipse
+401 d23_sg58 0.0 0.0 ellipse
+402 d23_sg107 0.0 0.0 ellipse
+403 d23_sg273 0.0 0.0 ellipse
+404 d23_sg275 0.0 0.0 ellipse
+405 d23_sg351 0.0 0.0 ellipse
+406 d22_sg141 0.0 0.0 ellipse
+407 d22_sg144 0.0 0.0 ellipse
+408 d23_sg381 0.0 0.0 ellipse
+409 d22_sg146 0.0 0.0 ellipse
+410 d23_sg53 0.0 0.0 ellipse
+411 d23_sg194 0.0 0.0 ellipse
+412 d23_sg346 0.0 0.0 ellipse
+413 d22_sg148 0.0 0.0 ellipse
+414 d23_sg165 0.0 0.0 ellipse
+415 d23_sg166 0.0 0.0 ellipse
+416 d22_sg149 0.0 0.0 ellipse
+417 d23_sg306 0.0 0.0 ellipse
+418 d22_sg150 0.0 0.0 ellipse
+419 d22_sg151 0.0 0.0 ellipse
+420 d23_sg207 0.0 0.0 ellipse
+421 d22_sg152 0.0 0.0 ellipse
+422 d23_sg384 0.0 0.0 ellipse
+423 d22_sg154 0.0 0.0 ellipse
+424 d23_sg227 0.0 0.0 ellipse
+425 d22_sg155 0.0 0.0 ellipse
+426 d22_sg156 0.0 0.0 ellipse
+427 d22_sg157 0.0 0.0 ellipse
+428 d22_sg159 0.0 0.0 ellipse
+429 d22_sg168 0.0 0.0 ellipse
+430 d23_sg178 0.0 0.0 ellipse
+431 d22_sg169 0.0 0.0 ellipse
+432 d23_sg169 0.0 0.0 ellipse
+433 d22_sg170 0.0 0.0 ellipse
+434 d23_sg222 0.0 0.0 ellipse
+435 d22_sg171 0.0 0.0 ellipse
+436 d23_sg215 0.0 0.0 ellipse
+437 d22_sg175 0.0 0.0 ellipse
+438 d22_sg178 0.0 0.0 ellipse
+439 d23_sg182 0.0 0.0 ellipse
+440 d22_sg179 0.0 0.0 ellipse
+441 d22_sg180 0.0 0.0 ellipse
+442 d22_sg182 0.0 0.0 ellipse
+443 d23_sg195 0.0 0.0 ellipse
+444 d23_sg367 0.0 0.0 ellipse
+445 d22_sg185 0.0 0.0 ellipse
+446 d22_sg186 0.0 0.0 ellipse
+447 d23_sg294 0.0 0.0 ellipse
+448 d22_sg187 0.0 0.0 ellipse
+449 d22_sg188 0.0 0.0 ellipse
+450 d22_sg192 0.0 0.0 ellipse
+451 d22_sg193 0.0 0.0 ellipse
+452 d23_sg164 0.0 0.0 ellipse
+453 d22_sg194 0.0 0.0 ellipse
+454 d23_sg99 0.0 0.0 ellipse
+455 d22_sg195 0.0 0.0 ellipse
+456 d22_sg196 0.0 0.0 ellipse
+457 d23_sg213 0.0 0.0 ellipse
+458 d23_sg313 0.0 0.0 ellipse
+459 d23_sg172 0.0 0.0 ellipse
+460 d23_sg350 0.0 0.0 ellipse
+461 d22_sg201 0.0 0.0 ellipse
+462 d23_sg83 0.0 0.0 ellipse
+463 d23_sg146 0.0 0.0 ellipse
+464 d23_sg200 0.0 0.0 ellipse
+465 d23_sg226 0.0 0.0 ellipse
+466 d23_sg232 0.0 0.0 ellipse
+467 d23_sg352 0.0 0.0 ellipse
+468 d23_sg353 0.0 0.0 ellipse
+469 d23_sg354 0.0 0.0 ellipse
+470 d22_sg202 0.0 0.0 ellipse
+471 d23_sg230 0.0 0.0 ellipse
+472 d22_sg203 0.0 0.0 ellipse
+473 d23_sg80 0.0 0.0 ellipse
+474 d22_sg205 0.0 0.0 ellipse
+475 d22_sg206 0.0 0.0 ellipse
+476 d23_sg47 0.0 0.0 ellipse
+477 d22_sg208 0.0 0.0 ellipse
+478 d22_sg209 0.0 0.0 ellipse
+479 d22_sg210 0.0 0.0 ellipse
+480 d23_sg41 0.0 0.0 ellipse
+481 d23_sg357 0.0 0.0 ellipse
+482 d23_sg387 0.0 0.0 ellipse
+483 d22_sg211 0.0 0.0 ellipse
+484 d22_sg213 0.0 0.0 ellipse
+485 d22_sg214 0.0 0.0 ellipse
+486 d23_sg44 0.0 0.0 ellipse
+487 d23_sg48 0.0 0.0 ellipse
+488 d23_sg201 0.0 0.0 ellipse
+489 d23_sg252 0.0 0.0 ellipse
+490 d22_sg215 0.0 0.0 ellipse
+491 d23_sg334 0.0 0.0 ellipse
+492 d22_sg217 0.0 0.0 ellipse
+493 d22_sg218 0.0 0.0 ellipse
+494 d22_sg219 0.0 0.0 ellipse
+495 d23_sg147 0.0 0.0 ellipse
+496 d23_sg244 0.0 0.0 ellipse
+497 d23_sg368 0.0 0.0 ellipse
+498 d25_sg2 0.0 0.0 ellipse
+499 d22_sg220 0.0 0.0 ellipse
+500 d22_sg221 0.0 0.0 ellipse
+501 d23_sg28 0.0 0.0 ellipse
+502 d23_sg214 0.0 0.0 ellipse
+503 d23_sg231 0.0 0.0 ellipse
+504 d25_sg12 0.0 0.0 ellipse
+505 d22_sg222 0.0 0.0 ellipse
+506 d22_sg223 0.0 0.0 ellipse
+507 d23_sg103 0.0 0.0 ellipse
+508 d22_sg224 0.0 0.0 ellipse
+509 d23_sg369 0.0 0.0 ellipse
+510 d22_sg225 0.0 0.0 ellipse
+511 d22_sg226 0.0 0.0 ellipse
+512 d22_sg227 0.0 0.0 ellipse
+513 d25_sg9 0.0 0.0 ellipse
+514 d22_sg228 0.0 0.0 ellipse
+515 d25_sg8 0.0 0.0 ellipse
+516 d22_sg231 0.0 0.0 ellipse
+517 d22_sg233 0.0 0.0 ellipse
+518 d22_sg234 0.0 0.0 ellipse
+519 d22_sg236 0.0 0.0 ellipse
+520 d23_sg220 0.0 0.0 ellipse
+521 d23_sg237 0.0 0.0 ellipse
+522 d25_sg6 0.0 0.0 ellipse
+523 d22_sg237 0.0 0.0 ellipse
+524 d23_sg203 0.0 0.0 ellipse
+525 d23_sg235 0.0 0.0 ellipse
+526 d22_sg238 0.0 0.0 ellipse
+527 d22_sg240 0.0 0.0 ellipse
+528 d22_sg241 0.0 0.0 ellipse
+529 d22_sg243 0.0 0.0 ellipse
+530 d23_sg391 0.0 0.0 ellipse
+531 d22_sg244 0.0 0.0 ellipse
+532 d23_sg399 0.0 0.0 ellipse
+533 d22_sg246 0.0 0.0 ellipse
+534 d22_sg248 0.0 0.0 ellipse
+535 d23_sg400 0.0 0.0 ellipse
+536 d22_sg252 0.0 0.0 ellipse
+537 d23_sg376 0.0 0.0 ellipse
+538 d23_sg377 0.0 0.0 ellipse
+539 d23_sg396 0.0 0.0 ellipse
+540 d23_sg405 0.0 0.0 ellipse
+541 d22_sg253 0.0 0.0 ellipse
+542 d22_sg254 0.0 0.0 ellipse
+543 d22_sg256 0.0 0.0 ellipse
+544 d23_sg154 0.0 0.0 ellipse
+545 d23_sg171 0.0 0.0 ellipse
+546 d23_sg173 0.0 0.0 ellipse
+547 d23_sg174 0.0 0.0 ellipse
+548 d22_sg257 0.0 0.0 ellipse
+549 d22_sg259 0.0 0.0 ellipse
+550 d23_sg403 0.0 0.0 ellipse
+551 d22_sg260 0.0 0.0 ellipse
+552 d22_sg261 0.0 0.0 ellipse
+553 d22_sg263 0.0 0.0 ellipse
+554 d22_sg265 0.0 0.0 ellipse
+555 d22_sg266 0.0 0.0 ellipse
+556 d23_sg300 0.0 0.0 ellipse
+557 d23_sg379 0.0 0.0 ellipse
+558 d22_sg267 0.0 0.0 ellipse
+559 d23_sg392 0.0 0.0 ellipse
+560 d23_sg394 0.0 0.0 ellipse
+561 d23_sg401 0.0 0.0 ellipse
+562 d22_sg268 0.0 0.0 ellipse
+563 d23_sg398 0.0 0.0 ellipse
+564 d22_sg269 0.0 0.0 ellipse
+565 d23_sg70 0.0 0.0 ellipse
+566 d22_sg270 0.0 0.0 ellipse
+567 d25_sg10 0.0 0.0 ellipse
+568 d22_sg272 0.0 0.0 ellipse
+569 d23_sg97 0.0 0.0 ellipse
+570 d23_sg100 0.0 0.0 ellipse
+571 d23_sg115 0.0 0.0 ellipse
+572 d23_sg118 0.0 0.0 ellipse
+573 d23_sg128 0.0 0.0 ellipse
+574 d23_sg141 0.0 0.0 ellipse
+575 d23_sg151 0.0 0.0 ellipse
+576 d23_sg157 0.0 0.0 ellipse
+577 d23_sg163 0.0 0.0 ellipse
+578 d23_sg180 0.0 0.0 ellipse
+579 d23_sg183 0.0 0.0 ellipse
+580 d23_sg191 0.0 0.0 ellipse
+581 d23_sg206 0.0 0.0 ellipse
+582 d23_sg208 0.0 0.0 ellipse
+583 d23_sg224 0.0 0.0 ellipse
+584 d23_sg234 0.0 0.0 ellipse
+585 d23_sg245 0.0 0.0 ellipse
+586 d23_sg253 0.0 0.0 ellipse
+587 d22_sg273 0.0 0.0 ellipse
+588 d22_sg277 0.0 0.0 ellipse
+589 d22_sg283 0.0 0.0 ellipse
+590 d23_sg122 0.0 0.0 ellipse
+591 d23_sg219 0.0 0.0 ellipse
+592 d23_sg238 0.0 0.0 ellipse
+593 d23_sg388 0.0 0.0 ellipse
+594 d23_sg395 0.0 0.0 ellipse
+595 d22_sg284 0.0 0.0 ellipse
+596 d23_sg373 0.0 0.0 ellipse
+597 d22_sg285 0.0 0.0 ellipse
+598 d22_sg287 0.0 0.0 ellipse
+599 d23_sg101 0.0 0.0 ellipse
+600 d23_sg293 0.0 0.0 ellipse
+601 d22_sg289 0.0 0.0 ellipse
+602 d22_sg291 0.0 0.0 ellipse
+603 d23_sg98 0.0 0.0 ellipse
+604 d22_sg292 0.0 0.0 ellipse
+605 d22_sg296 0.0 0.0 ellipse
+606 d22_sg297 0.0 0.0 ellipse
+607 d23_sg225 0.0 0.0 ellipse
+608 d22_sg298 0.0 0.0 ellipse
+609 d25_sg11 0.0 0.0 ellipse
+610 d22_sg301 0.0 0.0 ellipse
+611 d22_sg302 0.0 0.0 ellipse
+612 d22_sg303 0.0 0.0 ellipse
+613 d22_sg307 0.0 0.0 ellipse
+614 d23_sg333 0.0 0.0 ellipse
+615 d22_sg311 0.0 0.0 ellipse
+616 d22_sg312 0.0 0.0 ellipse
+617 d23_sg67 0.0 0.0 ellipse
+618 d22_sg313 0.0 0.0 ellipse
+619 d22_sg315 0.0 0.0 ellipse
+620 d23_sg134 0.0 0.0 ellipse
+621 d23_sg153 0.0 0.0 ellipse
+622 d23_sg321 0.0 0.0 ellipse
+623 d22_sg316 0.0 0.0 ellipse
+624 d23_sg329 0.0 0.0 ellipse
+625 d22_sg317 0.0 0.0 ellipse
+626 d23_sg27 0.0 0.0 ellipse
+627 d23_sg193 0.0 0.0 ellipse
+628 d22_sg318 0.0 0.0 ellipse
+629 d23_sg336 0.0 0.0 ellipse
+630 d22_sg319 0.0 0.0 ellipse
+631 d22_sg320 0.0 0.0 ellipse
+632 d22_sg322 0.0 0.0 ellipse
+633 d23_sg66 0.0 0.0 ellipse
+634 d22_sg323 0.0 0.0 ellipse
+635 d22_sg325 0.0 0.0 ellipse
+636 d23_sg26 0.0 0.0 ellipse
+637 d22_sg326 0.0 0.0 ellipse
+638 d22_sg328 0.0 0.0 ellipse
+639 d22_sg330 0.0 0.0 ellipse
+640 d22_sg333 0.0 0.0 ellipse
+641 d23_sg335 0.0 0.0 ellipse
+642 d22_sg337 0.0 0.0 ellipse
+643 d22_sg338 0.0 0.0 ellipse
+644 d22_sg343 0.0 0.0 ellipse
+645 d22_sg346 0.0 0.0 ellipse
+646 d23_sg332 0.0 0.0 ellipse
+647 d22_sg348 0.0 0.0 ellipse
+648 d22_sg349 0.0 0.0 ellipse
+649 d22_sg350 0.0 0.0 ellipse
+650 d22_sg353 0.0 0.0 ellipse
+651 d22_sg355 0.0 0.0 ellipse
+652 d22_sg357 0.0 0.0 ellipse
+653 d23_sg113 0.0 0.0 ellipse
+654 d23_sg202 0.0 0.0 ellipse
+655 d23_sg359 0.0 0.0 ellipse
+656 d22_sg359 0.0 0.0 ellipse
+657 d22_sg360 0.0 0.0 ellipse
+658 d22_sg361 0.0 0.0 ellipse
+659 d23_sg223 0.0 0.0 ellipse
+660 d22_sg362 0.0 0.0 ellipse
+661 d23_sg161 0.0 0.0 ellipse
+662 d22_sg366 0.0 0.0 ellipse
+663 d22_sg367 0.0 0.0 ellipse
+664 d22_sg369 0.0 0.0 ellipse
+665 d22_sg371 0.0 0.0 ellipse
+666 d22_sg372 0.0 0.0 ellipse
+667 d23_sg217 0.0 0.0 ellipse
+668 d22_sg373 0.0 0.0 ellipse
+669 d23_sg145 0.0 0.0 ellipse
+670 d23_sg155 0.0 0.0 ellipse
+671 d22_sg374 0.0 0.0 ellipse
+672 d22_sg375 0.0 0.0 ellipse
+673 d22_sg376 0.0 0.0 ellipse
+674 d23_sg248 0.0 0.0 ellipse
+675 d22_sg377 0.0 0.0 ellipse
+676 d22_sg380 0.0 0.0 ellipse
+677 d23_sg211 0.0 0.0 ellipse
+678 d22_sg381 0.0 0.0 ellipse
+679 d22_sg383 0.0 0.0 ellipse
+680 d22_sg384 0.0 0.0 ellipse
+681 d22_sg385 0.0 0.0 ellipse
+682 d22_sg386 0.0 0.0 ellipse
+683 d22_sg389 0.0 0.0 ellipse
+684 d23_sg30 0.0 0.0 ellipse
+685 d22_sg390 0.0 0.0 ellipse
+686 d22_sg391 0.0 0.0 ellipse
+687 d23_sg196 0.0 0.0 ellipse
+688 d22_sg393 0.0 0.0 ellipse
+689 d22_sg394 0.0 0.0 ellipse
+690 d23_sg76 0.0 0.0 ellipse
+691 d22_sg395 0.0 0.0 ellipse
+692 d23_sg57 0.0 0.0 ellipse
+693 d23_sg59 0.0 0.0 ellipse
+694 d23_sg228 0.0 0.0 ellipse
+695 d22_sg396 0.0 0.0 ellipse
+696 d23_sg49 0.0 0.0 ellipse
+697 d22_sg397 0.0 0.0 ellipse
+698 d22_sg399 0.0 0.0 ellipse
+699 d22_sg401 0.0 0.0 ellipse
+700 d23_sg218 0.0 0.0 ellipse
+701 d22_sg402 0.0 0.0 ellipse
+702 d22_sg403 0.0 0.0 ellipse
+703 d23_sg188 0.0 0.0 ellipse
+704 d23_sg320 0.0 0.0 ellipse
+705 d22_sg404 0.0 0.0 ellipse
+706 d22_sg405 0.0 0.0 ellipse
+707 d22_sg407 0.0 0.0 ellipse
+708 d23_sg20 0.0 0.0 ellipse
+709 d22_sg408 0.0 0.0 ellipse
+710 d23_sg176 0.0 0.0 ellipse
+711 d23_sg356 0.0 0.0 ellipse
+712 d22_sg410 0.0 0.0 ellipse
+713 d22_sg411 0.0 0.0 ellipse
+714 d22_sg412 0.0 0.0 ellipse
+715 d22_sg414 0.0 0.0 ellipse
+716 d22_sg415 0.0 0.0 ellipse
+717 d23_sg370 0.0 0.0 ellipse
+718 d22_sg416 0.0 0.0 ellipse
+719 d22_sg417 0.0 0.0 ellipse
+720 d22_sg419 0.0 0.0 ellipse
+721 d22_sg420 0.0 0.0 ellipse
+722 d22_sg421 0.0 0.0 ellipse
+723 d25_sg1 0.0 0.0 ellipse
+724 d22_sg422 0.0 0.0 ellipse
+725 d22_sg423 0.0 0.0 ellipse
+726 d23_sg181 0.0 0.0 ellipse
+727 d23_sg355 0.0 0.0 ellipse
+728 d22_sg424 0.0 0.0 ellipse
+729 d22_sg425 0.0 0.0 ellipse
+730 d22_sg426 0.0 0.0 ellipse
+731 d22_sg428 0.0 0.0 ellipse
+732 d22_sg430 0.0 0.0 ellipse
+733 d23_sg158 0.0 0.0 ellipse
+734 d23_sg159 0.0 0.0 ellipse
+735 d23_sg162 0.0 0.0 ellipse
+736 d22_sg431 0.0 0.0 ellipse
+737 d22_sg432 0.0 0.0 ellipse
+738 d22_sg434 0.0 0.0 ellipse
+739 d23_sg382 0.0 0.0 ellipse
+740 d22_sg435 0.0 0.0 ellipse
+741 d22_sg436 0.0 0.0 ellipse
+742 d22_sg441 0.0 0.0 ellipse
+743 d23_sg35 0.0 0.0 ellipse
+744 d23_sg256 0.0 0.0 ellipse
+745 d22_sg444 0.0 0.0 ellipse
+746 d22_sg447 0.0 0.0 ellipse
+747 d22_sg448 0.0 0.0 ellipse
+748 d22_sg449 0.0 0.0 ellipse
+749 d22_sg450 0.0 0.0 ellipse
+750 d22_sg451 0.0 0.0 ellipse
+751 d22_sg452 0.0 0.0 ellipse
+752 d22_sg453 0.0 0.0 ellipse
+753 d22_sg454 0.0 0.0 ellipse
+754 d22_sg455 0.0 0.0 ellipse
+755 d22_sg456 0.0 0.0 ellipse
+756 d22_sg457 0.0 0.0 ellipse
+757 d23_sg347 0.0 0.0 ellipse
+758 d22_sg458 0.0 0.0 ellipse
+759 d22_sg459 0.0 0.0 ellipse
+760 d22_sg460 0.0 0.0 ellipse
+761 d22_sg461 0.0 0.0 ellipse
+762 d22_sg462 0.0 0.0 ellipse
+763 d22_sg463 0.0 0.0 ellipse
+764 d22_sg464 0.0 0.0 ellipse
+765 d23_sg156 0.0 0.0 ellipse
+766 d22_sg465 0.0 0.0 ellipse
+767 d22_sg467 0.0 0.0 ellipse
+768 d22_sg468 0.0 0.0 ellipse
+769 d22_sg469 0.0 0.0 ellipse
+770 d22_sg471 0.0 0.0 ellipse
+771 d22_sg472 0.0 0.0 ellipse
+772 d22_sg473 0.0 0.0 ellipse
+773 d23_sg247 0.0 0.0 ellipse
+774 d23_sg404 0.0 0.0 ellipse
+775 d22_sg474 0.0 0.0 ellipse
+776 d23_sg140 0.0 0.0 ellipse
+777 d22_sg476 0.0 0.0 ellipse
+778 d22_sg477 0.0 0.0 ellipse
+779 d23_sg102 0.0 0.0 ellipse
+780 d22_sg480 0.0 0.0 ellipse
+781 d22_sg481 0.0 0.0 ellipse
+782 d22_sg484 0.0 0.0 ellipse
+783 d23_sg364 0.0 0.0 ellipse
+784 d22_sg486 0.0 0.0 ellipse
+785 d22_sg487 0.0 0.0 ellipse
+786 d22_sg488 0.0 0.0 ellipse
+787 d22_sg489 0.0 0.0 ellipse
+788 d22_sg490 0.0 0.0 ellipse
+789 d22_sg491 0.0 0.0 ellipse
+790 d22_sg492 0.0 0.0 ellipse
+791 d23_sg365 0.0 0.0 ellipse
+792 d22_sg493 0.0 0.0 ellipse
+793 d22_sg494 0.0 0.0 ellipse
+794 d22_sg495 0.0 0.0 ellipse
+795 d23_sg366 0.0 0.0 ellipse
+796 d22_sg496 0.0 0.0 ellipse
+797 d23_sg160 0.0 0.0 ellipse
+798 d22_sg497 0.0 0.0 ellipse
+799 d22_sg498 0.0 0.0 ellipse
+800 d22_sg499 0.0 0.0 ellipse
+801 d22_sg500 0.0 0.0 ellipse
+802 d22_sg502 0.0 0.0 ellipse
+803 d23_sg52 0.0 0.0 ellipse
+804 d23_sg271 0.0 0.0 ellipse
+805 d22_sg503 0.0 0.0 ellipse
+806 d23_sg204 0.0 0.0 ellipse
+807 d22_sg504 0.0 0.0 ellipse
+808 d22_sg506 0.0 0.0 ellipse
+809 d22_sg507 0.0 0.0 ellipse
+810 d22_sg509 0.0 0.0 ellipse
+811 d22_sg510 0.0 0.0 ellipse
+812 d22_sg511 0.0 0.0 ellipse
+813 d23_sg311 0.0 0.0 ellipse
+814 d22_sg512 0.0 0.0 ellipse
+815 d22_sg513 0.0 0.0 ellipse
+816 d23_sg327 0.0 0.0 ellipse
+817 d22_sg514 0.0 0.0 ellipse
+818 d23_sg33 0.0 0.0 ellipse
+819 d23_sg121 0.0 0.0 ellipse
+820 d22_sg515 0.0 0.0 ellipse
+821 d22_sg516 0.0 0.0 ellipse
+822 d22_sg517 0.0 0.0 ellipse
+823 d22_sg518 0.0 0.0 ellipse
+824 d22_sg519 0.0 0.0 ellipse
+825 d23_sg24 0.0 0.0 ellipse
+826 d23_sg119 0.0 0.0 ellipse
+827 d22_sg520 0.0 0.0 ellipse
+828 d23_sg389 0.0 0.0 ellipse
+829 d22_sg521 0.0 0.0 ellipse
+830 d22_sg522 0.0 0.0 ellipse
+831 d22_sg523 0.0 0.0 ellipse
+832 d22_sg524 0.0 0.0 ellipse
+833 d22_sg525 0.0 0.0 ellipse
+834 d22_sg526 0.0 0.0 ellipse
+835 d22_sg527 0.0 0.0 ellipse
+836 d22_sg528 0.0 0.0 ellipse
+837 d23_sg96 0.0 0.0 ellipse
+838 d22_sg529 0.0 0.0 ellipse
+839 d23_sg360 0.0 0.0 ellipse
+840 d23_sg114 0.0 0.0 ellipse
+841 d22_sg532 0.0 0.0 ellipse
+842 d22_sg535 0.0 0.0 ellipse
+843 d22_sg537 0.0 0.0 ellipse
+844 d22_sg538 0.0 0.0 ellipse
+845 d23_sg243 0.0 0.0 ellipse
+846 d22_sg539 0.0 0.0 ellipse
+847 d22_sg540 0.0 0.0 ellipse
+848 d22_sg542 0.0 0.0 ellipse
+849 d23_sg132 0.0 0.0 ellipse
+850 d22_sg543 0.0 0.0 ellipse
+851 d23_sg22 0.0 0.0 ellipse
+852 d23_sg109 0.0 0.0 ellipse
+853 d23_sg250 0.0 0.0 ellipse
+854 d23_sg345 0.0 0.0 ellipse
+855 d22_sg549 0.0 0.0 ellipse
+856 d22_sg550 0.0 0.0 ellipse
+857 d22_sg553 0.0 0.0 ellipse
+858 d22_sg554 0.0 0.0 ellipse
+859 d22_sg557 0.0 0.0 ellipse
+860 d23_sg397 0.0 0.0 ellipse
+861 d22_sg558 0.0 0.0 ellipse
+862 d22_sg559 0.0 0.0 ellipse
+863 d22_sg562 0.0 0.0 ellipse
+864 d22_sg564 0.0 0.0 ellipse
+865 d22_sg565 0.0 0.0 ellipse
+866 d22_sg566 0.0 0.0 ellipse
+867 d23_sg324 0.0 0.0 ellipse
+868 d22_sg570 0.0 0.0 ellipse
+869 d22_sg571 0.0 0.0 ellipse
+870 d22_sg572 0.0 0.0 ellipse
+871 d22_sg573 0.0 0.0 ellipse
+872 d22_sg574 0.0 0.0 ellipse
+873 d22_sg575 0.0 0.0 ellipse
+874 d22_sg577 0.0 0.0 ellipse
+875 d22_sg582 0.0 0.0 ellipse
+876 d22_sg583 0.0 0.0 ellipse
+877 d22_sg584 0.0 0.0 ellipse
+878 d23_sg383 0.0 0.0 ellipse
+879 d22_sg585 0.0 0.0 ellipse
+880 d22_sg586 0.0 0.0 ellipse
+881 d22_sg589 0.0 0.0 ellipse
+882 d22_sg590 0.0 0.0 ellipse
+883 d22_sg595 0.0 0.0 ellipse
+884 d22_sg596 0.0 0.0 ellipse
+885 d22_sg597 0.0 0.0 ellipse
+886 d22_sg598 0.0 0.0 ellipse
+887 d22_sg599 0.0 0.0 ellipse
+888 d23_sg266 0.0 0.0 ellipse
+889 d23_sg272 0.0 0.0 ellipse
+890 d23_sg285 0.0 0.0 ellipse
+891 d22_sg601 0.0 0.0 ellipse
+892 d22_sg602 0.0 0.0 ellipse
+893 d22_sg603 0.0 0.0 ellipse
+894 d22_sg604 0.0 0.0 ellipse
+895 d23_sg242 0.0 0.0 ellipse
+896 d22_sg605 0.0 0.0 ellipse
+897 d22_sg609 0.0 0.0 ellipse
+898 d22_sg611 0.0 0.0 ellipse
+899 d23_sg265 0.0 0.0 ellipse
+900 d22_sg616 0.0 0.0 ellipse
+901 d22_sg618 0.0 0.0 ellipse
+902 d22_sg619 0.0 0.0 ellipse
+903 d22_sg620 0.0 0.0 ellipse
+904 d22_sg622 0.0 0.0 ellipse
+905 d22_sg623 0.0 0.0 ellipse
+906 d22_sg624 0.0 0.0 ellipse
+907 d22_sg626 0.0 0.0 ellipse
+908 d22_sg627 0.0 0.0 ellipse
+909 d23_sg112 0.0 0.0 ellipse
+910 d22_sg628 0.0 0.0 ellipse
+911 d22_sg630 0.0 0.0 ellipse
+912 d22_sg631 0.0 0.0 ellipse
+913 d22_sg632 0.0 0.0 ellipse
+914 d23_sg236 0.0 0.0 ellipse
+915 d22_sg634 0.0 0.0 ellipse
+916 d22_sg636 0.0 0.0 ellipse
+917 d22_sg637 0.0 0.0 ellipse
+918 d22_sg640 0.0 0.0 ellipse
+919 d22_sg642 0.0 0.0 ellipse
+920 d22_sg646 0.0 0.0 ellipse
+921 d23_sg0 0.0 0.0 ellipse
+922 d23_sg257 0.0 0.0 ellipse
+923 d23_sg260 0.0 0.0 ellipse
+924 d23_sg263 0.0 0.0 ellipse
+925 d23_sg278 0.0 0.0 ellipse
+926 d23_sg284 0.0 0.0 ellipse
+927 d23_sg286 0.0 0.0 ellipse
+928 d23_sg1 0.0 0.0 ellipse
+929 d23_sg262 0.0 0.0 ellipse
+930 d23_sg276 0.0 0.0 ellipse
+931 d23_sg3 0.0 0.0 ellipse
+932 d23_sg123 0.0 0.0 ellipse
+933 d23_sg319 0.0 0.0 ellipse
+934 d23_sg4 0.0 0.0 ellipse
+935 d23_sg7 0.0 0.0 ellipse
+936 d23_sg25 0.0 0.0 ellipse
+937 d23_sg8 0.0 0.0 ellipse
+938 d23_sg9 0.0 0.0 ellipse
+939 d23_sg19 0.0 0.0 ellipse
+940 d23_sg29 0.0 0.0 ellipse
+941 d23_sg10 0.0 0.0 ellipse
+942 d23_sg11 0.0 0.0 ellipse
+943 d23_sg12 0.0 0.0 ellipse
+944 d23_sg241 0.0 0.0 ellipse
+945 d23_sg14 0.0 0.0 ellipse
+946 d23_sg23 0.0 0.0 ellipse
+947 d23_sg16 0.0 0.0 ellipse
+948 d25_sg26 0.0 0.0 ellipse
+949 d25_sg72 0.0 0.0 ellipse
+950 d25_sg74 0.0 0.0 ellipse
+951 d25_sg76 0.0 0.0 ellipse
+952 d25_sg109 0.0 0.0 ellipse
+953 d25_sg281 0.0 0.0 ellipse
+954 d25_sg103 0.0 0.0 ellipse
+955 d25_sg34 0.0 0.0 ellipse
+956 d25_sg233 0.0 0.0 ellipse
+957 d25_sg172 0.0 0.0 ellipse
+958 d25_sg150 0.0 0.0 ellipse
+959 d25_sg218 0.0 0.0 ellipse
+960 d25_sg228 0.0 0.0 ellipse
+961 d25_sg263 0.0 0.0 ellipse
+962 d25_sg85 0.0 0.0 ellipse
+963 d25_sg196 0.0 0.0 ellipse
+964 d25_sg253 0.0 0.0 ellipse
+965 d25_sg251 0.0 0.0 ellipse
+966 d25_sg58 0.0 0.0 ellipse
+967 d25_sg121 0.0 0.0 ellipse
+968 d25_sg159 0.0 0.0 ellipse
+969 d25_sg190 0.0 0.0 ellipse
+970 d25_sg210 0.0 0.0 ellipse
+971 d25_sg235 0.0 0.0 ellipse
+972 d25_sg269 0.0 0.0 ellipse
+973 d25_sg326 0.0 0.0 ellipse
+974 d25_sg54 0.0 0.0 ellipse
+975 d25_sg277 0.0 0.0 ellipse
+976 d25_sg153 0.0 0.0 ellipse
+977 d25_sg237 0.0 0.0 ellipse
+978 d25_sg239 0.0 0.0 ellipse
+979 d25_sg240 0.0 0.0 ellipse
+980 d25_sg242 0.0 0.0 ellipse
+981 d25_sg122 0.0 0.0 ellipse
+982 d25_sg290 0.0 0.0 ellipse
+983 d25_sg358 0.0 0.0 ellipse
+984 d23_sg56 0.0 0.0 ellipse
+985 d25_sg113 0.0 0.0 ellipse
+986 d25_sg160 0.0 0.0 ellipse
+987 d25_sg193 0.0 0.0 ellipse
+988 d25_sg82 0.0 0.0 ellipse
+989 d25_sg156 0.0 0.0 ellipse
+990 d23_sg61 0.0 0.0 ellipse
+991 d25_sg187 0.0 0.0 ellipse
+992 d23_sg64 0.0 0.0 ellipse
+993 d25_sg182 0.0 0.0 ellipse
+994 d25_sg229 0.0 0.0 ellipse
+995 d25_sg169 0.0 0.0 ellipse
+996 d25_sg221 0.0 0.0 ellipse
+997 d23_sg68 0.0 0.0 ellipse
+998 d25_sg23 0.0 0.0 ellipse
+999 d23_sg73 0.0 0.0 ellipse
+1000 d23_sg75 0.0 0.0 ellipse
+1001 d23_sg78 0.0 0.0 ellipse
+1002 d25_sg24 0.0 0.0 ellipse
+1003 d23_sg90 0.0 0.0 ellipse
+1004 d23_sg95 0.0 0.0 ellipse
+1005 d27_sg15 0.0 0.0 ellipse
+1006 d25_sg98 0.0 0.0 ellipse
+1007 d25_sg102 0.0 0.0 ellipse
+1008 d25_sg30 0.0 0.0 ellipse
+1009 d25_sg78 0.0 0.0 ellipse
+1010 d25_sg79 0.0 0.0 ellipse
+1011 d25_sg107 0.0 0.0 ellipse
+1012 d25_sg115 0.0 0.0 ellipse
+1013 d25_sg188 0.0 0.0 ellipse
+1014 d25_sg197 0.0 0.0 ellipse
+1015 d25_sg202 0.0 0.0 ellipse
+1016 d25_sg209 0.0 0.0 ellipse
+1017 d25_sg258 0.0 0.0 ellipse
+1018 d25_sg91 0.0 0.0 ellipse
+1019 d25_sg117 0.0 0.0 ellipse
+1020 d23_sg104 0.0 0.0 ellipse
+1021 d25_sg116 0.0 0.0 ellipse
+1022 d25_sg331 0.0 0.0 ellipse
+1023 d23_sg110 0.0 0.0 ellipse
+1024 d25_sg223 0.0 0.0 ellipse
+1025 d25_sg148 0.0 0.0 ellipse
+1026 d25_sg206 0.0 0.0 ellipse
+1027 d25_sg220 0.0 0.0 ellipse
+1028 d25_sg236 0.0 0.0 ellipse
+1029 d25_sg244 0.0 0.0 ellipse
+1030 d25_sg252 0.0 0.0 ellipse
+1031 d25_sg259 0.0 0.0 ellipse
+1032 d25_sg347 0.0 0.0 ellipse
+1033 d23_sg116 0.0 0.0 ellipse
+1034 d25_sg318 0.0 0.0 ellipse
+1035 d25_sg343 0.0 0.0 ellipse
+1036 d25_sg363 0.0 0.0 ellipse
+1037 d25_sg316 0.0 0.0 ellipse
+1038 d25_sg138 0.0 0.0 ellipse
+1039 d25_sg185 0.0 0.0 ellipse
+1040 d25_sg194 0.0 0.0 ellipse
+1041 d25_sg201 0.0 0.0 ellipse
+1042 d25_sg264 0.0 0.0 ellipse
+1043 d25_sg219 0.0 0.0 ellipse
+1044 d25_sg325 0.0 0.0 ellipse
+1045 d23_sg127 0.0 0.0 ellipse
+1046 d25_sg336 0.0 0.0 ellipse
+1047 d25_sg339 0.0 0.0 ellipse
+1048 d25_sg93 0.0 0.0 ellipse
+1049 d23_sg139 0.0 0.0 ellipse
+1050 d25_sg64 0.0 0.0 ellipse
+1051 d25_sg145 0.0 0.0 ellipse
+1052 d25_sg44 0.0 0.0 ellipse
+1053 d25_sg46 0.0 0.0 ellipse
+1054 d25_sg123 0.0 0.0 ellipse
+1055 d25_sg134 0.0 0.0 ellipse
+1056 d25_sg203 0.0 0.0 ellipse
+1057 d25_sg272 0.0 0.0 ellipse
+1058 d25_sg284 0.0 0.0 ellipse
+1059 d27_sg4 0.0 0.0 ellipse
+1060 d27_sg11 0.0 0.0 ellipse
+1061 d25_sg191 0.0 0.0 ellipse
+1062 d23_sg149 0.0 0.0 ellipse
+1063 d25_sg245 0.0 0.0 ellipse
+1064 d25_sg130 0.0 0.0 ellipse
+1065 d25_sg273 0.0 0.0 ellipse
+1066 d25_sg25 0.0 0.0 ellipse
+1067 d25_sg152 0.0 0.0 ellipse
+1068 d25_sg231 0.0 0.0 ellipse
+1069 d25_sg132 0.0 0.0 ellipse
+1070 d25_sg374 0.0 0.0 ellipse
+1071 d25_sg250 0.0 0.0 ellipse
+1072 d25_sg254 0.0 0.0 ellipse
+1073 d23_sg186 0.0 0.0 ellipse
+1074 d25_sg255 0.0 0.0 ellipse
+1075 d25_sg247 0.0 0.0 ellipse
+1076 d25_sg241 0.0 0.0 ellipse
+1077 d25_sg265 0.0 0.0 ellipse
+1078 d25_sg73 0.0 0.0 ellipse
+1079 d25_sg260 0.0 0.0 ellipse
+1080 d25_sg262 0.0 0.0 ellipse
+1081 d25_sg304 0.0 0.0 ellipse
+1082 d25_sg227 0.0 0.0 ellipse
+1083 d25_sg329 0.0 0.0 ellipse
+1084 d25_sg120 0.0 0.0 ellipse
+1085 d25_sg56 0.0 0.0 ellipse
+1086 d25_sg225 0.0 0.0 ellipse
+1087 d25_sg20 0.0 0.0 ellipse
+1088 d25_sg84 0.0 0.0 ellipse
+1089 d25_sg63 0.0 0.0 ellipse
+1090 d25_sg77 0.0 0.0 ellipse
+1091 d25_sg333 0.0 0.0 ellipse
+1092 d25_sg353 0.0 0.0 ellipse
+1093 d25_sg368 0.0 0.0 ellipse
+1094 d25_sg375 0.0 0.0 ellipse
+1095 d25_sg71 0.0 0.0 ellipse
+1096 d25_sg234 0.0 0.0 ellipse
+1097 d25_sg19 0.0 0.0 ellipse
+1098 d25_sg165 0.0 0.0 ellipse
+1099 d23_sg233 0.0 0.0 ellipse
+1100 d25_sg266 0.0 0.0 ellipse
+1101 d25_sg361 0.0 0.0 ellipse
+1102 d25_sg158 0.0 0.0 ellipse
+1103 d25_sg215 0.0 0.0 ellipse
+1104 d25_sg86 0.0 0.0 ellipse
+1105 d25_sg33 0.0 0.0 ellipse
+1106 d25_sg179 0.0 0.0 ellipse
+1107 d25_sg256 0.0 0.0 ellipse
+1108 d25_sg257 0.0 0.0 ellipse
+1109 d25_sg222 0.0 0.0 ellipse
+1110 d25_sg180 0.0 0.0 ellipse
+1111 d23_sg258 0.0 0.0 ellipse
+1112 d23_sg259 0.0 0.0 ellipse
+1113 d23_sg264 0.0 0.0 ellipse
+1114 d23_sg267 0.0 0.0 ellipse
+1115 d23_sg268 0.0 0.0 ellipse
+1116 d25_sg319 0.0 0.0 ellipse
+1117 d25_sg372 0.0 0.0 ellipse
+1118 d25_sg88 0.0 0.0 ellipse
+1119 d23_sg274 0.0 0.0 ellipse
+1120 d25_sg211 0.0 0.0 ellipse
+1121 d25_sg80 0.0 0.0 ellipse
+1122 d23_sg280 0.0 0.0 ellipse
+1123 d25_sg298 0.0 0.0 ellipse
+1124 d23_sg281 0.0 0.0 ellipse
+1125 d25_sg365 0.0 0.0 ellipse
+1126 d25_sg373 0.0 0.0 ellipse
+1127 d27_sg12 0.0 0.0 ellipse
+1128 d25_sg163 0.0 0.0 ellipse
+1129 d25_sg171 0.0 0.0 ellipse
+1130 d25_sg306 0.0 0.0 ellipse
+1131 d25_sg111 0.0 0.0 ellipse
+1132 d25_sg364 0.0 0.0 ellipse
+1133 d23_sg291 0.0 0.0 ellipse
+1134 d27_sg14 0.0 0.0 ellipse
+1135 d25_sg142 0.0 0.0 ellipse
+1136 d25_sg359 0.0 0.0 ellipse
+1137 d23_sg297 0.0 0.0 ellipse
+1138 d25_sg192 0.0 0.0 ellipse
+1139 d23_sg304 0.0 0.0 ellipse
+1140 d23_sg305 0.0 0.0 ellipse
+1141 d25_sg137 0.0 0.0 ellipse
+1142 d25_sg243 0.0 0.0 ellipse
+1143 d25_sg307 0.0 0.0 ellipse
+1144 d25_sg309 0.0 0.0 ellipse
+1145 d23_sg318 0.0 0.0 ellipse
+1146 d23_sg323 0.0 0.0 ellipse
+1147 d25_sg183 0.0 0.0 ellipse
+1148 d25_sg204 0.0 0.0 ellipse
+1149 d25_sg305 0.0 0.0 ellipse
+1150 d23_sg326 0.0 0.0 ellipse
+1151 d25_sg112 0.0 0.0 ellipse
+1152 d25_sg139 0.0 0.0 ellipse
+1153 d25_sg323 0.0 0.0 ellipse
+1154 d23_sg337 0.0 0.0 ellipse
+1155 d25_sg35 0.0 0.0 ellipse
+1156 d25_sg370 0.0 0.0 ellipse
+1157 d25_sg131 0.0 0.0 ellipse
+1158 d23_sg343 0.0 0.0 ellipse
+1159 d25_sg57 0.0 0.0 ellipse
+1160 d25_sg226 0.0 0.0 ellipse
+1161 d25_sg230 0.0 0.0 ellipse
+1162 d25_sg267 0.0 0.0 ellipse
+1163 d25_sg42 0.0 0.0 ellipse
+1164 d25_sg271 0.0 0.0 ellipse
+1165 d23_sg358 0.0 0.0 ellipse
+1166 d25_sg36 0.0 0.0 ellipse
+1167 d25_sg162 0.0 0.0 ellipse
+1168 d23_sg362 0.0 0.0 ellipse
+1169 d25_sg248 0.0 0.0 ellipse
+1170 d25_sg249 0.0 0.0 ellipse
+1171 d25_sg212 0.0 0.0 ellipse
+1172 d25_sg87 0.0 0.0 ellipse
+1173 d25_sg99 0.0 0.0 ellipse
+1174 d23_sg371 0.0 0.0 ellipse
+1175 d25_sg40 0.0 0.0 ellipse
+1176 d25_sg43 0.0 0.0 ellipse
+1177 d25_sg311 0.0 0.0 ellipse
+1178 d25_sg105 0.0 0.0 ellipse
+1179 d25_sg337 0.0 0.0 ellipse
+1180 d25_sg5 0.0 0.0 ellipse
+1181 d25_sg21 0.0 0.0 ellipse
+1182 d25_sg270 0.0 0.0 ellipse
+1183 d25_sg22 0.0 0.0 ellipse
+1184 d25_sg279 0.0 0.0 ellipse
+1185 d25_sg280 0.0 0.0 ellipse
+1186 d25_sg371 0.0 0.0 ellipse
+1187 d25_sg168 0.0 0.0 ellipse
+1188 d25_sg173 0.0 0.0 ellipse
+1189 d25_sg338 0.0 0.0 ellipse
+1190 d27_sg28 0.0 0.0 ellipse
+1191 d25_sg317 0.0 0.0 ellipse
+1192 d27_sg38 0.0 0.0 ellipse
+1193 d27_sg25 0.0 0.0 ellipse
+1194 d25_sg324 0.0 0.0 ellipse
+1195 d27_sg36 0.0 0.0 ellipse
+1196 d25_sg328 0.0 0.0 ellipse
+1197 d25_sg332 0.0 0.0 ellipse
+1198 d25_sg340 0.0 0.0 ellipse
+1199 d27_sg2 0.0 0.0 ellipse
+1200 d27_sg33 0.0 0.0 ellipse
+1201 d27_sg22 0.0 0.0 ellipse
+1202 d27_sg31 0.0 0.0 ellipse
+1203 d27_sg10 0.0 0.0 ellipse
+1204 d27_sg35 0.0 0.0 ellipse
+1205 d27_sg13 0.0 0.0 ellipse
+1206 d27_sg32 0.0 0.0 ellipse
+1207 d27_sg16 0.0 0.0 ellipse
+1208 d27_sg19 0.0 0.0 ellipse
+1209 d27_sg41 0.0 0.0 ellipse
+1210 d27_sg221 0.0 0.0 ellipse
+1211 d27_sg24 0.0 0.0 ellipse
+1212 d27_sg123 0.0 0.0 ellipse
+1213 d27_sg151 0.0 0.0 ellipse
+1214 d27_sg108 0.0 0.0 ellipse
+1215 d27_sg152 0.0 0.0 ellipse
+1216 d27_sg217 0.0 0.0 ellipse
+1217 d27_sg26 0.0 0.0 ellipse
+1218 d27_sg231 0.0 0.0 ellipse
+1219 d27_sg233 0.0 0.0 ellipse
+1220 d27_sg110 0.0 0.0 ellipse
+1221 d27_sg109 0.0 0.0 ellipse
+1222 d27_sg112 0.0 0.0 ellipse
+1223 d27_sg37 0.0 0.0 ellipse
+1224 d27_sg115 0.0 0.0 ellipse
+1225 d27_sg39 0.0 0.0 ellipse
+1226 d27_sg65 0.0 0.0 ellipse
+1227 d27_sg68 0.0 0.0 ellipse
+1228 d30_sg11 0.0 0.0 ellipse
+1229 d27_sg77 0.0 0.0 ellipse
+1230 d30_sg24 0.0 0.0 ellipse
+1231 d27_sg87 0.0 0.0 ellipse
+1232 d30_sg10 0.0 0.0 ellipse
+1233 d30_sg19 0.0 0.0 ellipse
+1234 d30_sg32 0.0 0.0 ellipse
+1235 d27_sg88 0.0 0.0 ellipse
+1236 d27_sg128 0.0 0.0 ellipse
+1237 d30_sg27 0.0 0.0 ellipse
+1238 d27_sg145 0.0 0.0 ellipse
+1239 d27_sg148 0.0 0.0 ellipse
+1240 d30_sg16 0.0 0.0 ellipse
+1241 d27_sg186 0.0 0.0 ellipse
+1242 d27_sg226 0.0 0.0 ellipse
+1243 d30_sg37 0.0 0.0 ellipse
+1244 d29_sg4 0.0 0.0 ellipse
+1245 d29_sg5 0.0 0.0 ellipse
+1246 d29_sg30 0.0 0.0 ellipse
+1247 d30_sg13 0.0 0.0 ellipse
+1248 d30_sg0 0.0 0.0 ellipse
+1249 d32_sg13 0.0 0.0 ellipse
+1250 d30_sg23 0.0 0.0 ellipse
+1251 d32_sg5 0.0 0.0 ellipse
+1252 d30_sg40 0.0 0.0 ellipse
+1253 d30_sg34 0.0 0.0 ellipse
+1254 d30_sg42 0.0 0.0 ellipse
+*arcs
+1 2 1.0
+3 4 1.0
+3 5 1.0
+3 6 1.0
+3 7 1.0
+3 8 1.0
+3 9 1.0
+3 10 1.0
+3 11 1.0
+3 12 1.0
+3 13 1.0
+4 28 1.0
+4 29 1.0
+5 28 1.0
+5 29 1.0
+6 28 1.0
+6 29 1.0
+7 28 1.0
+7 29 1.0
+8 28 1.0
+8 29 1.0
+9 28 1.0
+9 29 1.0
+10 28 1.0
+10 29 1.0
+11 28 1.0
+11 29 1.0
+12 28 1.0
+12 29 1.0
+13 28 1.0
+13 29 1.0
+14 15 1.0
+16 17 1.0
+18 19 1.0
+20 15 1.0
+21 2 1.0
+22 23 1.0
+22 24 1.0
+22 25 1.0
+22 26 1.0
+27 15 1.0
+28 58 1.0
+28 59 1.0
+28 60 1.0
+29 58 1.0
+29 59 1.0
+29 60 1.0
+30 31 1.0
+31 50 1.0
+31 51 1.0
+31 52 1.0
+31 40 1.0
+31 41 1.0
+31 42 1.0
+31 43 1.0
+31 44 1.0
+31 45 1.0
+31 53 1.0
+31 54 1.0
+31 55 1.0
+31 46 1.0
+31 56 1.0
+32 33 1.0
+32 34 1.0
+33 50 1.0
+33 51 1.0
+33 52 1.0
+33 40 1.0
+33 42 1.0
+33 43 1.0
+33 44 1.0
+33 45 1.0
+33 54 1.0
+33 55 1.0
+33 46 1.0
+33 56 1.0
+35 36 1.0
+36 50 1.0
+36 41 1.0
+36 42 1.0
+36 44 1.0
+36 55 1.0
+36 46 1.0
+36 67 1.0
+36 56 1.0
+36 68 1.0
+36 48 1.0
+36 66 1.0
+36 69 1.0
+36 49 1.0
+36 70 1.0
+36 71 1.0
+37 38 1.0
+38 41 1.0
+38 47 1.0
+39 40 1.0
+39 41 1.0
+39 42 1.0
+39 43 1.0
+39 44 1.0
+39 45 1.0
+39 46 1.0
+39 47 1.0
+39 48 1.0
+39 49 1.0
+41 79 1.0
+41 80 1.0
+42 81 1.0
+49 79 1.0
+55 79 1.0
+55 84 1.0
+57 50 1.0
+57 51 1.0
+57 52 1.0
+57 40 1.0
+57 42 1.0
+57 43 1.0
+57 44 1.0
+57 45 1.0
+57 54 1.0
+57 46 1.0
+58 82 1.0
+58 83 1.0
+59 82 1.0
+59 83 1.0
+60 82 1.0
+60 83 1.0
+61 50 1.0
+61 51 1.0
+61 52 1.0
+61 40 1.0
+61 41 1.0
+61 42 1.0
+61 43 1.0
+61 44 1.0
+61 45 1.0
+61 54 1.0
+61 46 1.0
+61 56 1.0
+62 63 1.0
+62 40 1.0
+62 42 1.0
+62 54 1.0
+62 64 1.0
+62 65 1.0
+62 66 1.0
+70 87 1.0
+71 91 1.0
+71 92 1.0
+72 50 1.0
+72 51 1.0
+72 52 1.0
+72 40 1.0
+72 41 1.0
+72 42 1.0
+72 43 1.0
+72 44 1.0
+72 45 1.0
+72 55 1.0
+72 46 1.0
+72 65 1.0
+72 56 1.0
+73 52 1.0
+73 40 1.0
+73 54 1.0
+74 52 1.0
+74 54 1.0
+74 49 1.0
+75 52 1.0
+75 63 1.0
+75 40 1.0
+75 42 1.0
+75 43 1.0
+75 44 1.0
+75 45 1.0
+75 54 1.0
+75 46 1.0
+75 76 1.0
+75 69 1.0
+76 84 1.0
+77 50 1.0
+77 51 1.0
+77 52 1.0
+77 40 1.0
+77 42 1.0
+77 43 1.0
+77 44 1.0
+77 45 1.0
+77 55 1.0
+77 46 1.0
+77 56 1.0
+78 50 1.0
+78 51 1.0
+78 52 1.0
+78 63 1.0
+78 40 1.0
+78 41 1.0
+78 42 1.0
+78 43 1.0
+78 44 1.0
+78 45 1.0
+78 53 1.0
+78 54 1.0
+78 55 1.0
+78 46 1.0
+78 56 1.0
+80 120 1.0
+80 121 1.0
+81 118 1.0
+85 86 1.0
+88 89 1.0
+88 90 1.0
+93 94 1.0
+94 111 1.0
+95 87 1.0
+95 91 1.0
+95 90 1.0
+96 97 1.0
+97 114 1.0
+98 94 1.0
+99 100 1.0
+99 87 1.0
+99 101 1.0
+99 102 1.0
+99 103 1.0
+99 97 1.0
+99 90 1.0
+102 104 1.0
+102 105 1.0
+103 106 1.0
+107 108 1.0
+109 110 1.0
+112 113 1.0
+115 116 1.0
+117 116 1.0
+119 120 1.0
+119 118 1.0
+121 127 1.0
+122 120 1.0
+123 124 1.0
+125 126 1.0
+126 166 1.0
+126 164 1.0
+127 164 1.0
+128 127 1.0
+129 130 1.0
+129 131 1.0
+129 132 1.0
+130 157 1.0
+130 158 1.0
+130 159 1.0
+133 131 1.0
+133 132 1.0
+134 135 1.0
+135 160 1.0
+135 158 1.0
+136 137 1.0
+136 138 1.0
+139 131 1.0
+139 132 1.0
+140 137 1.0
+140 138 1.0
+141 142 1.0
+141 143 1.0
+142 152 1.0
+142 153 1.0
+142 154 1.0
+142 155 1.0
+142 156 1.0
+143 152 1.0
+143 153 1.0
+143 154 1.0
+143 155 1.0
+143 156 1.0
+144 137 1.0
+145 135 1.0
+146 147 1.0
+148 149 1.0
+150 142 1.0
+150 143 1.0
+151 135 1.0
+158 177 1.0
+161 162 1.0
+163 164 1.0
+165 166 1.0
+167 160 1.0
+168 169 1.0
+168 170 1.0
+168 171 1.0
+168 172 1.0
+169 181 1.0
+171 181 1.0
+173 174 1.0
+175 166 1.0
+176 177 1.0
+178 177 1.0
+179 180 1.0
+180 189 1.0
+181 194 1.0
+181 195 1.0
+182 183 1.0
+184 181 1.0
+184 185 1.0
+185 196 1.0
+185 197 1.0
+186 187 1.0
+186 188 1.0
+189 202 1.0
+190 191 1.0
+192 193 1.0
+194 198 1.0
+199 200 1.0
+199 198 1.0
+200 203 1.0
+201 200 1.0
+202 204 1.0
+203 209 1.0
+205 206 1.0
+205 207 1.0
+206 216 1.0
+206 217 1.0
+206 218 1.0
+207 216 1.0
+207 219 1.0
+208 209 1.0
+209 237 1.0
+209 216 1.0
+209 238 1.0
+209 239 1.0
+209 240 1.0
+209 241 1.0
+209 242 1.0
+210 206 1.0
+210 207 1.0
+211 212 1.0
+212 220 1.0
+212 221 1.0
+212 222 1.0
+212 223 1.0
+212 224 1.0
+212 225 1.0
+212 226 1.0
+212 227 1.0
+212 228 1.0
+212 229 1.0
+212 230 1.0
+212 231 1.0
+212 232 1.0
+212 233 1.0
+212 234 1.0
+212 235 1.0
+212 236 1.0
+213 212 1.0
+214 207 1.0
+215 212 1.0
+217 515 1.0
+219 286 1.0
+219 458 1.0
+220 308 1.0
+220 309 1.0
+220 310 1.0
+220 311 1.0
+220 312 1.0
+220 313 1.0
+220 314 1.0
+220 315 1.0
+220 316 1.0
+220 317 1.0
+220 318 1.0
+220 319 1.0
+220 320 1.0
+221 308 1.0
+221 309 1.0
+221 310 1.0
+221 311 1.0
+221 312 1.0
+221 313 1.0
+221 314 1.0
+221 315 1.0
+221 316 1.0
+221 317 1.0
+221 318 1.0
+221 319 1.0
+221 320 1.0
+222 308 1.0
+222 309 1.0
+222 310 1.0
+222 311 1.0
+222 312 1.0
+222 313 1.0
+222 314 1.0
+222 315 1.0
+222 316 1.0
+222 317 1.0
+222 318 1.0
+222 319 1.0
+222 320 1.0
+223 308 1.0
+223 309 1.0
+223 310 1.0
+223 311 1.0
+223 312 1.0
+223 313 1.0
+223 314 1.0
+223 315 1.0
+223 316 1.0
+223 317 1.0
+223 318 1.0
+223 319 1.0
+223 320 1.0
+224 308 1.0
+224 309 1.0
+224 310 1.0
+224 311 1.0
+224 312 1.0
+224 313 1.0
+224 314 1.0
+224 315 1.0
+224 316 1.0
+224 317 1.0
+224 318 1.0
+224 319 1.0
+224 320 1.0
+225 308 1.0
+225 309 1.0
+225 310 1.0
+225 311 1.0
+225 312 1.0
+225 313 1.0
+225 314 1.0
+225 315 1.0
+225 316 1.0
+225 317 1.0
+225 318 1.0
+225 319 1.0
+225 320 1.0
+226 308 1.0
+226 309 1.0
+226 310 1.0
+226 311 1.0
+226 312 1.0
+226 313 1.0
+226 314 1.0
+226 315 1.0
+226 316 1.0
+226 317 1.0
+226 318 1.0
+226 319 1.0
+226 320 1.0
+227 308 1.0
+227 309 1.0
+227 310 1.0
+227 311 1.0
+227 312 1.0
+227 313 1.0
+227 314 1.0
+227 315 1.0
+227 316 1.0
+227 317 1.0
+227 318 1.0
+227 319 1.0
+227 320 1.0
+228 308 1.0
+228 309 1.0
+228 310 1.0
+228 311 1.0
+228 312 1.0
+228 313 1.0
+228 314 1.0
+228 315 1.0
+228 316 1.0
+228 317 1.0
+228 318 1.0
+228 319 1.0
+228 320 1.0
+229 308 1.0
+229 309 1.0
+229 310 1.0
+229 311 1.0
+229 312 1.0
+229 313 1.0
+229 314 1.0
+229 315 1.0
+229 316 1.0
+229 317 1.0
+229 318 1.0
+229 319 1.0
+229 320 1.0
+230 308 1.0
+230 309 1.0
+230 310 1.0
+230 311 1.0
+230 312 1.0
+230 313 1.0
+230 314 1.0
+230 315 1.0
+230 316 1.0
+230 317 1.0
+230 318 1.0
+230 319 1.0
+230 320 1.0
+231 308 1.0
+231 309 1.0
+231 310 1.0
+231 311 1.0
+231 312 1.0
+231 313 1.0
+231 314 1.0
+231 315 1.0
+231 316 1.0
+231 317 1.0
+231 318 1.0
+231 319 1.0
+231 320 1.0
+232 308 1.0
+232 309 1.0
+232 310 1.0
+232 311 1.0
+232 312 1.0
+232 313 1.0
+232 314 1.0
+232 315 1.0
+232 316 1.0
+232 317 1.0
+232 318 1.0
+232 319 1.0
+232 320 1.0
+233 308 1.0
+233 309 1.0
+233 310 1.0
+233 311 1.0
+233 312 1.0
+233 313 1.0
+233 314 1.0
+233 315 1.0
+233 316 1.0
+233 317 1.0
+233 318 1.0
+233 319 1.0
+233 320 1.0
+234 308 1.0
+234 309 1.0
+234 310 1.0
+234 311 1.0
+234 312 1.0
+234 313 1.0
+234 314 1.0
+234 315 1.0
+234 316 1.0
+234 317 1.0
+234 318 1.0
+234 319 1.0
+234 320 1.0
+235 308 1.0
+235 309 1.0
+235 310 1.0
+235 311 1.0
+235 312 1.0
+235 313 1.0
+235 314 1.0
+235 315 1.0
+235 316 1.0
+235 317 1.0
+235 318 1.0
+235 319 1.0
+235 320 1.0
+236 308 1.0
+236 309 1.0
+236 310 1.0
+236 311 1.0
+236 312 1.0
+236 313 1.0
+236 314 1.0
+236 315 1.0
+236 316 1.0
+236 317 1.0
+236 318 1.0
+236 319 1.0
+236 320 1.0
+237 306 1.0
+237 307 1.0
+238 400 1.0
+238 459 1.0
+238 460 1.0
+239 501 1.0
+239 521 1.0
+240 609 1.0
+240 301 1.0
+241 636 1.0
+241 360 1.0
+241 486 1.0
+241 852 1.0
+241 464 1.0
+241 396 1.0
+241 465 1.0
+241 853 1.0
+241 854 1.0
+241 467 1.0
+241 727 1.0
+241 498 1.0
+242 818 1.0
+242 360 1.0
+242 401 1.0
+242 735 1.0
+242 888 1.0
+242 889 1.0
+242 890 1.0
+242 286 1.0
+243 244 1.0
+244 840 1.0
+245 246 1.0
+247 248 1.0
+247 249 1.0
+248 389 1.0
+248 487 1.0
+248 696 1.0
+248 779 1.0
+248 392 1.0
+248 396 1.0
+248 520 1.0
+248 489 1.0
+248 280 1.0
+248 460 1.0
+248 469 1.0
+250 251 1.0
+250 252 1.0
+250 253 1.0
+251 281 1.0
+252 400 1.0
+252 401 1.0
+252 402 1.0
+252 390 1.0
+252 391 1.0
+252 394 1.0
+252 403 1.0
+252 404 1.0
+252 398 1.0
+252 273 1.0
+252 405 1.0
+253 386 1.0
+253 360 1.0
+253 389 1.0
+253 401 1.0
+253 464 1.0
+253 393 1.0
+253 420 1.0
+253 394 1.0
+253 396 1.0
+253 436 1.0
+253 520 1.0
+253 397 1.0
+253 489 1.0
+253 404 1.0
+253 324 1.0
+254 244 1.0
+255 256 1.0
+255 257 1.0
+255 258 1.0
+255 259 1.0
+255 260 1.0
+255 261 1.0
+255 262 1.0
+255 263 1.0
+256 268 1.0
+256 271 1.0
+257 271 1.0
+258 268 1.0
+258 271 1.0
+258 273 1.0
+264 265 1.0
+264 266 1.0
+265 1164 1.0
+266 1164 1.0
+267 268 1.0
+269 268 1.0
+270 268 1.0
+270 271 1.0
+271 1044 1.0
+271 1032 1.0
+272 268 1.0
+273 1109 1.0
+273 1032 1.0
+274 275 1.0
+274 276 1.0
+274 277 1.0
+274 278 1.0
+275 1132 1.0
+276 1008 1.0
+276 1071 1.0
+276 1132 1.0
+277 1138 1.0
+277 1035 1.0
+277 1132 1.0
+278 1121 1.0
+278 1151 1.0
+278 1152 1.0
+278 1024 1.0
+278 971 1.0
+278 964 1.0
+279 280 1.0
+280 1009 1.0
+280 1157 1.0
+280 1106 1.0
+280 991 1.0
+280 1016 1.0
+280 964 1.0
+280 1079 1.0
+280 1057 1.0
+281 1048 1.0
+281 969 1.0
+282 283 1.0
+283 1026 1.0
+283 1103 1.0
+283 994 1.0
+283 1028 1.0
+283 1029 1.0
+283 1030 1.0
+283 1031 1.0
+284 285 1.0
+284 286 1.0
+285 1126 1.0
+286 1143 1.0
+286 1144 1.0
+287 288 1.0
+288 1155 1.0
+288 1009 1.0
+288 964 1.0
+289 290 1.0
+291 292 1.0
+293 294 1.0
+294 993 1.0
+294 1061 1.0
+295 278 1.0
+296 297 1.0
+297 1189 1.0
+298 297 1.0
+299 300 1.0
+299 301 1.0
+299 302 1.0
+300 1066 1.0
+301 1181 1.0
+303 304 1.0
+303 305 1.0
+304 1043 1.0
+304 978 1.0
+305 1043 1.0
+306 1067 1.0
+307 1131 1.0
+308 948 1.0
+308 949 1.0
+308 950 1.0
+308 951 1.0
+309 948 1.0
+309 949 1.0
+309 950 1.0
+309 951 1.0
+310 948 1.0
+310 949 1.0
+310 950 1.0
+310 951 1.0
+311 948 1.0
+311 949 1.0
+311 950 1.0
+311 951 1.0
+312 948 1.0
+312 949 1.0
+312 950 1.0
+312 951 1.0
+313 948 1.0
+313 949 1.0
+313 950 1.0
+313 951 1.0
+314 948 1.0
+314 949 1.0
+314 950 1.0
+314 951 1.0
+315 948 1.0
+315 949 1.0
+315 950 1.0
+315 951 1.0
+316 948 1.0
+316 949 1.0
+316 950 1.0
+316 951 1.0
+317 948 1.0
+317 949 1.0
+317 950 1.0
+317 951 1.0
+318 948 1.0
+318 949 1.0
+318 950 1.0
+318 951 1.0
+319 948 1.0
+319 949 1.0
+319 950 1.0
+319 951 1.0
+320 948 1.0
+320 949 1.0
+320 950 1.0
+320 951 1.0
+321 288 1.0
+322 278 1.0
+323 324 1.0
+324 1008 1.0
+324 1050 1.0
+324 970 1.0
+324 1149 1.0
+325 326 1.0
+326 952 1.0
+326 1076 1.0
+327 328 1.0
+327 329 1.0
+327 330 1.0
+327 331 1.0
+327 332 1.0
+329 1077 1.0
+331 973 1.0
+332 962 1.0
+332 1077 1.0
+333 328 1.0
+333 331 1.0
+334 330 1.0
+334 331 1.0
+335 331 1.0
+336 337 1.0
+336 338 1.0
+336 339 1.0
+340 341 1.0
+340 342 1.0
+340 331 1.0
+341 966 1.0
+341 967 1.0
+341 968 1.0
+341 969 1.0
+341 970 1.0
+341 971 1.0
+342 1052 1.0
+342 1053 1.0
+342 1054 1.0
+342 1055 1.0
+342 1056 1.0
+342 1057 1.0
+342 1058 1.0
+342 1059 1.0
+342 1060 1.0
+343 331 1.0
+344 331 1.0
+345 346 1.0
+346 1071 1.0
+346 1072 1.0
+347 348 1.0
+349 350 1.0
+351 278 1.0
+352 328 1.0
+352 353 1.0
+353 1088 1.0
+353 962 1.0
+353 964 1.0
+353 1077 1.0
+354 355 1.0
+355 1102 1.0
+356 330 1.0
+357 358 1.0
+357 329 1.0
+358 994 1.0
+358 980 1.0
+358 965 1.0
+358 975 1.0
+359 360 1.0
+359 328 1.0
+360 965 1.0
+361 362 1.0
+362 1135 1.0
+362 1136 1.0
+362 1070 1.0
+363 364 1.0
+363 365 1.0
+364 1156 1.0
+365 1156 1.0
+366 367 1.0
+368 369 1.0
+368 370 1.0
+368 371 1.0
+369 1117 1.0
+372 373 1.0
+372 374 1.0
+375 376 1.0
+377 378 1.0
+378 1029 1.0
+378 1169 1.0
+378 1170 1.0
+379 380 1.0
+380 1109 1.0
+381 382 1.0
+381 383 1.0
+381 384 1.0
+384 1068 1.0
+385 386 1.0
+385 387 1.0
+385 388 1.0
+385 341 1.0
+385 389 1.0
+385 390 1.0
+385 391 1.0
+385 392 1.0
+385 393 1.0
+385 394 1.0
+385 395 1.0
+385 396 1.0
+385 397 1.0
+385 398 1.0
+385 399 1.0
+386 962 1.0
+386 963 1.0
+386 964 1.0
+388 962 1.0
+388 963 1.0
+389 955 1.0
+389 974 1.0
+389 971 1.0
+389 964 1.0
+389 975 1.0
+390 963 1.0
+391 985 1.0
+391 986 1.0
+392 1008 1.0
+392 1078 1.0
+392 1051 1.0
+392 965 1.0
+393 965 1.0
+393 1083 1.0
+394 1085 1.0
+395 1086 1.0
+395 971 1.0
+395 964 1.0
+396 1071 1.0
+396 964 1.0
+397 1071 1.0
+397 965 1.0
+397 964 1.0
+397 1077 1.0
+398 1078 1.0
+398 1032 1.0
+399 1078 1.0
+399 1147 1.0
+399 963 1.0
+401 988 1.0
+401 989 1.0
+404 1120 1.0
+406 384 1.0
+407 384 1.0
+407 408 1.0
+408 1019 1.0
+408 1017 1.0
+409 386 1.0
+409 410 1.0
+409 411 1.0
+409 330 1.0
+409 412 1.0
+410 983 1.0
+411 1075 1.0
+412 1088 1.0
+412 962 1.0
+412 964 1.0
+413 414 1.0
+413 415 1.0
+415 1066 1.0
+415 959 1.0
+415 1043 1.0
+416 414 1.0
+416 417 1.0
+417 1141 1.0
+417 977 1.0
+417 1142 1.0
+418 414 1.0
+418 415 1.0
+419 391 1.0
+419 414 1.0
+419 420 1.0
+420 1084 1.0
+420 971 1.0
+420 965 1.0
+420 964 1.0
+421 414 1.0
+421 422 1.0
+422 1178 1.0
+423 424 1.0
+424 1095 1.0
+424 1088 1.0
+424 1096 1.0
+425 393 1.0
+425 305 1.0
+426 369 1.0
+427 392 1.0
+428 417 1.0
+429 342 1.0
+429 430 1.0
+429 305 1.0
+430 1069 1.0
+430 1070 1.0
+431 390 1.0
+431 432 1.0
+433 434 1.0
+434 1089 1.0
+434 952 1.0
+434 1043 1.0
+435 436 1.0
+436 1071 1.0
+436 1080 1.0
+436 1077 1.0
+437 404 1.0
+438 430 1.0
+438 439 1.0
+440 424 1.0
+441 439 1.0
+442 443 1.0
+442 444 1.0
+444 1024 1.0
+444 971 1.0
+444 964 1.0
+445 420 1.0
+446 447 1.0
+447 1026 1.0
+447 994 1.0
+447 1028 1.0
+447 1029 1.0
+447 1030 1.0
+447 1031 1.0
+448 378 1.0
+449 353 1.0
+449 332 1.0
+449 412 1.0
+450 424 1.0
+451 452 1.0
+451 328 1.0
+451 353 1.0
+451 330 1.0
+451 412 1.0
+451 444 1.0
+453 454 1.0
+454 1008 1.0
+454 1009 1.0
+454 1010 1.0
+454 1011 1.0
+454 1012 1.0
+454 1013 1.0
+454 1014 1.0
+454 1015 1.0
+454 1016 1.0
+454 1017 1.0
+455 378 1.0
+456 457 1.0
+457 963 1.0
+457 1027 1.0
+459 989 1.0
+460 954 1.0
+460 985 1.0
+460 986 1.0
+460 1026 1.0
+460 996 1.0
+460 1160 1.0
+460 960 1.0
+460 994 1.0
+460 1161 1.0
+460 971 1.0
+460 1028 1.0
+460 1029 1.0
+460 965 1.0
+460 1030 1.0
+460 1031 1.0
+460 1162 1.0
+461 462 1.0
+461 463 1.0
+461 464 1.0
+461 396 1.0
+461 465 1.0
+461 466 1.0
+461 467 1.0
+461 468 1.0
+461 469 1.0
+462 995 1.0
+464 1071 1.0
+464 964 1.0
+464 1072 1.0
+464 1079 1.0
+464 1080 1.0
+465 1090 1.0
+465 963 1.0
+465 1027 1.0
+465 973 1.0
+465 1091 1.0
+465 1092 1.0
+465 983 1.0
+465 1093 1.0
+465 1094 1.0
+466 1064 1.0
+466 960 1.0
+466 1096 1.0
+467 1110 1.0
+467 1160 1.0
+467 1074 1.0
+469 968 1.0
+469 965 1.0
+469 964 1.0
+470 471 1.0
+470 404 1.0
+470 460 1.0
+471 1087 1.0
+472 473 1.0
+473 995 1.0
+474 467 1.0
+475 476 1.0
+475 464 1.0
+477 436 1.0
+478 378 1.0
+479 480 1.0
+479 481 1.0
+479 378 1.0
+479 482 1.0
+480 972 1.0
+480 973 1.0
+481 1163 1.0
+481 1164 1.0
+483 360 1.0
+483 397 1.0
+484 378 1.0
+485 360 1.0
+485 486 1.0
+485 487 1.0
+485 392 1.0
+485 464 1.0
+485 488 1.0
+485 420 1.0
+485 395 1.0
+485 489 1.0
+485 460 1.0
+485 467 1.0
+485 469 1.0
+486 976 1.0
+487 971 1.0
+487 977 1.0
+487 978 1.0
+487 979 1.0
+487 980 1.0
+487 964 1.0
+488 971 1.0
+488 1081 1.0
+489 1105 1.0
+489 1009 1.0
+489 1106 1.0
+489 1103 1.0
+489 1071 1.0
+489 964 1.0
+489 1072 1.0
+489 1107 1.0
+489 1108 1.0
+489 1080 1.0
+489 1037 1.0
+490 491 1.0
+491 1008 1.0
+491 1138 1.0
+491 1153 1.0
+492 401 1.0
+492 265 1.0
+493 465 1.0
+493 378 1.0
+494 495 1.0
+494 496 1.0
+494 497 1.0
+494 498 1.0
+495 981 1.0
+495 980 1.0
+496 1026 1.0
+497 1172 1.0
+497 985 1.0
+497 968 1.0
+497 986 1.0
+497 1026 1.0
+497 994 1.0
+497 1028 1.0
+497 979 1.0
+497 1029 1.0
+497 1170 1.0
+497 1030 1.0
+497 1031 1.0
+498 1071 1.0
+498 1072 1.0
+498 1107 1.0
+498 1080 1.0
+499 278 1.0
+500 501 1.0
+500 502 1.0
+500 503 1.0
+500 504 1.0
+501 958 1.0
+502 1087 1.0
+503 1097 1.0
+503 1087 1.0
+503 1098 1.0
+503 959 1.0
+504 1188 1.0
+505 501 1.0
+505 502 1.0
+505 503 1.0
+505 504 1.0
+506 507 1.0
+506 503 1.0
+507 1019 1.0
+508 509 1.0
+508 504 1.0
+509 1173 1.0
+509 1068 1.0
+510 471 1.0
+510 503 1.0
+511 503 1.0
+512 503 1.0
+512 513 1.0
+513 1183 1.0
+513 1098 1.0
+513 1184 1.0
+513 1185 1.0
+513 953 1.0
+514 503 1.0
+514 515 1.0
+515 1181 1.0
+515 998 1.0
+515 1066 1.0
+515 1182 1.0
+516 502 1.0
+516 504 1.0
+517 278 1.0
+518 503 1.0
+519 400 1.0
+519 328 1.0
+519 396 1.0
+519 520 1.0
+519 521 1.0
+519 489 1.0
+519 280 1.0
+519 522 1.0
+520 1009 1.0
+520 964 1.0
+520 1079 1.0
+521 971 1.0
+521 973 1.0
+521 1101 1.0
+523 524 1.0
+523 525 1.0
+524 1082 1.0
+525 968 1.0
+525 960 1.0
+525 1077 1.0
+525 1100 1.0
+526 401 1.0
+526 507 1.0
+526 447 1.0
+526 305 1.0
+526 265 1.0
+527 520 1.0
+528 278 1.0
+529 362 1.0
+529 530 1.0
+531 530 1.0
+531 532 1.0
+532 952 1.0
+533 459 1.0
+533 304 1.0
+533 326 1.0
+533 466 1.0
+534 535 1.0
+535 1010 1.0
+536 537 1.0
+536 538 1.0
+536 422 1.0
+536 530 1.0
+536 539 1.0
+536 535 1.0
+536 540 1.0
+538 1030 1.0
+540 1054 1.0
+541 422 1.0
+542 535 1.0
+543 360 1.0
+543 401 1.0
+543 507 1.0
+543 544 1.0
+543 545 1.0
+543 546 1.0
+543 547 1.0
+543 424 1.0
+543 332 1.0
+544 1063 1.0
+548 538 1.0
+548 422 1.0
+548 530 1.0
+549 550 1.0
+550 1179 1.0
+551 535 1.0
+552 422 1.0
+553 436 1.0
+554 524 1.0
+555 556 1.0
+555 557 1.0
+555 535 1.0
+558 537 1.0
+558 538 1.0
+558 422 1.0
+558 482 1.0
+558 559 1.0
+558 560 1.0
+558 539 1.0
+558 535 1.0
+558 561 1.0
+558 540 1.0
+559 1030 1.0
+560 1043 1.0
+561 976 1.0
+562 563 1.0
+564 565 1.0
+565 998 1.0
+565 995 1.0
+566 567 1.0
+567 1186 1.0
+568 569 1.0
+568 570 1.0
+568 571 1.0
+568 572 1.0
+568 573 1.0
+568 574 1.0
+568 575 1.0
+568 576 1.0
+568 577 1.0
+568 578 1.0
+568 579 1.0
+568 580 1.0
+568 581 1.0
+568 582 1.0
+568 583 1.0
+568 584 1.0
+568 585 1.0
+568 586 1.0
+569 1006 1.0
+569 1007 1.0
+570 1006 1.0
+570 1007 1.0
+571 1006 1.0
+571 1007 1.0
+572 1006 1.0
+572 1007 1.0
+573 1006 1.0
+573 1007 1.0
+574 1006 1.0
+574 1007 1.0
+575 1006 1.0
+575 1007 1.0
+576 1006 1.0
+576 1007 1.0
+577 1006 1.0
+577 1007 1.0
+578 1006 1.0
+578 1007 1.0
+579 1006 1.0
+579 1007 1.0
+580 1006 1.0
+580 1007 1.0
+581 1006 1.0
+581 1007 1.0
+582 1006 1.0
+582 1007 1.0
+583 1006 1.0
+583 1007 1.0
+584 1006 1.0
+584 1007 1.0
+585 1006 1.0
+585 1007 1.0
+586 1006 1.0
+586 1007 1.0
+587 544 1.0
+588 569 1.0
+588 570 1.0
+588 571 1.0
+588 572 1.0
+588 573 1.0
+588 574 1.0
+588 575 1.0
+588 576 1.0
+588 577 1.0
+588 578 1.0
+588 579 1.0
+588 580 1.0
+588 581 1.0
+588 582 1.0
+588 583 1.0
+588 584 1.0
+588 585 1.0
+588 586 1.0
+589 590 1.0
+589 591 1.0
+589 592 1.0
+589 593 1.0
+589 594 1.0
+589 561 1.0
+590 1038 1.0
+590 1039 1.0
+590 1040 1.0
+590 1041 1.0
+590 1027 1.0
+590 1042 1.0
+591 1038 1.0
+591 1039 1.0
+591 1040 1.0
+591 1041 1.0
+591 1027 1.0
+591 1042 1.0
+592 1038 1.0
+592 1039 1.0
+592 1040 1.0
+592 1041 1.0
+592 1027 1.0
+592 1042 1.0
+594 1042 1.0
+595 596 1.0
+596 1070 1.0
+597 465 1.0
+598 599 1.0
+598 382 1.0
+598 521 1.0
+598 600 1.0
+600 1104 1.0
+600 967 1.0
+600 1032 1.0
+600 1134 1.0
+601 569 1.0
+601 570 1.0
+601 571 1.0
+601 572 1.0
+601 573 1.0
+601 574 1.0
+601 575 1.0
+601 576 1.0
+601 577 1.0
+601 578 1.0
+601 579 1.0
+601 580 1.0
+601 581 1.0
+601 582 1.0
+601 583 1.0
+601 584 1.0
+601 585 1.0
+601 586 1.0
+602 603 1.0
+603 973 1.0
+604 590 1.0
+604 591 1.0
+604 592 1.0
+604 593 1.0
+604 594 1.0
+604 561 1.0
+605 569 1.0
+605 570 1.0
+605 571 1.0
+605 572 1.0
+605 573 1.0
+605 574 1.0
+605 575 1.0
+605 576 1.0
+605 577 1.0
+605 578 1.0
+605 579 1.0
+605 580 1.0
+605 581 1.0
+605 582 1.0
+605 583 1.0
+605 584 1.0
+605 585 1.0
+605 586 1.0
+606 607 1.0
+607 1035 1.0
+608 609 1.0
+609 1066 1.0
+609 1187 1.0
+610 590 1.0
+610 591 1.0
+610 592 1.0
+610 593 1.0
+610 594 1.0
+610 561 1.0
+611 400 1.0
+612 569 1.0
+612 570 1.0
+612 571 1.0
+612 572 1.0
+612 573 1.0
+612 574 1.0
+612 575 1.0
+612 576 1.0
+612 577 1.0
+612 578 1.0
+612 579 1.0
+612 580 1.0
+612 581 1.0
+612 582 1.0
+612 583 1.0
+612 584 1.0
+612 585 1.0
+612 586 1.0
+613 464 1.0
+613 614 1.0
+615 380 1.0
+616 617 1.0
+617 995 1.0
+617 996 1.0
+618 465 1.0
+618 539 1.0
+619 410 1.0
+619 620 1.0
+619 463 1.0
+619 621 1.0
+619 420 1.0
+619 496 1.0
+619 622 1.0
+619 273 1.0
+619 469 1.0
+619 497 1.0
+621 1026 1.0
+621 1047 1.0
+622 965 1.0
+623 465 1.0
+623 624 1.0
+625 626 1.0
+625 627 1.0
+626 957 1.0
+628 629 1.0
+630 590 1.0
+630 591 1.0
+630 592 1.0
+630 593 1.0
+630 594 1.0
+630 561 1.0
+631 278 1.0
+632 633 1.0
+634 569 1.0
+634 570 1.0
+634 571 1.0
+634 572 1.0
+634 573 1.0
+634 574 1.0
+634 575 1.0
+634 576 1.0
+634 577 1.0
+634 578 1.0
+634 579 1.0
+634 580 1.0
+634 581 1.0
+634 582 1.0
+634 583 1.0
+634 584 1.0
+634 585 1.0
+634 586 1.0
+635 636 1.0
+636 956 1.0
+637 280 1.0
+638 501 1.0
+638 297 1.0
+639 389 1.0
+639 273 1.0
+639 380 1.0
+640 641 1.0
+641 1035 1.0
+641 1132 1.0
+642 521 1.0
+642 600 1.0
+642 417 1.0
+643 521 1.0
+643 346 1.0
+644 294 1.0
+645 646 1.0
+647 364 1.0
+647 365 1.0
+648 331 1.0
+649 331 1.0
+650 346 1.0
+651 559 1.0
+652 653 1.0
+652 654 1.0
+652 434 1.0
+652 447 1.0
+652 283 1.0
+652 460 1.0
+652 655 1.0
+652 497 1.0
+653 1025 1.0
+653 1026 1.0
+653 1027 1.0
+653 994 1.0
+653 1028 1.0
+653 1029 1.0
+653 1030 1.0
+653 1031 1.0
+654 1025 1.0
+654 1026 1.0
+654 1027 1.0
+654 994 1.0
+654 1028 1.0
+654 1029 1.0
+654 1030 1.0
+654 1031 1.0
+655 1167 1.0
+655 1026 1.0
+655 994 1.0
+655 1028 1.0
+655 1029 1.0
+655 1030 1.0
+655 1031 1.0
+656 537 1.0
+656 538 1.0
+656 422 1.0
+656 482 1.0
+656 559 1.0
+656 560 1.0
+656 539 1.0
+657 388 1.0
+658 659 1.0
+659 968 1.0
+660 653 1.0
+660 544 1.0
+660 661 1.0
+660 654 1.0
+660 447 1.0
+660 283 1.0
+660 460 1.0
+660 655 1.0
+660 497 1.0
+661 963 1.0
+661 1065 1.0
+662 547 1.0
+663 653 1.0
+663 414 1.0
+663 654 1.0
+663 447 1.0
+663 283 1.0
+663 460 1.0
+663 655 1.0
+663 497 1.0
+664 331 1.0
+665 326 1.0
+666 667 1.0
+666 362 1.0
+668 454 1.0
+668 669 1.0
+668 338 1.0
+668 670 1.0
+669 989 1.0
+671 328 1.0
+671 307 1.0
+671 497 1.0
+671 265 1.0
+672 462 1.0
+672 515 1.0
+673 462 1.0
+673 674 1.0
+673 609 1.0
+675 607 1.0
+675 362 1.0
+676 507 1.0
+676 306 1.0
+676 677 1.0
+676 424 1.0
+676 332 1.0
+676 305 1.0
+678 471 1.0
+678 503 1.0
+679 624 1.0
+680 524 1.0
+680 469 1.0
+681 380 1.0
+682 447 1.0
+683 684 1.0
+683 396 1.0
+683 489 1.0
+683 280 1.0
+684 960 1.0
+684 961 1.0
+685 403 1.0
+685 280 1.0
+686 547 1.0
+686 687 1.0
+687 1014 1.0
+688 653 1.0
+688 654 1.0
+688 447 1.0
+688 283 1.0
+688 460 1.0
+688 655 1.0
+688 497 1.0
+689 690 1.0
+691 692 1.0
+691 693 1.0
+691 694 1.0
+695 487 1.0
+695 696 1.0
+695 358 1.0
+695 328 1.0
+695 392 1.0
+695 332 1.0
+695 460 1.0
+696 965 1.0
+697 400 1.0
+697 306 1.0
+697 353 1.0
+697 332 1.0
+697 280 1.0
+698 653 1.0
+698 654 1.0
+698 447 1.0
+698 283 1.0
+698 460 1.0
+698 655 1.0
+698 497 1.0
+699 373 1.0
+699 700 1.0
+699 424 1.0
+699 556 1.0
+699 497 1.0
+699 266 1.0
+701 465 1.0
+702 703 1.0
+702 704 1.0
+705 392 1.0
+705 393 1.0
+705 420 1.0
+705 520 1.0
+705 417 1.0
+705 288 1.0
+706 329 1.0
+706 288 1.0
+707 708 1.0
+708 953 1.0
+709 710 1.0
+709 331 1.0
+709 711 1.0
+711 1068 1.0
+712 332 1.0
+713 341 1.0
+713 389 1.0
+713 487 1.0
+713 653 1.0
+713 654 1.0
+713 420 1.0
+713 447 1.0
+713 283 1.0
+713 460 1.0
+713 655 1.0
+713 497 1.0
+714 496 1.0
+714 491 1.0
+715 411 1.0
+716 620 1.0
+716 717 1.0
+718 600 1.0
+718 567 1.0
+719 667 1.0
+719 465 1.0
+720 600 1.0
+720 609 1.0
+721 391 1.0
+722 723 1.0
+723 1164 1.0
+724 341 1.0
+724 342 1.0
+724 339 1.0
+725 386 1.0
+725 726 1.0
+725 464 1.0
+725 397 1.0
+725 489 1.0
+725 346 1.0
+725 469 1.0
+725 727 1.0
+725 498 1.0
+726 1071 1.0
+726 1072 1.0
+727 1071 1.0
+727 1072 1.0
+727 1107 1.0
+727 1080 1.0
+728 401 1.0
+729 504 1.0
+730 626 1.0
+730 306 1.0
+731 391 1.0
+732 733 1.0
+732 734 1.0
+732 661 1.0
+732 735 1.0
+732 452 1.0
+732 414 1.0
+732 415 1.0
+732 384 1.0
+732 459 1.0
+736 733 1.0
+737 733 1.0
+737 414 1.0
+738 391 1.0
+738 278 1.0
+738 412 1.0
+738 739 1.0
+739 1138 1.0
+739 1177 1.0
+740 513 1.0
+741 462 1.0
+741 609 1.0
+742 743 1.0
+742 744 1.0
+744 1109 1.0
+745 471 1.0
+745 503 1.0
+746 386 1.0
+746 420 1.0
+746 395 1.0
+746 353 1.0
+746 424 1.0
+746 332 1.0
+746 412 1.0
+746 444 1.0
+746 265 1.0
+747 653 1.0
+747 654 1.0
+747 353 1.0
+747 447 1.0
+747 283 1.0
+747 412 1.0
+747 460 1.0
+747 655 1.0
+747 497 1.0
+748 353 1.0
+748 600 1.0
+749 467 1.0
+749 498 1.0
+750 561 1.0
+751 342 1.0
+751 328 1.0
+751 556 1.0
+752 674 1.0
+753 653 1.0
+753 654 1.0
+753 447 1.0
+753 283 1.0
+753 460 1.0
+753 655 1.0
+753 497 1.0
+754 636 1.0
+755 468 1.0
+756 757 1.0
+758 342 1.0
+758 544 1.0
+758 661 1.0
+758 447 1.0
+759 476 1.0
+759 328 1.0
+759 464 1.0
+760 353 1.0
+760 398 1.0
+760 412 1.0
+761 424 1.0
+762 341 1.0
+762 389 1.0
+762 487 1.0
+762 653 1.0
+762 654 1.0
+762 420 1.0
+762 447 1.0
+762 283 1.0
+762 460 1.0
+762 655 1.0
+762 497 1.0
+763 278 1.0
+763 539 1.0
+764 476 1.0
+764 765 1.0
+764 464 1.0
+764 396 1.0
+764 520 1.0
+764 521 1.0
+764 489 1.0
+764 280 1.0
+764 469 1.0
+764 727 1.0
+764 498 1.0
+766 380 1.0
+767 636 1.0
+767 386 1.0
+767 487 1.0
+767 392 1.0
+767 464 1.0
+767 420 1.0
+767 395 1.0
+767 396 1.0
+767 520 1.0
+767 397 1.0
+767 460 1.0
+767 469 1.0
+767 560 1.0
+768 386 1.0
+768 389 1.0
+768 420 1.0
+768 436 1.0
+768 397 1.0
+768 491 1.0
+769 653 1.0
+769 654 1.0
+769 489 1.0
+769 447 1.0
+769 283 1.0
+769 460 1.0
+769 655 1.0
+769 497 1.0
+769 560 1.0
+769 567 1.0
+770 464 1.0
+770 607 1.0
+770 489 1.0
+770 727 1.0
+770 498 1.0
+771 464 1.0
+771 489 1.0
+771 346 1.0
+771 727 1.0
+771 399 1.0
+771 498 1.0
+772 773 1.0
+772 593 1.0
+772 774 1.0
+774 1142 1.0
+775 776 1.0
+775 515 1.0
+775 567 1.0
+777 400 1.0
+777 599 1.0
+777 396 1.0
+777 353 1.0
+777 520 1.0
+777 521 1.0
+777 622 1.0
+777 280 1.0
+778 684 1.0
+778 454 1.0
+778 779 1.0
+778 507 1.0
+778 677 1.0
+778 276 1.0
+778 497 1.0
+779 1018 1.0
+780 391 1.0
+781 684 1.0
+781 454 1.0
+781 507 1.0
+781 677 1.0
+781 276 1.0
+782 607 1.0
+782 471 1.0
+782 521 1.0
+782 331 1.0
+782 783 1.0
+783 1068 1.0
+784 462 1.0
+784 733 1.0
+784 415 1.0
+784 609 1.0
+785 515 1.0
+786 765 1.0
+786 504 1.0
+787 339 1.0
+788 513 1.0
+788 609 1.0
+789 757 1.0
+790 342 1.0
+790 791 1.0
+790 301 1.0
+791 1052 1.0
+791 1053 1.0
+791 1055 1.0
+791 1057 1.0
+791 1058 1.0
+792 393 1.0
+792 396 1.0
+792 520 1.0
+793 629 1.0
+794 629 1.0
+794 795 1.0
+794 300 1.0
+794 302 1.0
+795 1171 1.0
+795 1043 1.0
+795 980 1.0
+796 670 1.0
+796 797 1.0
+797 1064 1.0
+797 971 1.0
+797 975 1.0
+798 476 1.0
+798 464 1.0
+798 436 1.0
+798 489 1.0
+798 369 1.0
+798 727 1.0
+798 560 1.0
+798 498 1.0
+799 476 1.0
+799 463 1.0
+799 464 1.0
+799 420 1.0
+799 489 1.0
+799 727 1.0
+799 497 1.0
+799 498 1.0
+800 684 1.0
+800 454 1.0
+800 779 1.0
+800 507 1.0
+800 677 1.0
+800 276 1.0
+800 305 1.0
+800 717 1.0
+801 481 1.0
+802 803 1.0
+802 410 1.0
+802 653 1.0
+802 654 1.0
+802 804 1.0
+802 447 1.0
+802 283 1.0
+802 460 1.0
+802 655 1.0
+802 497 1.0
+803 981 1.0
+803 978 1.0
+803 982 1.0
+804 1118 1.0
+804 976 1.0
+805 341 1.0
+805 389 1.0
+805 487 1.0
+805 392 1.0
+805 488 1.0
+805 806 1.0
+805 393 1.0
+805 420 1.0
+805 395 1.0
+805 278 1.0
+805 460 1.0
+805 469 1.0
+805 444 1.0
+806 971 1.0
+806 1032 1.0
+807 386 1.0
+807 360 1.0
+807 389 1.0
+807 358 1.0
+807 329 1.0
+807 392 1.0
+807 393 1.0
+807 420 1.0
+807 396 1.0
+807 436 1.0
+807 397 1.0
+807 469 1.0
+808 653 1.0
+808 654 1.0
+808 447 1.0
+808 283 1.0
+808 460 1.0
+808 655 1.0
+808 497 1.0
+809 397 1.0
+810 726 1.0
+810 464 1.0
+810 489 1.0
+810 346 1.0
+810 727 1.0
+810 498 1.0
+811 341 1.0
+811 389 1.0
+811 487 1.0
+811 653 1.0
+811 654 1.0
+811 420 1.0
+811 447 1.0
+811 283 1.0
+811 460 1.0
+811 655 1.0
+811 497 1.0
+812 346 1.0
+812 813 1.0
+812 641 1.0
+812 399 1.0
+814 489 1.0
+814 346 1.0
+814 727 1.0
+814 498 1.0
+815 696 1.0
+815 358 1.0
+815 392 1.0
+815 420 1.0
+815 397 1.0
+815 816 1.0
+815 460 1.0
+816 1032 1.0
+817 386 1.0
+817 818 1.0
+817 388 1.0
+817 803 1.0
+817 819 1.0
+817 420 1.0
+817 396 1.0
+819 1037 1.0
+820 400 1.0
+820 386 1.0
+820 360 1.0
+820 486 1.0
+820 487 1.0
+820 358 1.0
+820 599 1.0
+820 329 1.0
+820 392 1.0
+820 393 1.0
+820 420 1.0
+820 395 1.0
+820 677 1.0
+820 396 1.0
+820 353 1.0
+820 520 1.0
+820 397 1.0
+820 521 1.0
+820 489 1.0
+820 280 1.0
+820 469 1.0
+821 360 1.0
+821 696 1.0
+821 358 1.0
+821 329 1.0
+821 392 1.0
+821 420 1.0
+821 397 1.0
+821 460 1.0
+822 386 1.0
+822 360 1.0
+822 627 1.0
+822 488 1.0
+822 806 1.0
+822 420 1.0
+822 397 1.0
+823 400 1.0
+823 476 1.0
+823 391 1.0
+823 726 1.0
+823 392 1.0
+823 464 1.0
+823 393 1.0
+823 420 1.0
+823 396 1.0
+823 520 1.0
+823 397 1.0
+823 489 1.0
+823 404 1.0
+823 280 1.0
+823 469 1.0
+823 727 1.0
+823 498 1.0
+824 825 1.0
+824 826 1.0
+824 524 1.0
+824 806 1.0
+824 525 1.0
+826 977 1.0
+826 1036 1.0
+827 360 1.0
+827 401 1.0
+827 544 1.0
+827 307 1.0
+827 828 1.0
+828 1138 1.0
+829 684 1.0
+829 353 1.0
+829 332 1.0
+830 386 1.0
+830 452 1.0
+830 328 1.0
+830 330 1.0
+830 622 1.0
+830 412 1.0
+830 444 1.0
+831 559 1.0
+832 444 1.0
+833 353 1.0
+833 332 1.0
+833 412 1.0
+834 444 1.0
+835 653 1.0
+835 654 1.0
+835 353 1.0
+835 447 1.0
+835 283 1.0
+835 412 1.0
+835 460 1.0
+835 655 1.0
+835 497 1.0
+836 837 1.0
+836 444 1.0
+838 710 1.0
+838 331 1.0
+838 839 1.0
+838 444 1.0
+839 993 1.0
+840 1032 1.0
+841 394 1.0
+842 607 1.0
+842 412 1.0
+842 839 1.0
+842 444 1.0
+842 509 1.0
+843 509 1.0
+844 845 1.0
+845 1103 1.0
+846 353 1.0
+846 330 1.0
+847 341 1.0
+847 389 1.0
+847 487 1.0
+847 653 1.0
+847 654 1.0
+847 420 1.0
+847 447 1.0
+847 283 1.0
+847 460 1.0
+847 655 1.0
+847 497 1.0
+848 849 1.0
+848 444 1.0
+850 851 1.0
+850 420 1.0
+850 330 1.0
+850 346 1.0
+850 288 1.0
+852 1022 1.0
+853 1104 1.0
+853 1077 1.0
+855 626 1.0
+856 694 1.0
+857 395 1.0
+858 400 1.0
+858 653 1.0
+858 654 1.0
+858 396 1.0
+858 353 1.0
+858 520 1.0
+858 521 1.0
+858 489 1.0
+858 447 1.0
+858 283 1.0
+858 280 1.0
+858 412 1.0
+858 460 1.0
+858 469 1.0
+858 655 1.0
+858 497 1.0
+858 550 1.0
+859 860 1.0
+861 386 1.0
+862 328 1.0
+862 331 1.0
+862 332 1.0
+863 331 1.0
+864 331 1.0
+865 341 1.0
+866 341 1.0
+866 339 1.0
+866 867 1.0
+866 481 1.0
+867 1147 1.0
+867 1148 1.0
+868 520 1.0
+868 659 1.0
+868 813 1.0
+868 380 1.0
+869 460 1.0
+870 620 1.0
+870 329 1.0
+870 355 1.0
+871 329 1.0
+872 341 1.0
+872 389 1.0
+872 487 1.0
+872 653 1.0
+872 654 1.0
+872 420 1.0
+872 447 1.0
+872 283 1.0
+872 460 1.0
+872 655 1.0
+872 497 1.0
+873 674 1.0
+873 297 1.0
+874 460 1.0
+875 447 1.0
+876 504 1.0
+877 878 1.0
+879 491 1.0
+880 487 1.0
+881 773 1.0
+882 465 1.0
+883 304 1.0
+884 400 1.0
+884 459 1.0
+884 520 1.0
+884 489 1.0
+884 280 1.0
+885 607 1.0
+885 465 1.0
+885 307 1.0
+886 669 1.0
+886 278 1.0
+887 818 1.0
+887 743 1.0
+887 467 1.0
+891 391 1.0
+892 590 1.0
+892 591 1.0
+892 592 1.0
+893 773 1.0
+894 342 1.0
+894 895 1.0
+894 757 1.0
+894 791 1.0
+896 773 1.0
+897 420 1.0
+897 773 1.0
+897 560 1.0
+898 899 1.0
+898 398 1.0
+899 957 1.0
+900 469 1.0
+901 469 1.0
+902 444 1.0
+903 391 1.0
+903 404 1.0
+904 382 1.0
+905 727 1.0
+906 304 1.0
+906 326 1.0
+907 670 1.0
+907 765 1.0
+908 909 1.0
+908 342 1.0
+910 520 1.0
+910 280 1.0
+911 360 1.0
+911 401 1.0
+911 544 1.0
+911 307 1.0
+911 828 1.0
+912 515 1.0
+913 914 1.0
+913 346 1.0
+913 497 1.0
+915 600 1.0
+916 400 1.0
+916 795 1.0
+917 386 1.0
+917 278 1.0
+917 444 1.0
+918 342 1.0
+919 278 1.0
+920 387 1.0
+921 922 1.0
+921 923 1.0
+921 924 1.0
+921 925 1.0
+921 926 1.0
+921 927 1.0
+922 1110 1.0
+922 1024 1.0
+922 1071 1.0
+925 1105 1.0
+925 1121 1.0
+925 1110 1.0
+926 1128 1.0
+926 1129 1.0
+926 1130 1.0
+927 1128 1.0
+927 1129 1.0
+928 922 1.0
+928 923 1.0
+928 929 1.0
+928 924 1.0
+928 930 1.0
+928 925 1.0
+928 926 1.0
+928 890 1.0
+928 927 1.0
+931 932 1.0
+931 933 1.0
+931 854 1.0
+932 1043 1.0
+933 976 1.0
+934 922 1.0
+934 923 1.0
+934 924 1.0
+934 930 1.0
+934 925 1.0
+934 926 1.0
+934 927 1.0
+935 825 1.0
+935 936 1.0
+935 501 1.0
+935 525 1.0
+935 933 1.0
+936 955 1.0
+937 501 1.0
+938 400 1.0
+938 939 1.0
+938 708 1.0
+938 851 1.0
+938 825 1.0
+938 936 1.0
+938 501 1.0
+938 940 1.0
+938 627 1.0
+939 952 1.0
+940 959 1.0
+941 939 1.0
+941 851 1.0
+941 825 1.0
+941 501 1.0
+941 495 1.0
+941 265 1.0
+942 708 1.0
+942 851 1.0
+942 825 1.0
+942 936 1.0
+942 501 1.0
+942 940 1.0
+942 684 1.0
+942 342 1.0
+942 294 1.0
+942 600 1.0
+943 546 1.0
+943 944 1.0
+945 400 1.0
+945 939 1.0
+945 851 1.0
+945 946 1.0
+945 825 1.0
+945 501 1.0
+945 940 1.0
+945 684 1.0
+945 393 1.0
+946 954 1.0
+947 708 1.0
+947 851 1.0
+947 825 1.0
+947 936 1.0
+947 940 1.0
+947 684 1.0
+975 1190 1.0
+983 1193 1.0
+984 985 1.0
+984 986 1.0
+984 987 1.0
+984 970 1.0
+990 991 1.0
+992 993 1.0
+997 995 1.0
+997 996 1.0
+999 969 1.0
+1000 995 1.0
+1001 1002 1.0
+1003 995 1.0
+1004 1005 1.0
+1005 1206 1.0
+1020 1021 1.0
+1023 1024 1.0
+1033 1034 1.0
+1033 1035 1.0
+1034 1193 1.0
+1045 1046 1.0
+1045 1047 1.0
+1047 1195 1.0
+1049 1050 1.0
+1049 1051 1.0
+1059 1201 1.0
+1059 1190 1.0
+1059 1202 1.0
+1062 981 1.0
+1073 1074 1.0
+1099 993 1.0
+1099 1082 1.0
+1099 1100 1.0
+1099 983 1.0
+1111 1060 1.0
+1112 1071 1.0
+1113 980 1.0
+1114 980 1.0
+1115 1116 1.0
+1119 987 1.0
+1122 958 1.0
+1122 1123 1.0
+1124 1009 1.0
+1124 957 1.0
+1124 994 1.0
+1124 1044 1.0
+1124 1125 1.0
+1124 1126 1.0
+1124 1127 1.0
+1127 1201 1.0
+1127 1202 1.0
+1127 1204 1.0
+1133 1018 1.0
+1133 1054 1.0
+1134 1206 1.0
+1137 1105 1.0
+1139 1132 1.0
+1140 988 1.0
+1145 1068 1.0
+1146 1103 1.0
+1150 1008 1.0
+1154 1118 1.0
+1158 1159 1.0
+1165 1166 1.0
+1168 1095 1.0
+1174 1175 1.0
+1174 1163 1.0
+1174 1176 1.0
+1174 1170 1.0
+1180 1110 1.0
+1180 1164 1.0
+1191 1192 1.0
+1192 1225 1.0
+1192 1226 1.0
+1193 1214 1.0
+1193 1215 1.0
+1193 1216 1.0
+1194 1195 1.0
+1194 1192 1.0
+1195 1221 1.0
+1195 1220 1.0
+1195 1222 1.0
+1196 1192 1.0
+1197 1193 1.0
+1198 1193 1.0
+1199 1200 1.0
+1200 1209 1.0
+1201 1210 1.0
+1203 1200 1.0
+1204 1220 1.0
+1205 1206 1.0
+1206 1219 1.0
+1207 1190 1.0
+1208 1209 1.0
+1211 1212 1.0
+1211 1213 1.0
+1217 1218 1.0
+1223 1224 1.0
+1227 1228 1.0
+1229 1230 1.0
+1231 1232 1.0
+1231 1233 1.0
+1231 1234 1.0
+1234 1252 1.0
+1235 1230 1.0
+1236 1237 1.0
+1238 1230 1.0
+1239 1240 1.0
+1240 1249 1.0
+1241 1237 1.0
+1242 1243 1.0
+1243 1249 1.0
+1244 1228 1.0
+1245 1243 1.0
+1246 1247 1.0
+1248 1240 1.0
+1250 1251 1.0
+1253 1254 1.0
