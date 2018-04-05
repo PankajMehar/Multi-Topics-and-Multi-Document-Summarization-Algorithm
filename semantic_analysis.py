@@ -26,8 +26,8 @@ from Pajek import pajek
 def main():
     # step1() # 產生各群組的資料，並在最後產生出group_number.json的資料
     # step2() # 根據各群組的資料進行相似度比較, 最後產生group_' + str(group_day) + '_%s.json檔案
-    step3() # 將group_data_%s/%s內的json檔案讀出來，並轉換成pajek 的.net檔案
-    # step4() # 進行main path分析後產生group_data_%s/%s/main_path.json
+    # step3() # 將group_data_%s/%s內的json檔案讀出來，並轉換成pajek 的.net檔案
+    step4() # 進行main path分析後產生group_data_%s/%s/main_path.json
     # step5() # 根據主路境內的檔案產生摘要
 
 
@@ -78,32 +78,43 @@ def step3():
 
 def step4():
     # 進行main path分析後產生group_data_%s/%s/main_path.json
+    # tf-pdf 15 54.net有問題
+
     for sim_type in ["tf_pdf", "tf_idf", "simple"]:
         for file_number in range(19):
             res = {}
             for i in range(1, 100):
+                log("sim_type: {sim_type}, file_number: {file_number}, i: {i}".format(sim_type=sim_type, file_number=file_number, i=i), lvl="w")
                 data = ""
                 file_path = os.path.join(os.path.dirname(__file__), 'group_data_%s/%s/%s.net' % (sim_type, file_number, i))
                 with open(file_path, "r") as file:
                     data = file.readlines()
-                print(data)
-                if "*vertices 0\n" not in data:
-                    log("pajek start")
-                    res_ = pajek(str(i), EXE_FILE="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\pajek\\Pajek.exe",
-                                 FOLDER="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\group_data_%s\\%s\\" % (sim_type, file_number)).run()
-                    log("pajek end")
-                    res[i] = res_
-                    log(i, lvl='w')
-                    log(res, lvl='w')
-                else:
-                    log("No result", lvl='w')
+                # print(data)
+                try:
+                    if "*vertices 0\n" not in data:
+                        log("pajek start")
+                        res_ = pajek(str(i), EXE_FILE="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\pajek\\Pajek.exe",
+                                     FOLDER="C:\\Users\\Yuhsuan\\Desktop\\MEMDS\\group_data_%s\\%s\\" % (sim_type, file_number)).run()
+                        log("pajek end")
+                        res[i] = res_
+                        log(i, lvl='d')
+                        log(res, lvl='d')
+                    else:
+                        log("No result", lvl='w')
+                        res[i] = {}
+                        log(i, lvl='d')
+                        log(res, lvl='d')
+                except Exception as e:
+                    log("Shit happened!!!!!", lvl='w')
+                    log(str(e), lvl='w')
+                    print(e)
                     res[i] = {}
-                    log(i, lvl='w')
-                    log(res, lvl='w')
+                    log(i, lvl='d')
+                    log(res, lvl='d')
 
             with open("group_data_%s/%s/main_path.json" % (sim_type,file_number), "w") as file:
                 json.dump(res, file)
-
+            log("File save to group_data_%s/%s/main_path.json" % (sim_type,file_number), lvl="w")
 
 def step5():
     # 根據主路境內的檔案產生摘要

@@ -88,7 +88,7 @@ class pajek:
 
     def execute(self):
         cmd = "{exe} {log}".format(exe=self.EXE_FILE_PATH, log=self.LOG_PATH)
-        print(cmd)
+        # print(cmd)
         p = subprocess.Popen(cmd, shell=True)
 
     def analysis_main_path(self):
@@ -101,7 +101,7 @@ class pajek:
 
         # 找開始記錄main path的行數
         for start in range(len(data)):
-            if "Network Standard Global Main Path of N4" in data[start]:
+            if "Network Standard Global Main Path" in data[start]:
                 line_start = start + 2
                 break
 
@@ -123,11 +123,26 @@ class pajek:
         else:
             return self.MAIN_PATH
 
+    def _wait(self,file_path, sleeptime=None):
+        if sleeptime == None:
+            waite_time = 5
+        else:
+            waite_time = sleeptime
+
+        for i in range(10):
+            if not os.path.exists(file_path):
+                time.sleep(waite_time)
+            else:
+                time.sleep(1)
+                break
+
     def run(self):
         self.generate_log_file(self.NET_FILE_PATH, self.OUTPUT_PAJ, self.OUTPUT_JPG)
-        time.sleep(10)
+        # self._wait(self.LOG_PATH,2)
+        time.sleep(3)
         self.execute()
-        time.sleep(10)
+        # self._wait(self.OUTPUT_PAJ)
+        time.sleep(7)
         self.analysis_main_path()
         return self.MAIN_PATH
 
