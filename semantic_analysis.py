@@ -27,8 +27,8 @@ def main():
     # step1() # 產生各群組的資料，並在最後產生出group_number.json的資料
     # step2() # 根據各群組的資料進行相似度比較, 最後產生group_' + str(group_day) + '_%s.json檔案
     # step3() # 將group_data_%s/%s內的json檔案讀出來，並轉換成pajek 的.net檔案
-    step4() # 進行main path分析後產生group_data_%s/%s/main_path.json
-    # step5() # 根據主路境內的檔案產生摘要
+    # step4() # 進行main path分析後產生group_data_%s/%s/main_path.json
+    step5() # 根據主路境內的檔案產生摘要
 
 
 def step1():
@@ -141,7 +141,7 @@ def step5():
                     summary = system_summary(res, ref_path)
                     # print(summary)
                     log("%s,%s" % (file_number, i), lvl="w")
-                    summary_path = "main_path_summary/%s/%s_%s.txt" % (sim_type,file_number, i)
+                    summary_path = "main_path_summary/%s/%s_%s.txt" % (sim_type, file_number, i)
                     with open(summary_path, 'w', encoding='utf8') as file:
                         file.write(summary)
                     # time.sleep(3)
