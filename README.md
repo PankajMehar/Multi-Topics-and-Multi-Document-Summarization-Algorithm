@@ -23,7 +23,7 @@
     - 將資料及內的system檔案(系統摘要)放到projects/test-summarization/system
     - 執行java -jar rouge2-xx.java 會將計算出來的資料產生在results.csv
     - 跑出來的檔案已經手動整理到Rouge_Final檔案中
-    - 最後論文根據裡面的資料撰寫結果
+    - 最後論文內容根據裡面的資料撰寫結果
 
 ---------------------------------------
 #### 2017/03/24 
