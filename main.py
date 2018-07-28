@@ -47,6 +47,7 @@ def main():
 
     # 輸入時間新聞來源，輸出的資料夾，分隔的時間區間
     # 輸出的檔案名稱為 arrange_day_{day}.json
+    # 數字0就是指定要以多少天為分割，0代表每天各自分割, 15代表將所有的資料分割成15天
     ARRANGE_DATA_SOURCE = generate_time_data(STEMMING_DATA_DIR,STEMMING_DATA_DIR,0,SOURCES,NEWS_EVENTS)
 
     # 產生需要分析的資料集

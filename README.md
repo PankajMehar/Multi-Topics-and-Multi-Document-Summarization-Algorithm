@@ -2,11 +2,26 @@
 
 #### 2018/07/28
 資料流程：
-先產生arrange_day_0\analysis_temp.json
-執行daily_data_clusting.py ->產生arrange_day_0\first_clusting_result.json
-執行daily_group_relation.py ->產生arrange_day_0\clusting_tree_value.json
-執行clusting_tree_analysis.py ->產生final_group_file\{門檻值}.json 跟jsonfinal_group_file_reference\{門檻值}.json
-執行analysis_clusting.py ->產生arrange_day_0\res_cos.csv等
+1. 執行main.py ->讀取指定的新聞資料夾產生各天的資料，如arrange_day_100\day0_CNN_gravitational_1.txt
+2. 執行analysis_auto.py -> 產生arrange_day_0\analysis_temp.json與analysis.csv
+    - analysis.csv是做各種不同相似度門檻的資料，就是在做分析每日新聞群體的工作
+3. 執行daily_data_clusting.py ->產生arrange_day_0\first_clusting_result.json
+4. 執行daily_group_relation.py ->產生arrange_day_0\clusting_tree_value.json
+    - 分群各新聞事件
+5. 執行clusting_tree_analysis.py ->產生final_group_file\{門檻值}.json 跟jsonfinal_group_file_reference\{門檻值}.json
+6. 執行analysis_clusting.py ->產生arrange_day_0\res_cos.csv等
+7. 執行semantic_analysis.py ->產生分析資料
+    - step1() # 產生各群組的資料，並在最後產生出group_number.json的資料
+    - step2() # 根據各群組的資料進行相似度比較, 最後產生group_' + str(group_day) + '_%s.json檔案
+    - step3() # 將group_data_%s/%s內的json檔案讀出來，並轉換成pajek 的.net檔案
+    - step4() # 進行main path分析後產生group_data_%s/%s/main_path.json
+    - step5() # 根據主路境內的檔案產生摘要
+    - 產生的摘要資料會分別存在textrank / lexrank / main_path_summary(本研究的摘要集) /text_rank_simple, 整理好的資料放置在https://drive.google.com/open?id=1eg7daI1lB9MPCtMUQK_ikiEccMyHMh26
+8. 計算Rouge值
+    - 下載 https://github.com/RxNLP/ROUGE-2.0 套件
+    - 將資料集內的reference檔案(參考摘要)放到projects/test-summarization/reference
+    - 將資料及內的system檔案(系統摘要)放到projects/test-summarization/system
+    - 執行java -jar rouge2-xx.java 會將計算出來的資料產生在results.csv
 
 ---------------------------------------
 #### 2017/03/24 
@@ -70,7 +85,7 @@
 * 利用clusting_tree_analysis輸入自訂的門檻值，顯示出完整的樹狀圖
 ---------------------------------------
 #### 2017/02/07
-* 每天的預算分析數據完成，透過daily_group_relation.py產生clusting_tree_values.json
+* 每天的運算分析數據完成，透過daily_group_relation.py產生clusting_tree_values.json
 - [ ] 找出可以做完整路徑的演算法
 ---------------------------------------
 #### 2017/02/04
