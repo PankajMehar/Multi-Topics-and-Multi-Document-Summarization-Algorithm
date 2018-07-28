@@ -1,7 +1,7 @@
 # MEMDS
 
-#### 2018/07/28
-資料流程：
+#### 程式碼: https://github.com/moveurbody/Multi-Topics-and-Multi-Document-Summarization-Algorithm
+#### 資料流程：
 1. 執行main.py ->讀取指定的新聞資料夾產生各天的資料，如arrange_day_100\day0_CNN_gravitational_1.txt
 2. 執行analysis_auto.py -> 產生arrange_day_0\analysis_temp.json與analysis.csv
     - analysis.csv是做各種不同相似度門檻的資料，就是在做分析每日新聞群體的工作
