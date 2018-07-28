@@ -1,0 +1,142 @@
+*Network C:\Users\Yuhsuan\Desktop\MEMDS\group_data\5\32.net
+*Vertices 27
+  1 "d48_sg18"                               0.1000    0.5000    0.5000 ellipse
+  2 "d48_sg34"                               0.1108    0.4078    0.5000
+  3 "d48_sg19"                               0.1425    0.3205    0.5000
+  4 "d48_sg29"                               0.1936    0.2429    0.5000
+  5 "d48_sg21"                               0.2611    0.1792    0.5000
+  6 "d48_sg24"                               0.3416    0.1327    0.5000
+  7 "d48_sg28"                               0.4305    0.1061    0.5000
+  8 "d50_sg0"                                0.5233    0.1007    0.5000
+  9 "d48_sg30"                               0.6147    0.1168    0.5000
+ 10 "d48_sg41"                               0.7000    0.1536    0.5000
+ 11 "d48_sg44"                               0.7745    0.2091    0.5000
+ 12 "d48_sg32"                               0.8342    0.2802    0.5000
+ 13 "d48_sg40"                               0.8759    0.3632    0.5000
+ 14 "d48_sg35"                               0.8973    0.4536    0.5000
+ 15 "d50_sg30"                               0.8973    0.5464    0.5000
+ 16 "d50_sg31"                               0.8759    0.6368    0.5000
+ 17 "d50_sg50"                               0.8342    0.7198    0.5000
+ 18 "d50_sg46"                               0.7745    0.7909    0.5000
+ 19 "d50_sg52"                               0.7000    0.8464    0.5000
+ 20 "d50_sg1"                                0.6147    0.8832    0.5000
+ 21 "d50_sg56"                               0.5233    0.8993    0.5000
+ 22 "d50_sg2"                                0.4305    0.8939    0.5000
+ 23 "d50_sg45"                               0.3416    0.8673    0.5000
+ 24 "d50_sg3"                                0.2611    0.8208    0.5000
+ 25 "d50_sg32"                               0.1936    0.7571    0.5000
+ 26 "d50_sg35"                               0.1425    0.6795    0.5000
+ 27 "d50_sg44"                               0.1108    0.5922    0.5000
+*Arcs
+  1   2 1
+  3   4 1
+  5   4 1
+  6   4 1
+  7   8 1
+  9  10 1
+  9  11 1
+ 10  18 1
+ 10  19 1
+ 12  13 1
+ 13  17 1
+ 14  15 1
+ 14  16 1
+ 20  21 1
+ 22  23 1
+ 24  23 1
+ 25  23 1
+ 26  27 1
+
+*Network Extracting N1 according to C1 [1]
+*Vertices 2
+ 1 "d48_sg18"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d48_sg34"                               0.1108    0.4078    0.5000
+*Arcs
+ 1  2 1
+
+*Network Shrinking N2 according to C3 [1,0]
+*Vertices 2
+ 1 "d48_sg18"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d48_sg34"                               0.9000    0.5000    0.5000
+*Arcs
+ 1  2 1
+
+*Network Citation weights SPC [flow] of N3
+*Vertices 2
+ 1 "d48_sg18"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d48_sg34"                               0.9000    0.5000    0.5000
+*Arcs
+ 1  2 1
+
+*Network Standard Global Main Path of N4
+*Vertices 2
+ 1 "d48_sg18"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d48_sg34"                               0.9000    0.5000    0.5000
+*Arcs
+ 1  2 1
+
+*Partition Weak Components of N1 [>=1]
+*Vertices 27
+1
+1
+2
+2
+2
+2
+3
+3
+4
+4
+4
+5
+5
+6
+6
+6
+5
+4
+4
+7
+7
+8
+8
+8
+8
+9
+9
+
+*Partition Extracting from C1 vertices determined by C1 [1]
+*Vertices 2
+1
+1
+
+*Partition Strong Components of N2 [>=1]
+*Vertices 2
+1
+2
+
+*Partition Shrinking C3 [0]
+*Vertices 2
+1
+2
+
+*Partition Vertices on Standard Global Main Path of N4
+*Vertices 2
+1
+1
+
+*Vector Number of Different Incoming Paths [SPC] in N3
+*Vertices 2
+1
+1
+
+*Vector Number of Different Outgoing Paths [SPC] in N3
+*Vertices 2
+1
+1
+
+*Vector Citation weights SPC [flow] of N3
+*Vertices 2
+1
+1
+

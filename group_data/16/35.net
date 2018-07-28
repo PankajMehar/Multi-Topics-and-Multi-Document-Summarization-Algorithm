@@ -1,0 +1,16 @@
+*vertices 8
+1 d0_sg66 0.0 0.0 ellipse
+2 d1_sg9 0.0 0.0 ellipse
+3 d0_sg76 0.0 0.0 ellipse
+4 d0_sg109 0.0 0.0 ellipse
+5 d1_sg1 0.0 0.0 ellipse
+6 d0_sg110 0.0 0.0 ellipse
+7 d0_sg148 0.0 0.0 ellipse
+8 d0_sg205 0.0 0.0 ellipse
+*arcs
+1 2 1.0
+3 2 1.0
+4 5 1.0
+6 5 1.0
+7 5 1.0
+8 2 1.0
