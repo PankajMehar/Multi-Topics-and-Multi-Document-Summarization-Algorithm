@@ -1,4 +1,14 @@
 # MEMDS
+
+#### 2018/07/28
+資料流程：
+先產生arrange_day_0\analysis_temp.json
+執行daily_data_clusting.py ->產生arrange_day_0\first_clusting_result.json
+執行daily_group_relation.py ->產生arrange_day_0\clusting_tree_value.json
+執行clusting_tree_analysis.py ->產生final_group_file\{門檻值}.json 跟jsonfinal_group_file_reference\{門檻值}.json
+執行analysis_clusting.py ->產生arrange_day_0\res_cos.csv等
+
+---------------------------------------
 #### 2017/03/24 
 * main_path的文本計算完成 -> semantic_analysis.py
 * textrank的文本計算完成 -> mainpath_textrank_summary.py
