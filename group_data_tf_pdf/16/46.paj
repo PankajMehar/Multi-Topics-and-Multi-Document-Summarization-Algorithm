@@ -1,0 +1,75 @@
+*Network C:\Users\Yuhsuan\Desktop\MEMDS\group_data_tf_pdf\16\46.net
+*Vertices 2
+ 1 "d0_sg205"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d1_sg9"                                 0.9000    0.5000    0.5000
+*Arcs
+ 1  2 1
+
+*Network Extracting N1 according to C1 [1]
+*Vertices 2
+ 1 "d0_sg205"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d1_sg9"                                 0.9000    0.5000    0.5000
+*Arcs
+ 1  2 1
+
+*Network Shrinking N2 according to C3 [1,0]
+*Vertices 2
+ 1 "d0_sg205"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d1_sg9"                                 0.9000    0.5000    0.5000
+*Arcs
+ 1  2 1
+
+*Network Citation weights SPC [flow] of N3
+*Vertices 2
+ 1 "d0_sg205"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d1_sg9"                                 0.9000    0.5000    0.5000
+*Arcs
+ 1  2 1
+
+*Network Standard Global Main Path of N4
+*Vertices 2
+ 1 "d0_sg205"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d1_sg9"                                 0.9000    0.5000    0.5000
+*Arcs
+ 1  2 1
+
+*Partition Weak Components of N1 [>=1]
+*Vertices 2
+1
+1
+
+*Partition Extracting from C1 vertices determined by C1 [1]
+*Vertices 2
+1
+1
+
+*Partition Strong Components of N2 [>=1]
+*Vertices 2
+1
+2
+
+*Partition Shrinking C3 [0]
+*Vertices 2
+1
+2
+
+*Partition Vertices on Standard Global Main Path of N4
+*Vertices 2
+1
+1
+
+*Vector Number of Different Incoming Paths [SPC] in N3
+*Vertices 2
+1
+1
+
+*Vector Number of Different Outgoing Paths [SPC] in N3
+*Vertices 2
+1
+1
+
+*Vector Citation weights SPC [flow] of N3
+*Vertices 2
+1
+1
+

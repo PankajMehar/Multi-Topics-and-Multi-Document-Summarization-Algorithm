@@ -1,0 +1,101 @@
+*Network C:\Users\Yuhsuan\Desktop\MEMDS\group_data_tf_pdf\5\47.net
+*Vertices 12
+  1 "d48_sg30"                               0.1000    0.5000    0.5000 ellipse
+  2 "d48_sg44"                               0.1536    0.3000    0.5000
+  3 "d48_sg32"                               0.3000    0.1536    0.5000
+  4 "d48_sg40"                               0.5000    0.1000    0.5000
+  5 "d48_sg35"                               0.7000    0.1536    0.5000
+  6 "d50_sg30"                               0.8464    0.3000    0.5000
+  7 "d50_sg50"                               0.9000    0.5000    0.5000
+  8 "d48_sg41"                               0.8464    0.7000    0.5000
+  9 "d50_sg52"                               0.7000    0.8464    0.5000
+ 10 "d50_sg3"                                0.5000    0.9000    0.5000
+ 11 "d50_sg45"                               0.3000    0.8464    0.5000
+ 12 "d50_sg32"                               0.1536    0.7000    0.5000
+*Arcs
+  1   2 1
+  3   4 1
+  4   7 1
+  5   6 1
+  8   9 1
+ 10  11 1
+ 12  11 1
+
+*Network Extracting N1 according to C1 [1]
+*Vertices 2
+ 1 "d48_sg30"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d48_sg44"                               0.1536    0.3000    0.5000
+*Arcs
+ 1  2 1
+
+*Network Shrinking N2 according to C3 [1,0]
+*Vertices 2
+ 1 "d48_sg30"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d48_sg44"                               0.9000    0.5000    0.5000
+*Arcs
+ 1  2 1
+
+*Network Citation weights SPC [flow] of N3
+*Vertices 2
+ 1 "d48_sg30"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d48_sg44"                               0.9000    0.5000    0.5000
+*Arcs
+ 1  2 1
+
+*Network Standard Global Main Path of N4
+*Vertices 2
+ 1 "d48_sg30"                               0.1000    0.5000    0.5000 ellipse
+ 2 "d48_sg44"                               0.9000    0.5000    0.5000
+*Arcs
+ 1  2 1
+
+*Partition Weak Components of N1 [>=1]
+*Vertices 12
+1
+1
+2
+2
+3
+3
+2
+4
+4
+5
+5
+5
+
+*Partition Extracting from C1 vertices determined by C1 [1]
+*Vertices 2
+1
+1
+
+*Partition Strong Components of N2 [>=1]
+*Vertices 2
+1
+2
+
+*Partition Shrinking C3 [0]
+*Vertices 2
+1
+2
+
+*Partition Vertices on Standard Global Main Path of N4
+*Vertices 2
+1
+1
+
+*Vector Number of Different Incoming Paths [SPC] in N3
+*Vertices 2
+1
+1
+
+*Vector Number of Different Outgoing Paths [SPC] in N3
+*Vertices 2
+1
+1
+
+*Vector Citation weights SPC [flow] of N3
+*Vertices 2
+1
+1
+
