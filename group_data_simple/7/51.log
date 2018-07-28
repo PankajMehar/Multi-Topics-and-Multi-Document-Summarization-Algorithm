@@ -1,0 +1,41 @@
+
+        NETBEGIN 1
+        CLUBEGIN 1
+        PERBEGIN 1
+        CLSBEGIN 1
+        HIEBEGIN 1
+        VECBEGIN 1
+
+        % Reading Network   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.net
+        N 1 RDN "C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.net" (203)
+        % Weak Components
+        C 1 COMP 1 [2] [1] (203)
+        % Extracting Subnetwork according to Partition
+        N 2 EXT 1 1 [1] 1 (151)
+        % Strong Components
+        C 3 COMP 2 [1] [1] (151)
+        % Shrinking
+        N 3 SHR 2 3 [1 ,0,1] (151)
+        % Citation Weights: Search Path Count (SPC)
+        V 3 CITSPC 3 0 1 (151)
+        % Standard Global Main Path
+        N 5 GLOBALMAINPATH 4 0 (13)
+        E 5 CIRCULAR
+        E 5 DRAW 0 0 0 0 0
+        E 5 JPEG 0 0 0 0 0 "C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.jpg" 100 0
+        % Saving network to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        % Saving network to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        % Saving network to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        % Saving network to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        % Saving network to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        % Saving partition to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        % Saving partition to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        % Saving partition to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        % Saving partition to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        % Saving partition to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        % Saving vector to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        % Saving vector to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        % Saving vector to file   ---    C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj
+        N 9999 WRPAJ "C:\Users\Yuhsuan\Desktop\MEMDS\group_data_simple\7\51.paj"
+        EXIT
+        
